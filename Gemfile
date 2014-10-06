@@ -7,8 +7,9 @@ gem "rails", "4.1.6"
 #  PLEASE KEEP THE REST ALPHABETICAL.
 #
 
-# Use ActiveModel has_secure_password
-gem "bcrypt", "~> 3.1.7"
+# Sort tables:
+gem "acts_as_list"
+
 # NEVER EVER *EVER* run this in production. Ever. Don"t. It will be
 # immediately obvious what it does in dev.
 gem "better_errors", group: :development
@@ -17,8 +18,6 @@ gem "binding_of_caller", group: :development
 # Use debugger
 gem "byebug", group: [:development, :test]
 
-# Permissions:
-gem "cancan"
 # Use Capistrano for deployment
 gem "capistrano-rails", group: :development
 # Tree structures:
@@ -26,23 +25,13 @@ gem "closure_tree"
 
 # Memcached:
 gem "dalli"
-# Users:
-gem "devise"
-# Darwin Core Archive files:
-gem "dwc-archive"
 
 # Robust mocking:
 gem "factory_girl_rails", group: [:development, :test]
 # Better spec output:
 gem "fuubar", group: [:development, :test]
 
-# Translated attributes on models:
-# NOTE - If you are using versioning (with paper_trail or any other versioning
-# gem), please add the line "gem 'globalize-versioning'" to your Gemfile and go
-# to the github page at globalize/globalize-versioning if you encounter any
-# problems.
-gem "globalize"
-
+# Use Haml instead of HTML:
 gem "haml-rails"
 
 # Build JSON APIs with ease. https://github.com/rails/jbuilder
@@ -50,8 +39,14 @@ gem "jbuilder", "~> 2.0"
 # Use jquery as the JavaScript library
 gem "jquery-rails"
 
+# Pagination:
+gem "kaminari"
+
 # Use mysql as the database for Active Record
 gem "mysql2"
+
+# Icons are handled with:
+gem "paperclip"
 
 # Queues:
 gem "resque", require: "resque/server"
