@@ -10,97 +10,168 @@ source.
   full_name
   abbr # A really (!) short name, essentially.  :)
   description
+  private_description # Needed?
+  admin_description # Needed?
   concepts.
     roots
   # partner - will add this later. For now, don't care.
-  icon # Paperclip (this is the original file, which we'll resize to larger.)
+  icon # Paperclip (this is the original file, which we'll resize to our largest
+       # allowable size, then resize again to small with a new name)
   small_icon_url
   url # This is their homepage, which we link to a lot.
   links # There are any other urls.
-# source name:string:index full_name:string abbr:string description:text icon::attachment url:string small_icon_url:string
+# rails g scaffold source name:string:index full_name:string abbr:string description:text icon:attachment url:string small_icon_url:string
 
 link.
-  source
-  name
+  belongs_to :source
+  name # I18n
   url
-  position
-# link source_id:integer name:string url:string position:integer
+  acts_as_list
+# rails g scaffold link source_id:integer name:string url:string position:integer
 
-# This is ONE source's concept of a collection of data.
+# This is ONE source's concept of a collection of data (around a set of names)
 concept.
   acts_as_tree # And all the methods that come with it...
   source
-  associations.
-    # See associations under "synth", below. Same filters.
-  traits.
-    toc
-    ranges
-    glossary
-# concept source_id:integer:index parent_id:integer
+  original_id # This is the (string) identifier the source gave us that they use
+              # internally to refer to this concept.
+  associations
+# concept source_id:integer:index parent_id:integer original_id:string
 # As per https://github.com/mceachen/closure_tree :
 # rails g migration create_concepts_hierarchies 
 
 # synth = SynthesizedConcept, but that's anoying to type and the idea is going
 # to be ubiquitous, so the short name should be adequate.
 synth.
-  sources
-  concepts # ...Do we even really need this? :S It doesn't show up anywhere.
+  sources # Through concepts
+  concepts
   traits # see the filters from concept, above.
-  associations. # To media, including names.
-  literature_references # Just store as strings for now...
-  bhl_references
+  associations # To media, including names.
 # Yes, there's nothing here except an id. That's because it's just a simple
 # collection of concepts:
-# synth 
+# rails g scaffold synth 
 
+# This reference is for
 literature_reference.
-  synth # DENORM
-  medium # The source where this ref came from.
-  locale
-  string
-# literature_reference synth_id:integer:index medium_id:integer locale:string string:string
+  is_for # POLY: either medium or name
+  appears_as # What we want the reference to appear as
+# rails g scaffold literature_reference is_for_type:string is_for_id:integer locale:integer:index appears_as:string
+# add_index :literature_references, [:is_for_type, :is_for_id]
 
-bhl_reference.
-  synth
-  publication_title
-  publication_url
-  year # Note this is actually a string.
+appearance.
+  name
+  publication
   page # Note this is actually a string.
-  details
-  url
-# bhl_reference synth_id:integer:index publication_title:string publication_url:string year:string page:string details:string url:string
+  url_snippet
+# rails g scaffold appearance name_id:integer publication_id:integer page:string url_snippet:string
 
-medium.
-  concept
-  string # alias #title
-  description # alias #body
-  synth # I haven't decided on whether we want to do this. Need to measure it...
-        # And to do that, it's easier to start WITH it... So, we have DUPLICATES
-        # in this table; but, hey, this *is* the DENORM EOL!
-  guid
-  locale # includes a special string for "scientific" as a language.
-  associations
-  translations
-  copyright
-  license # In some cases, this is N/A, but that's fine. ENUM
-  source_url # Meaning, where we downloaded it from.
-  source_id # What they originally tagged it with.
-  javascript # ENUM - any extra JS that must be loaded to display this
-  stylesheet # ENUM - any extra styles that must be loaded to display this
-  revisions. # via GUID
-    latest
-  collection_details
+publication.
+  title
+  url
+  appearance_url_template # Includes the string :appearance, which will be
+    # replaced with the appearance.url_snippet
+  details
+  year # Note this is actually a string.
+# rails g scaffold publication title:string url:string appearance_url_template:string details:string year:string
+
+# I'm *slightly* worried about this being confusing with all the "name"
+# attributes, but I don't think it's worth giving this some obscure name (heh)
+# to avoid that problem.
+name.
+  string
+  type # I18n
+  locale # Might as well make this nil for scientific names.
   preview?
-  literature_references # Just stored as strings for now.
-  section # Where in the TOC it shows up (only for aritcles)
-  full_size_url # This is also used for videos and sounds to play it.
-  thumbnail_url
+  appearances # BHL
+  literature_references
+  associations
+# rails g scaffold name string:string locale:integer:index preview:boolean
+
+# THIS IS AN ABSTRACT CLASS: it's implemented by image, video, sound, map, and
+# article.
+class Medium
+  attr_accessor :guid
+  attr_accessor :locale # includes a special string for "scientific" as a language.
+  # LATER: preview?
+  has_many :associations
+  has_many :translations
+  has_many :literature_references
+end
+
+image.
+  title
+  description
+  copyright
+  license
+  original_url # Meaning, where we downloaded it from.
+  full_size_url
   crop_url # This is the mid-size, March-of-life image.
-# medium concept_id:integer:index string:string description:text synth_id:integer:index guid:string locale:string copyright:string license:integer source_url:string source_id:string preview:boolean section_id:integer full_size_url:string thumbnail_url:string crop_url:string javascript:integer stylesheet:integer
+  thumbnail_url
+  old_images
+  collection_details
+# rails g scaffold image guid:string locale:integer:index preview:boolean title:string description:text copyright:string license_id:integer original_url:string full_size_url:string crop_url:string thumbnail_url:string
+# rails g scaffold old_image guid:string locale:integer preview:boolean title:string description:text copyright:string license_id:integer original_url:string full_size_url:string crop_url:string thumbnail_url:string image_id:integer
+
+video.
+  title
+  description
+  copyright
+  license
+  original_url # Meaning, where we downloaded it from.
+  url # You'll play this
+  javascript
+  stylesheet
+  collection_details
+  old_videos
+# rails g scaffold video guid:string locale:integer:index preview:boolean title:string description:text copyright:string license_id:integer original_url:string url:string javascript_id:integer stylesheet_id:integer
+# rails g scaffold old_video guid:string locale:integer preview:boolean title:string description:text copyright:string license_id:integer original_url:string url:string javascript_id:integer stylesheet_id:integer video_id:integer
+
+sound.
+  title
+  description
+  copyright
+  license
+  original_url
+  url
+  javascript
+  stylesheet
+  collection_details
+  old_sounds
+# rails g scaffold sound guid:string locale:integer:index preview:boolean title:string description:text copyright:string license_id:integer original_url:string url:string javascript_id:integer stylesheet_id:integer
+# rails g scaffold old_sound guid:string locale:integer preview:boolean title:string description:text copyright:string license_id:integer original_url:string url:string javascript_id:integer stylesheet_id:integer sound_id:integer
+
+article.
+  title
+  body
+  copyright
+  license
+  original_url
+  javascript
+  stylesheet
+  section # Where in the TOC it shows up (only for aritcles)
+  collection_details
+  old_articles
+# rails g scaffold article guid:string locale:integer:index preview:boolean section_id:integer title:string body:text copyright:string license_id:integer original_url:string javascript_id:integer stylesheet_id:integer section_id:integer
+# rails g scaffold old_article guid:string locale:integer preview:boolean section_id:integer title:string body:text copyright:string license_id:integer original_url:string javascript_id:integer stylesheet_id:integer section_id:integer article_id:integer
+
+map.
+  title
+  description
+  copyright
+  license
+  original_url
+  full_size_url
+  crop_url # This is the mid-size, March-of-life image.
+  thumbnail_url
+  javascript
+  stylesheet
+  old_maps
+# rails g scaffold map guid:string locale:integer:index preview:boolean title:string description:text copyright:string license_id:integer original_url:string full_size_url:string crop_url:string thumbnail_url:string javascript_id:integer stylesheet_id:integer 
+# rails g scaffold old_map guid:string locale:integer preview:boolean title:string description:text copyright:string license_id:integer original_url:string full_size_url:string crop_url:string thumbnail_url:string javascript_id:integer stylesheet_id:integer map_id:integer
 
 # These guys are exceptions because they don't store most of the media
 trait
-  subject # Polymorphic: either an association or a trait.
+  subject # POLY: either an association (normal data) or a trait (metadata).
   original_predicate_name # We want to store the source's preferred name, here
   predicate # alias #known_uri
   object # Checks value first, then text, then uri.
@@ -110,52 +181,61 @@ trait
     # STRING (in original_units). ...So be careful! Always read value first!
   uri # can be nil
   traits # Metadata.
-  units # Normalized. ENUM
+  units # Normalized. ENUM I18n
   original_units
-  statistical_method # ENUM
-  source
-# trait subject_type:string subject_id:integer original_predicate_name:string known_uri_id:integer value:string text:string uri:string units:integer original_units:string statistical_method:integer source_id:integer
-# NOTE: add_index :traits, [:subject_type, :subject_id]
+  statistical_method
+  lifestage
+# rails g scaffold trait subject_type:string subject_id:integer original_predicate_name:string known_uri_id:integer value:string text:string uri:string units:integer original_units:string statistical_method:string source_id:integer lifestage:string
+# add_index :traits, [:subject_type, :subject_id]
 
 translation
-  of # source medium
-  to # translated medium
-# translation of_medium_id:integer:index to_medium_id:integer
+  of_medium # POLY
+  to_medium # POLY
+# rails g scaffold translation of_medium_type:string of_medium_id:integer  to_medium_type:string to_medium_id:integer
+# add_index :translations, [:of_medium_type, :of_medium_id]
 
 collection_detail.
-  medium
+  medium # POLY
   who
-  url # If "as" is "source", then this would be the link to the source's page.
-  role # Source, photographer, editor, etc, etc... generalized solution. ENUM
-# collection_detail medium_id:integer:index who:string url:string role:integer
+  belongs_to role
+# rails g scaffold collection_detail medium_type:integer:string medium_id:integer:index who:string url:string role_id:integer
+
+# Source, photographer, editor, etc, etc... generalized solution.
+role
+  name # I18n
 
 known_uri.
   of # Unique by locale
   locale
   name
   description
-  position
-# known_uri of:string locale:string name:string description:text position:integer
-
-# TODO - we should generalize the Biomedical terms and Nucleotide Sequence types
+  acts_as_list
+# rails g scaffold known_uri of:string locale:integer:index name:string description:text position:integer
 
 # Items in a TOC
 section.
   name
   acts_as_tree
-  position
-# secion name:string position:integer parent_id:integer
+  acts_as_list
+# rails g scaffold secion name:string position:integer parent_id:integer
+# As per https://github.com/mceachen/closure_tree :
+# rails g migration create_sections_hierarchies 
 
+# TODO: how will we handle the relationships to higher-level taxa?
 association.
-  from # polymorphic: either a synth or a concept
-  to # polymorphic: either a medium or a trait
-  by # polymorphic: source... or ... uhh... LATER it will be user... :\
-  type # ENUM 
-  subtype # ENUM This is used (at least) by names, i.e.: "Ambiguous synonym"
+  # NOTE: in our "read-only" starting state, "from" will ALWAYS be a concept...
+  # it's only once users are added that it can be a synth:
+  from # POLY: either a synth or a concept
+  to # POLY: medium, trait, or name
+  # LATER: These two will allow us to store user-added data (associated "from" a
+  # synth)
+  # LATER: user_site_id 
+  # LATER: user_id
   trusted
   reviewed
   visible
-  overview? # Let's overload this for "preferred" with names.
+  overview?
+  acts_as_list scope: [:from]
   # Scopes:
     by_locale
     overview
@@ -178,4 +258,24 @@ association.
     unreviewed
     trusted
     untrusted
-# association from_type:string from_id:integer to_type:string to_id:integer by_type:string by_id:integer type:integer trusted:boolean reviewed:boolean visible:boolean overview:boolean subtype:integer
+# rails g scaffold association from_type:string from_id:integer to_type:string to_id:integer by_type:string by_id:integer type:integer trusted:boolean reviewed:boolean visible:boolean overview:boolean subtype:integer position:integer
+# add_index :associations, [:from_type, :from_id]
+# add_index :associations, [:to_type, :to_id]
+
+# Grrr. I wish this could be enumerable, but we don't want to block the
+# repository from telling us about a new license...
+license.
+  abbr # i.e. "cc-by-nc"
+  name # i.e. "Creative Commons Attribution Non-commercial" # I18n
+  description
+  icon
+
+# Javascripts and stylesheets are stored on the server, so these tables just
+# point to the script. Note that the EOL Repository *could* tell us about a
+# new script, in which case we'll have to upload it to the server as well as
+# adding an entry here.
+javascript.
+  name
+
+stylesheet.
+  name
