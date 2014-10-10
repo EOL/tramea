@@ -10,17 +10,16 @@ source.
   full_name
   abbr # A really (!) short name, essentially.  :)
   description
-  private_description # Needed?
-  admin_description # Needed?
-  concepts.
-    roots
+  private_notes
+  admin_notes
+  concepts
   # partner - will add this later. For now, don't care.
   icon # Paperclip (this is the original file, which we'll resize to our largest
        # allowable size, then resize again to small with a new name)
   small_icon_url
   url # This is their homepage, which we link to a lot.
   links # There are any other urls.
-# rails g scaffold source name:string:index full_name:string abbr:string description:text icon:attachment url:string small_icon_url:string
+# rails g scaffold source name:string:index full_name:string abbr:string description:text private_notes:text admin_notes:text icon:attachment url:string small_icon_url:string
 
 link.
   belongs_to :source
@@ -31,14 +30,14 @@ link.
 
 # This is ONE source's concept of a collection of data (around a set of names)
 concept.
-  acts_as_tree # And all the methods that come with it...
+  acts_as_tree dependent: :destroy
   source
   original_id # This is the (string) identifier the source gave us that they use
               # internally to refer to this concept.
   associations
 # concept source_id:integer:index parent_id:integer original_id:string
 # As per https://github.com/mceachen/closure_tree :
-# rails g migration create_concepts_hierarchies 
+# rails g migration create_concept_hierarchies 
 
 # synth = SynthesizedConcept, but that's anoying to type and the idea is going
 # to be ubiquitous, so the short name should be adequate.
@@ -220,12 +219,11 @@ known_uri.
 
 # Items in a TOC
 section.
-  name
-  acts_as_tree
-  acts_as_list
-# rails g scaffold secion name:string position:integer parent_id:integer
+  name # I18n
+  acts_as_tree :order
+# rails g scaffold secion name:string sort_order:integer parent_id:integer
 # As per https://github.com/mceachen/closure_tree :
-# rails g migration create_sections_hierarchies 
+# rails g migration create_section_hierarchies 
 
 # TODO: how will we handle the relationships to higher-level taxa?
 association.
