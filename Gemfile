@@ -31,6 +31,9 @@ gem "factory_girl_rails", group: [:development, :test]
 # Better spec output:
 gem "fuubar", group: [:development, :test]
 
+# Translations not in the I18n code:
+gem "globalize"
+
 # Use Haml instead of HTML:
 gem "haml-rails"
 
@@ -48,6 +51,8 @@ gem "mysql2"
 # Icons are handled with:
 gem "paperclip"
 
+# For creating an ERD, which helps with management:
+gem "railroady", group: [:development, :test]
 # Queues:
 gem "resque", require: "resque/server"
 # Specs!

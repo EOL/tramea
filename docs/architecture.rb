@@ -4,6 +4,9 @@
 # NOTE: this is a "read-only" concept of EoL, and doesn't include many of the
 # features that we'll eventually need with users and collections and the like.
 
+# TODO: Check again for I18n. Consider https://github.com/globalize/globalize
+# ...but recall that the more we can translate in YAML, the better!
+
 # This INCLUDES the idea of a "classification." No need to separate them now.
 source.
   name # Intended to be the "short" name throughout the site.
@@ -50,7 +53,7 @@ synth.
 # collection of concepts:
 # rails g scaffold synth 
 
-# This reference is for
+# This reference is for "simple" references, stored only as a string
 literature_reference.
   is_for # POLY: either medium or name
   appears_as # What we want the reference to appear as
@@ -107,7 +110,7 @@ image.
   crop_url # This is the mid-size, March-of-life image.
   thumbnail_url
   old_images
-  collection_details
+  collection_attributions
 # rails g scaffold image guid:string locale:integer:index preview:boolean title:string description:text copyright:string license_id:integer original_url:string full_size_url:string crop_url:string thumbnail_url:string
 # rails g scaffold old_image guid:string locale:integer preview:boolean title:string description:text copyright:string license_id:integer original_url:string full_size_url:string crop_url:string thumbnail_url:string image_id:integer
 
@@ -120,7 +123,7 @@ video.
   url # You'll play this
   javascript
   stylesheet
-  collection_details
+  collection_attributions
   old_videos
 # rails g scaffold video guid:string locale:integer:index preview:boolean title:string description:text copyright:string license_id:integer original_url:string url:string javascript_id:integer stylesheet_id:integer
 # rails g scaffold old_video guid:string locale:integer preview:boolean title:string description:text copyright:string license_id:integer original_url:string url:string javascript_id:integer stylesheet_id:integer video_id:integer
@@ -134,7 +137,7 @@ sound.
   url
   javascript
   stylesheet
-  collection_details
+  collection_attributions
   old_sounds
 # rails g scaffold sound guid:string locale:integer:index preview:boolean title:string description:text copyright:string license_id:integer original_url:string url:string javascript_id:integer stylesheet_id:integer
 # rails g scaffold old_sound guid:string locale:integer preview:boolean title:string description:text copyright:string license_id:integer original_url:string url:string javascript_id:integer stylesheet_id:integer sound_id:integer
@@ -148,7 +151,7 @@ article.
   javascript
   stylesheet
   section # Where in the TOC it shows up (only for aritcles)
-  collection_details
+  collection_attributions
   old_articles
 # rails g scaffold article guid:string locale:integer:index preview:boolean section_id:integer title:string body:text copyright:string license_id:integer original_url:string javascript_id:integer stylesheet_id:integer section_id:integer
 # rails g scaffold old_article guid:string locale:integer preview:boolean section_id:integer title:string body:text copyright:string license_id:integer original_url:string javascript_id:integer stylesheet_id:integer section_id:integer article_id:integer
@@ -195,17 +198,23 @@ translation
 # rails g scaffold translation of_medium_type:string of_medium_id:integer to_medium_type:string to_medium_id:integer
 # add_index :translations, [:of_medium_type, :of_medium_id]
 
-collection_detail.
+collection_attribution.
   medium # POLY
   who
   belongs_to role
-# rails g scaffold collection_detail medium_type:integer:string medium_id:integer:index who:string url:string role_id:integer
+# rails g scaffold collection_attribution medium_type:integer:string medium_id:integer:index who:string url:string role_id:integer
 
 # Source, photographer, editor, etc, etc... generalized solution.
-role
+role.
+  translates :name
   name # I18n
+# rails g scaffold roles
+# NOTE: cannot use #change in migration. Add:
+# Role.create_translation_table! name: :string
+# Role.drop_translation_table!
 
 known_uri.
+  translates :name, :description
   uri # Unique by locale
   locale
   name
@@ -214,8 +223,11 @@ known_uri.
   # the overview.)
   acts_as_list
   has_and_belongs_to_many :sections
-# rails g scaffold known_uri uri:string locale:integer:index name:string description:text position:integer
+# rails g scaffold known_uri uri:string locale:integer:index position:integer
 # rails g migration create_known_uris_sections known_uri_id:integer:index section_id:integer:index
+# NOTE: cannot use #change in migration. Add:
+# KnownUri.create_translation_table! name: :string, description: :text 
+# KnownUri.drop_translation_table!
 
 # Items in a TOC
 section.
