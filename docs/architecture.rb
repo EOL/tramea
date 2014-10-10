@@ -26,7 +26,7 @@ link.
   belongs_to :source
   name # I18n
   url
-  acts_as_list
+  acts_as_list scope: :source
 # rails g scaffold link source_id:integer name:string url:string position:integer
 
 # This is ONE source's concept of a collection of data (around a set of names)
@@ -174,7 +174,9 @@ trait
   subject # POLY: either an association (normal data) or a trait (metadata).
   original_predicate_name # We want to store the source's preferred name, here
   predicate # alias #known_uri
-  object # Checks value first, then text, then uri.
+  def object
+    value || text || uri
+  end
   value # can be nil; Numerical information, but note that it's stored as a
         # string so we don't have to assert type information.
   text # can be nil; if we have a value, THIS WILL BE THE ORIGINAL IMPORTED
@@ -191,7 +193,7 @@ trait
 translation
   of_medium # POLY
   to_medium # POLY
-# rails g scaffold translation of_medium_type:string of_medium_id:integer  to_medium_type:string to_medium_id:integer
+# rails g scaffold translation of_medium_type:string of_medium_id:integer to_medium_type:string to_medium_id:integer
 # add_index :translations, [:of_medium_type, :of_medium_id]
 
 collection_detail.
@@ -205,12 +207,16 @@ role
   name # I18n
 
 known_uri.
-  of # Unique by locale
+  uri # Unique by locale
   locale
   name
   description
+  # NOTE: list has no scope, we want to know the overall priority (for, q.v.,
+  # the overview.)
   acts_as_list
-# rails g scaffold known_uri of:string locale:integer:index name:string description:text position:integer
+  has_and_belongs_to_many :sections
+# rails g scaffold known_uri uri:string locale:integer:index name:string description:text position:integer
+# rails g migration create_known_uris_sections known_uri_id:integer:index section_id:integer:index
 
 # Items in a TOC
 section.
@@ -225,8 +231,8 @@ section.
 association.
   # NOTE: in our "read-only" starting state, "from" will ALWAYS be a concept...
   # it's only once users are added that it can be a synth:
-  from # POLY: either a synth or a concept
-  to # POLY: medium, trait, or name
+  parent # POLY: either a synth or a concept
+  child # POLY: medium, trait, or name
   # LATER: These two will allow us to store user-added data (associated "from" a
   # synth)
   # LATER: user_site_id 
@@ -235,6 +241,7 @@ association.
   reviewed
   visible
   overview?
+  # The list order here is a replacement for "ratings" (which IMO never worked):
   acts_as_list scope: [:from]
   # Scopes:
     by_locale
@@ -258,9 +265,9 @@ association.
     unreviewed
     trusted
     untrusted
-# rails g scaffold association from_type:string from_id:integer to_type:string to_id:integer by_type:string by_id:integer type:integer trusted:boolean reviewed:boolean visible:boolean overview:boolean subtype:integer position:integer
-# add_index :associations, [:from_type, :from_id]
-# add_index :associations, [:to_type, :to_id]
+# rails g scaffold association parent_type:string parent_id:integer child_type:string child_id:integer by_type:string by_id:integer type:integer trusted:boolean reviewed:boolean visible:boolean overview:boolean subtype:integer position:integer
+# add_index :associations, [:parent_type, :parent_id]
+# add_index :associations, [:child_type, :child_id]
 
 # Grrr. I wish this could be enumerable, but we don't want to block the
 # repository from telling us about a new license...
