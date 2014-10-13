@@ -74,12 +74,14 @@ ActiveRecord::Schema.define(version: 20141013174522) do
   create_table "concepts", force: true do |t|
     t.integer  "source_id"
     t.integer  "parent_id"
+    t.integer  "synth_id"
     t.string   "original_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "concepts", ["source_id"], name: "index_concepts_on_source_id", using: :btree
+  add_index "concepts", ["synth_id"], name: "index_concepts_on_synth_id", using: :btree
 
   create_table "images", force: true do |t|
     t.string   "guid"
@@ -315,7 +317,6 @@ ActiveRecord::Schema.define(version: 20141013174522) do
     t.integer  "icon_file_size"
     t.datetime "icon_updated_at"
     t.string   "url"
-    t.string   "small_icon_url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -374,6 +375,8 @@ ActiveRecord::Schema.define(version: 20141013174522) do
     t.string   "string"
     t.integer  "locale"
     t.integer  "position"
+    t.boolean  "show_in_glossary"
+    t.boolean  "important_metadata"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

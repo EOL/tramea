@@ -43,11 +43,10 @@ source.
   admin_notes
   icon # Paperclip (this is the original file, which we'll resize to our largest
        # allowable size, then resize again to small with a new name)
-  small_icon_url
   url # This is their homepage, which we link to a lot.
   concepts
   links # There can be many other urls, each with its own name/title.
-# rails g scaffold source name:string full_name:string abbr:string description:text private_notes:text admin_notes:text icon:attachment url:string small_icon_url:string
+# rails g scaffold source name:string full_name:string abbr:string description:text private_notes:text admin_notes:text icon:attachment url:string
 
 link.
   belongs_to :source
@@ -62,10 +61,11 @@ link.
 concept.
   acts_as_tree dependent: :destroy
   belongs_to :source
+  belongs_to :synth
   original_id # This is the (string) identifier the source gave us that they use
               # internally to refer to this concept.
   associations
-# rails g scaffold concept source_id:integer:index parent_id:integer original_id:string
+# rails g scaffold concept source_id:integer:index parent_id:integer original_id:string synth_id:integer
 # As per https://github.com/mceachen/closure_tree :
 # rails g closure_tree:migration concept
 
@@ -119,8 +119,8 @@ name.
 # THIS IS AN ABSTRACT CLASS: it's implemented by image, video, sound, map, and
 # article.
 class Medium
-  attr_accessor :guid
-  attr_accessor :locale # includes a special string for "scientific" as a language.
+  # Attribute: guid
+  # Attribute: locale # includes a special string for "scientific" as a language.
   # LATER: preview?
   has_many :associations
   has_many :translations
@@ -218,7 +218,6 @@ trait
   object_uri # can be nil
   traits # Metadata.
   units # Normalized. ENUM I18n
-  lifestage
 # rails g scaffold trait subject_type:string subject_id:integer original_predicate_name:string predicate_uri_id:integer value:string text:string object_uri_id:integer units:integer original_units_uri_id:integer
 # add_index :traits, [:subject_type, :subject_id]
 
@@ -231,7 +230,7 @@ translation
 collection_attribution.
   medium # POLY
   who
-  belongs_to role
+  belongs_to :role
 # rails g scaffold collection_attribution medium_type:integer:string medium_id:integer:index who:string url:string role_id:integer
 
 # Source, photographer, editor, etc, etc... generalized solution.
@@ -245,11 +244,15 @@ uri.
   locale
   name
   description
+  # important_metadata will be extracted from metadata and shown in the
+  # predicate column (i.e.: lifestage and statistical methods).
+  important_metadata?
+  show_in_glossary?
   # NOTE: list has no scope, we want to know the overall priority (for, q.v.,
   # the overview.)
   acts_as_list
   has_and_belongs_to_many :sections
-# rails g scaffold uri string:string locale:integer:index position:integer
+# rails g scaffold uri string:string locale:integer:index position:integer show_in_glossary:boolean important_metadata:boolean
 # NOTE: cannot use #change in migration. Add:
 # Uri.create_translation_table! name: :string, description: :text 
 # Uri.drop_translation_table!

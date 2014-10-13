@@ -121,11 +121,13 @@ CREATE TABLE `concepts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `source_id` int(11) DEFAULT NULL,
   `parent_id` int(11) DEFAULT NULL,
+  `synth_id` int(11) DEFAULT NULL,
   `original_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `index_concepts_on_source_id` (`source_id`)
+  KEY `index_concepts_on_source_id` (`source_id`),
+  KEY `index_concepts_on_synth_id` (`synth_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -548,7 +550,6 @@ CREATE TABLE `sources` (
   `icon_file_size` int(11) DEFAULT NULL,
   `icon_updated_at` datetime DEFAULT NULL,
   `url` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `small_icon_url` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -664,6 +665,8 @@ CREATE TABLE `uris` (
   `string` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `locale` int(11) DEFAULT NULL,
   `position` int(11) DEFAULT NULL,
+  `show_in_glossary` tinyint(1) DEFAULT NULL,
+  `important_metadata` tinyint(1) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -707,7 +710,7 @@ CREATE TABLE `videos` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-10-13 14:02:23
+-- Dump completed on 2014-10-13 15:05:25
 INSERT INTO schema_migrations (version) VALUES ('20141013171100');
 
 INSERT INTO schema_migrations (version) VALUES ('20141013171140');

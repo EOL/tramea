@@ -9,7 +9,6 @@ class CreateSources < ActiveRecord::Migration
       t.text :admin_notes
       t.attachment :icon
       t.string :url
-      t.string :small_icon_url
 
       t.timestamps
     end

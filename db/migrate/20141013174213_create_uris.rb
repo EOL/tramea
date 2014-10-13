@@ -4,6 +4,8 @@ class CreateUris < ActiveRecord::Migration
       t.string :string
       t.integer :locale
       t.integer :position
+      t.boolean :show_in_glossary
+      t.boolean :important_metadata
 
       t.timestamps
     end
