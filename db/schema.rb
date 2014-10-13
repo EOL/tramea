@@ -351,8 +351,7 @@ ActiveRecord::Schema.define(version: 20141013190813) do
   end
 
   create_table "traits", force: true do |t|
-    t.string   "subject_type"
-    t.integer  "subject_id"
+    t.integer  "metadata_for_id"
     t.string   "original_predicate_name"
     t.integer  "predicate_uri_id"
     t.string   "value"
@@ -364,7 +363,7 @@ ActiveRecord::Schema.define(version: 20141013190813) do
     t.datetime "updated_at"
   end
 
-  add_index "traits", ["subject_type", "subject_id"], name: "index_traits_on_subject_type_and_subject_id", using: :btree
+  add_index "traits", ["metadata_for_id"], name: "index_traits_on_metadata_for_id", using: :btree
 
   create_table "translations", force: true do |t|
     t.string   "of_medium_type"

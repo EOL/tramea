@@ -11,4 +11,5 @@ class Article < ActiveRecord::Base
 
   has_many :collection_attributions, as: :medium
   has_many :literature_references, as: :parent
+  has_many :old_articles
 end

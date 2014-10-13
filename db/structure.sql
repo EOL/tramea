@@ -628,8 +628,7 @@ DROP TABLE IF EXISTS `traits`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `traits` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `subject_type` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `subject_id` int(11) DEFAULT NULL,
+  `metadata_for_id` int(11) DEFAULT NULL,
   `original_predicate_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `predicate_uri_id` int(11) DEFAULT NULL,
   `value` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -640,7 +639,7 @@ CREATE TABLE `traits` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `index_traits_on_subject_type_and_subject_id` (`subject_type`,`subject_id`)
+  KEY `index_traits_on_metadata_for_id` (`metadata_for_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -742,7 +741,7 @@ CREATE TABLE `videos` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-10-13 15:08:50
+-- Dump completed on 2014-10-13 15:57:31
 INSERT INTO schema_migrations (version) VALUES ('20141013171100');
 
 INSERT INTO schema_migrations (version) VALUES ('20141013171140');

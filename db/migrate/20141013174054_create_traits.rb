@@ -1,8 +1,7 @@
 class CreateTraits < ActiveRecord::Migration
   def change
     create_table :traits do |t|
-      t.string :subject_type
-      t.integer :subject_id
+      t.integer :metadata_for_id
       t.string :original_predicate_name
       t.integer :predicate_uri_id
       t.string :value
@@ -13,6 +12,6 @@ class CreateTraits < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :traits, [:subject_type, :subject_id]
+    add_index :traits, :metadata_for_id
   end
 end
