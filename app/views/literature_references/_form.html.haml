@@ -1,0 +1,19 @@
+= form_for @literature_reference do |f|
+  - if @literature_reference.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@literature_reference.errors.count, "error")} prohibited this literature_reference from being saved:"
+      %ul
+        - @literature_reference.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :parent_type
+    = f.text_field :parent_type
+  .field
+    = f.label :parent_id
+    = f.number_field :parent_id
+  .field
+    = f.label :string
+    = f.text_field :string
+  .actions
+    = f.submit 'Save'

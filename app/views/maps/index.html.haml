@@ -1,0 +1,43 @@
+%h1 Listing maps
+
+%table
+  %tr
+    %th Guid
+    %th Locale
+    %th Preview
+    %th Title
+    %th Description
+    %th Copyright
+    %th License
+    %th Original url
+    %th Full size url
+    %th Crop url
+    %th Thumbnail url
+    %th Javascript
+    %th Stylesheet
+    %th
+    %th
+    %th
+
+  - @maps.each do |map|
+    %tr
+      %td= map.guid
+      %td= map.locale
+      %td= map.preview
+      %td= map.title
+      %td= map.description
+      %td= map.copyright
+      %td= map.license_id
+      %td= map.original_url
+      %td= map.full_size_url
+      %td= map.crop_url
+      %td= map.thumbnail_url
+      %td= map.javascript_id
+      %td= map.stylesheet_id
+      %td= link_to 'Show', map
+      %td= link_to 'Edit', edit_map_path(map)
+      %td= link_to 'Destroy', map, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Map', new_map_path

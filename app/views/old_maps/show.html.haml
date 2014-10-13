@@ -1,0 +1,48 @@
+%p#notice= notice
+
+%p
+  %b Guid:
+  = @old_map.guid
+%p
+  %b Locale:
+  = @old_map.locale
+%p
+  %b Preview:
+  = @old_map.preview
+%p
+  %b Title:
+  = @old_map.title
+%p
+  %b Description:
+  = @old_map.description
+%p
+  %b Copyright:
+  = @old_map.copyright
+%p
+  %b License:
+  = @old_map.license_id
+%p
+  %b Original url:
+  = @old_map.original_url
+%p
+  %b Full size url:
+  = @old_map.full_size_url
+%p
+  %b Crop url:
+  = @old_map.crop_url
+%p
+  %b Thumbnail url:
+  = @old_map.thumbnail_url
+%p
+  %b Javascript:
+  = @old_map.javascript_id
+%p
+  %b Stylesheet:
+  = @old_map.stylesheet_id
+%p
+  %b Map:
+  = @old_map.map_id
+
+= link_to 'Edit', edit_old_map_path(@old_map)
+\|
+= link_to 'Back', old_maps_path

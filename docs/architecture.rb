@@ -12,6 +12,8 @@
 # schedule them for inclusion in the code (or perhaps even dynamically add them
 # somehow, though I worry that might introduce garbage).
 
+# TODO: rails g closure_tree:migration concept  ... I couldn't get this to work.
+# and rails g closure_tree:migration section
 # TODO: run things and build the migrations.
 # TODO: Come up with MySQL queries for converting old data to this schema.
 # TODO: Benchmark some of the expected complex queries...
@@ -45,7 +47,7 @@ source.
   url # This is their homepage, which we link to a lot.
   concepts
   links # There can be many other urls, each with its own name/title.
-# rails g scaffold source name:string:index full_name:string abbr:string description:text private_notes:text admin_notes:text icon:attachment url:string small_icon_url:string
+# rails g scaffold source name:string full_name:string abbr:string description:text private_notes:text admin_notes:text icon:attachment url:string small_icon_url:string
 
 link.
   belongs_to :source
@@ -59,13 +61,13 @@ link.
 # This is ONE source's concept of a collection of data (around a set of names)
 concept.
   acts_as_tree dependent: :destroy
-  belongs_to source
+  belongs_to :source
   original_id # This is the (string) identifier the source gave us that they use
               # internally to refer to this concept.
   associations
-# concept source_id:integer:index parent_id:integer original_id:string
+# rails g scaffold concept source_id:integer:index parent_id:integer original_id:string
 # As per https://github.com/mceachen/closure_tree :
-# rails g migration create_concept_hierarchies 
+# rails g closure_tree:migration concept
 
 # synth = SynthesizedConcept, but that's anoying to type and the idea is going
 # to be ubiquitous, so the short name should be adequate.
@@ -235,7 +237,7 @@ collection_attribution.
 # Source, photographer, editor, etc, etc... generalized solution.
 role.
   name # ENUM
-# rails g scaffold roles name:id
+# rails g scaffold roles name:integer
 
 uri.
   translates :name, :description
@@ -248,10 +250,10 @@ uri.
   acts_as_list
   has_and_belongs_to_many :sections
 # rails g scaffold uri string:string locale:integer:index position:integer
-# rails g migration create_sections_uris uri_id:integer:index section_id:integer:index
 # NOTE: cannot use #change in migration. Add:
 # Uri.create_translation_table! name: :string, description: :text 
 # Uri.drop_translation_table!
+# rails g migration create_sections_uris uri_id:integer:index section_id:integer:index
 
 # Sections are stored as a kind of enumeration. However, each of those IDs also
 # need to have an order and can be nested in a tree. This table handles those
@@ -260,10 +262,10 @@ uri.
 section.
   type # ENUM
   def name ; I18n.t("table_of_contents_sections.#{type}") ; end
-  acts_as_tree :order
-# rails g scaffold secion type:integer sort_order:integer parent_id:integer
+  acts_as_tree order: 'position'
+# rails g scaffold section type:integer position:integer parent_id:integer
 # As per https://github.com/mceachen/closure_tree :
-# rails g migration create_section_hierarchies 
+# rails g closure_tree:migration section
 
 # LATER: These two will allow us to store user-added data (associated "from" a
 # synth)

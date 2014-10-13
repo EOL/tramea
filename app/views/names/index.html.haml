@@ -1,0 +1,25 @@
+%h1 Listing names
+
+%table
+  %tr
+    %th String
+    %th Type
+    %th Locale
+    %th Preview
+    %th
+    %th
+    %th
+
+  - @names.each do |name|
+    %tr
+      %td= name.string
+      %td= name.type
+      %td= name.locale
+      %td= name.preview
+      %td= link_to 'Show', name
+      %td= link_to 'Edit', edit_name_path(name)
+      %td= link_to 'Destroy', name, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Name', new_name_path

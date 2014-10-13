@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Parent type:
+  = @literature_reference.parent_type
+%p
+  %b Parent:
+  = @literature_reference.parent_id
+%p
+  %b String:
+  = @literature_reference.string
+
+= link_to 'Edit', edit_literature_reference_path(@literature_reference)
+\|
+= link_to 'Back', literature_references_path

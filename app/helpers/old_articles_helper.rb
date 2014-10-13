@@ -1,0 +1,2 @@
+module OldArticlesHelper
+end

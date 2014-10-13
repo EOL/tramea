@@ -1,0 +1,39 @@
+%h1 Listing sounds
+
+%table
+  %tr
+    %th Guid
+    %th Locale
+    %th Preview
+    %th Title
+    %th Description
+    %th Copyright
+    %th License
+    %th Original url
+    %th Url
+    %th Javascript
+    %th Stylesheet
+    %th
+    %th
+    %th
+
+  - @sounds.each do |sound|
+    %tr
+      %td= sound.guid
+      %td= sound.locale
+      %td= sound.preview
+      %td= sound.title
+      %td= sound.description
+      %td= sound.copyright
+      %td= sound.license_id
+      %td= sound.original_url
+      %td= sound.url
+      %td= sound.javascript_id
+      %td= sound.stylesheet_id
+      %td= link_to 'Show', sound
+      %td= link_to 'Edit', edit_sound_path(sound)
+      %td= link_to 'Destroy', sound, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Sound', new_sound_path

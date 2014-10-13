@@ -1,0 +1,43 @@
+= form_for @article do |f|
+  - if @article.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@article.errors.count, "error")} prohibited this article from being saved:"
+      %ul
+        - @article.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :guid
+    = f.text_field :guid
+  .field
+    = f.label :locale
+    = f.number_field :locale
+  .field
+    = f.label :preview
+    = f.check_box :preview
+  .field
+    = f.label :section_id
+    = f.number_field :section_id
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :body
+    = f.text_area :body
+  .field
+    = f.label :copyright
+    = f.text_field :copyright
+  .field
+    = f.label :license_id
+    = f.number_field :license_id
+  .field
+    = f.label :original_url
+    = f.text_field :original_url
+  .field
+    = f.label :javascript_id
+    = f.number_field :javascript_id
+  .field
+    = f.label :stylesheet_id
+    = f.number_field :stylesheet_id
+  .actions
+    = f.submit 'Save'

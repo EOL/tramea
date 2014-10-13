@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @appearance.name_id
+%p
+  %b Publication:
+  = @appearance.publication_id
+%p
+  %b Page:
+  = @appearance.page
+%p
+  %b Url snippet:
+  = @appearance.url_snippet
+
+= link_to 'Edit', edit_appearance_path(@appearance)
+\|
+= link_to 'Back', appearances_path

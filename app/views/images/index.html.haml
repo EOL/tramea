@@ -1,0 +1,39 @@
+%h1 Listing images
+
+%table
+  %tr
+    %th Guid
+    %th Locale
+    %th Preview
+    %th Title
+    %th Description
+    %th Copyright
+    %th License
+    %th Original url
+    %th Full size url
+    %th Crop url
+    %th Thumbnail url
+    %th
+    %th
+    %th
+
+  - @images.each do |image|
+    %tr
+      %td= image.guid
+      %td= image.locale
+      %td= image.preview
+      %td= image.title
+      %td= image.description
+      %td= image.copyright
+      %td= image.license_id
+      %td= image.original_url
+      %td= image.full_size_url
+      %td= image.crop_url
+      %td= image.thumbnail_url
+      %td= link_to 'Show', image
+      %td= link_to 'Edit', edit_image_path(image)
+      %td= link_to 'Destroy', image, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Image', new_image_path

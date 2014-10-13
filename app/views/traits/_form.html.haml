@@ -1,0 +1,37 @@
+= form_for @trait do |f|
+  - if @trait.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@trait.errors.count, "error")} prohibited this trait from being saved:"
+      %ul
+        - @trait.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :subject_type
+    = f.text_field :subject_type
+  .field
+    = f.label :subject_id
+    = f.number_field :subject_id
+  .field
+    = f.label :original_predicate_name
+    = f.text_field :original_predicate_name
+  .field
+    = f.label :predicate_uri_id
+    = f.number_field :predicate_uri_id
+  .field
+    = f.label :value
+    = f.text_field :value
+  .field
+    = f.label :text
+    = f.text_field :text
+  .field
+    = f.label :object_uri_id
+    = f.number_field :object_uri_id
+  .field
+    = f.label :units
+    = f.number_field :units
+  .field
+    = f.label :original_units_uri_id
+    = f.number_field :original_units_uri_id
+  .actions
+    = f.submit 'Save'

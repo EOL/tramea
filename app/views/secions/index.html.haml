@@ -1,0 +1,23 @@
+%h1 Listing secions
+
+%table
+  %tr
+    %th Type
+    %th Position
+    %th Parent
+    %th
+    %th
+    %th
+
+  - @secions.each do |secion|
+    %tr
+      %td= secion.type
+      %td= secion.position
+      %td= secion.parent_id
+      %td= link_to 'Show', secion
+      %td= link_to 'Edit', edit_secion_path(secion)
+      %td= link_to 'Destroy', secion, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Secion', new_secion_path

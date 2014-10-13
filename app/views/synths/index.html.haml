@@ -1,0 +1,17 @@
+%h1 Listing synths
+
+%table
+  %tr
+    %th
+    %th
+    %th
+
+  - @synths.each do |synth|
+    %tr
+      %td= link_to 'Show', synth
+      %td= link_to 'Edit', edit_synth_path(synth)
+      %td= link_to 'Destroy', synth, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Synth', new_synth_path

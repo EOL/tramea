@@ -1,4 +1,60 @@
 Rails.application.routes.draw do
+  resources :stylesheets
+
+  resources :javascripts
+
+  resources :licenses
+
+  resources :associations
+
+  resources :secions
+
+  resources :uris
+
+  resources :roles
+
+  resources :collection_attributions
+
+  resources :translations
+
+  resources :traits
+
+  resources :old_maps
+
+  resources :maps
+
+  resources :old_articles
+
+  resources :articles
+
+  resources :old_sounds
+
+  resources :sounds
+
+  resources :old_videos
+
+  resources :videos
+
+  resources :old_images
+
+  resources :images
+
+  resources :names
+
+  resources :publications
+
+  resources :appearances
+
+  resources :literature_references
+
+  resources :synths
+
+  resources :concepts
+
+  resources :links
+
+  resources :sources
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

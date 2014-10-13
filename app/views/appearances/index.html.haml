@@ -1,0 +1,25 @@
+%h1 Listing appearances
+
+%table
+  %tr
+    %th Name
+    %th Publication
+    %th Page
+    %th Url snippet
+    %th
+    %th
+    %th
+
+  - @appearances.each do |appearance|
+    %tr
+      %td= appearance.name_id
+      %td= appearance.publication_id
+      %td= appearance.page
+      %td= appearance.url_snippet
+      %td= link_to 'Show', appearance
+      %td= link_to 'Edit', edit_appearance_path(appearance)
+      %td= link_to 'Destroy', appearance, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Appearance', new_appearance_path

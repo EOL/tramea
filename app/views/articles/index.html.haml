@@ -1,0 +1,39 @@
+%h1 Listing articles
+
+%table
+  %tr
+    %th Guid
+    %th Locale
+    %th Preview
+    %th Section
+    %th Title
+    %th Body
+    %th Copyright
+    %th License
+    %th Original url
+    %th Javascript
+    %th Stylesheet
+    %th
+    %th
+    %th
+
+  - @articles.each do |article|
+    %tr
+      %td= article.guid
+      %td= article.locale
+      %td= article.preview
+      %td= article.section_id
+      %td= article.title
+      %td= article.body
+      %td= article.copyright
+      %td= article.license_id
+      %td= article.original_url
+      %td= article.javascript_id
+      %td= article.stylesheet_id
+      %td= link_to 'Show', article
+      %td= link_to 'Edit', edit_article_path(article)
+      %td= link_to 'Destroy', article, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Article', new_article_path

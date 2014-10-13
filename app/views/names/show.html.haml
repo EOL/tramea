@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b String:
+  = @name.string
+%p
+  %b Type:
+  = @name.type
+%p
+  %b Locale:
+  = @name.locale
+%p
+  %b Preview:
+  = @name.preview
+
+= link_to 'Edit', edit_name_path(@name)
+\|
+= link_to 'Back', names_path

@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @publication.title
+%p
+  %b Url:
+  = @publication.url
+%p
+  %b Appearance url template:
+  = @publication.appearance_url_template
+%p
+  %b Details:
+  = @publication.details
+%p
+  %b Year:
+  = @publication.year
+
+= link_to 'Edit', edit_publication_path(@publication)
+\|
+= link_to 'Back', publications_path

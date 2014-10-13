@@ -1,0 +1,42 @@
+%p#notice= notice
+
+%p
+  %b Guid:
+  = @old_video.guid
+%p
+  %b Locale:
+  = @old_video.locale
+%p
+  %b Preview:
+  = @old_video.preview
+%p
+  %b Title:
+  = @old_video.title
+%p
+  %b Description:
+  = @old_video.description
+%p
+  %b Copyright:
+  = @old_video.copyright
+%p
+  %b License:
+  = @old_video.license_id
+%p
+  %b Original url:
+  = @old_video.original_url
+%p
+  %b Url:
+  = @old_video.url
+%p
+  %b Javascript:
+  = @old_video.javascript_id
+%p
+  %b Stylesheet:
+  = @old_video.stylesheet_id
+%p
+  %b Video:
+  = @old_video.video_id
+
+= link_to 'Edit', edit_old_video_path(@old_video)
+\|
+= link_to 'Back', old_videos_path

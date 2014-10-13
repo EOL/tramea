@@ -1,0 +1,41 @@
+%h1 Listing old_sounds
+
+%table
+  %tr
+    %th Guid
+    %th Locale
+    %th Preview
+    %th Title
+    %th Description
+    %th Copyright
+    %th License
+    %th Original url
+    %th Url
+    %th Javascript
+    %th Stylesheet
+    %th Sound
+    %th
+    %th
+    %th
+
+  - @old_sounds.each do |old_sound|
+    %tr
+      %td= old_sound.guid
+      %td= old_sound.locale
+      %td= old_sound.preview
+      %td= old_sound.title
+      %td= old_sound.description
+      %td= old_sound.copyright
+      %td= old_sound.license_id
+      %td= old_sound.original_url
+      %td= old_sound.url
+      %td= old_sound.javascript_id
+      %td= old_sound.stylesheet_id
+      %td= old_sound.sound_id
+      %td= link_to 'Show', old_sound
+      %td= link_to 'Edit', edit_old_sound_path(old_sound)
+      %td= link_to 'Destroy', old_sound, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Old sound', new_old_sound_path

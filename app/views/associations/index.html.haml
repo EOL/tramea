@@ -1,0 +1,39 @@
+%h1 Listing associations
+
+%table
+  %tr
+    %th Parent type
+    %th Parent
+    %th Child type
+    %th Child
+    %th Trusted
+    %th Reviewed
+    %th Visible
+    %th Overview
+    %th Position
+    %th Rating
+    %th Num ratings
+    %th
+    %th
+    %th
+
+  - @associations.each do |association|
+    %tr
+      %td= association.parent_type
+      %td= association.parent_id
+      %td= association.child_type
+      %td= association.child_id
+      %td= association.trusted
+      %td= association.reviewed
+      %td= association.visible
+      %td= association.overview
+      %td= association.position
+      %td= association.rating
+      %td= association.num_ratings
+      %td= link_to 'Show', association
+      %td= link_to 'Edit', edit_association_path(association)
+      %td= link_to 'Destroy', association, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Association', new_association_path

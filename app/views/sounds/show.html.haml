@@ -1,0 +1,39 @@
+%p#notice= notice
+
+%p
+  %b Guid:
+  = @sound.guid
+%p
+  %b Locale:
+  = @sound.locale
+%p
+  %b Preview:
+  = @sound.preview
+%p
+  %b Title:
+  = @sound.title
+%p
+  %b Description:
+  = @sound.description
+%p
+  %b Copyright:
+  = @sound.copyright
+%p
+  %b License:
+  = @sound.license_id
+%p
+  %b Original url:
+  = @sound.original_url
+%p
+  %b Url:
+  = @sound.url
+%p
+  %b Javascript:
+  = @sound.javascript_id
+%p
+  %b Stylesheet:
+  = @sound.stylesheet_id
+
+= link_to 'Edit', edit_sound_path(@sound)
+\|
+= link_to 'Back', sounds_path

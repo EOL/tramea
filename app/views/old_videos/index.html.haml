@@ -1,0 +1,41 @@
+%h1 Listing old_videos
+
+%table
+  %tr
+    %th Guid
+    %th Locale
+    %th Preview
+    %th Title
+    %th Description
+    %th Copyright
+    %th License
+    %th Original url
+    %th Url
+    %th Javascript
+    %th Stylesheet
+    %th Video
+    %th
+    %th
+    %th
+
+  - @old_videos.each do |old_video|
+    %tr
+      %td= old_video.guid
+      %td= old_video.locale
+      %td= old_video.preview
+      %td= old_video.title
+      %td= old_video.description
+      %td= old_video.copyright
+      %td= old_video.license_id
+      %td= old_video.original_url
+      %td= old_video.url
+      %td= old_video.javascript_id
+      %td= old_video.stylesheet_id
+      %td= old_video.video_id
+      %td= link_to 'Show', old_video
+      %td= link_to 'Edit', edit_old_video_path(old_video)
+      %td= link_to 'Destroy', old_video, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Old video', new_old_video_path

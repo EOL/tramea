@@ -1,0 +1,10 @@
+= form_for @synth do |f|
+  - if @synth.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@synth.errors.count, "error")} prohibited this synth from being saved:"
+      %ul
+        - @synth.errors.full_messages.each do |msg|
+          %li= msg
+
+  .actions
+    = f.submit 'Save'

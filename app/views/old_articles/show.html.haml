@@ -1,0 +1,42 @@
+%p#notice= notice
+
+%p
+  %b Guid:
+  = @old_article.guid
+%p
+  %b Locale:
+  = @old_article.locale
+%p
+  %b Preview:
+  = @old_article.preview
+%p
+  %b Section:
+  = @old_article.section_id
+%p
+  %b Title:
+  = @old_article.title
+%p
+  %b Body:
+  = @old_article.body
+%p
+  %b Copyright:
+  = @old_article.copyright
+%p
+  %b License:
+  = @old_article.license_id
+%p
+  %b Original url:
+  = @old_article.original_url
+%p
+  %b Javascript:
+  = @old_article.javascript_id
+%p
+  %b Stylesheet:
+  = @old_article.stylesheet_id
+%p
+  %b Article:
+  = @old_article.article_id
+
+= link_to 'Edit', edit_old_article_path(@old_article)
+\|
+= link_to 'Back', old_articles_path

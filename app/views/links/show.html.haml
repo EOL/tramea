@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Source:
+  = @link.source_id
+%p
+  %b Name:
+  = @link.name
+%p
+  %b Url:
+  = @link.url
+%p
+  %b Position:
+  = @link.position
+
+= link_to 'Edit', edit_link_path(@link)
+\|
+= link_to 'Back', links_path

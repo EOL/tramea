@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @stylesheet.name
+
+= link_to 'Edit', edit_stylesheet_path(@stylesheet)
+\|
+= link_to 'Back', stylesheets_path

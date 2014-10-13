@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Of medium type:
+  = @translation.of_medium_type
+%p
+  %b Of medium:
+  = @translation.of_medium_id
+%p
+  %b To medium type:
+  = @translation.to_medium_type
+%p
+  %b To medium:
+  = @translation.to_medium_id
+
+= link_to 'Edit', edit_translation_path(@translation)
+\|
+= link_to 'Back', translations_path
