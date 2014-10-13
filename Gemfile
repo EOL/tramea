@@ -20,7 +20,7 @@ gem "byebug", group: [:development, :test]
 
 # Use Capistrano for deployment
 gem "capistrano-rails", group: :development
-# Tree structures:
+# Tree structures (This implements acts_as_tree):
 gem "closure_tree"
 
 # Memcached:

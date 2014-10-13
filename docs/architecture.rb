@@ -4,37 +4,62 @@
 # NOTE: this is a "read-only" concept of EoL, and doesn't include many of the
 # features that we'll eventually need with users and collections and the like.
 
-# TODO: Check again for I18n. Consider https://github.com/globalize/globalize
-# ...but recall that the more we can translate in YAML, the better!
+# NOTE: the "ENUM" fields here are actually somewhat dynamic. ...I'm not sure
+# how to best handle this. I don't want to use globalize to translate them for
+# each row, that's ridiculous. Translations really need to be in the YAML. But
+# when a new value comes in from a source, we DO want to be able to handle that.
+# We'll have to have part of the import process review those additions and
+# schedule them for inclusion in the code (or perhaps even dynamically add them
+# somehow, though I worry that might introduce garbage).
+
+# TODO: run things and build the migrations.
+# TODO: Come up with MySQL queries for converting old data to this schema.
+# TODO: Benchmark some of the expected complex queries...
+# TODO: Develop some basic Solr (or whatever) caching and benchmark that...
+# TODO: Perhaps "Overview" should be its own resource. Imports could
+# automatically add relationships to data this way, and managing the resource
+# would be much cleaner. Nice.
+# TODO: Capture links. (User added links.)
+# TODO: Generalize external resource links (did you start that?)
+
 
 # This INCLUDES the idea of a "classification." No need to separate them now.
+# LATER: relationship to (many) users
+# LATER: contact emails (by type)
+# LATER: auto-vetted status
+# LATER: archived boolean
+# LATER: active boolean (default true)
+# LATER: harvesting schedule
+# LATER: harvesting status
 source.
   name # Intended to be the "short" name throughout the site.
+  # full_name is the long and "proper" name. About half our CPs use this.
   full_name
-  abbr # A really (!) short name, essentially.  :)
+  abbr # A really (!) short name, essentially. i.e.: ITIS, CoL, NCBI...
   description
   private_notes
   admin_notes
-  concepts
-  # partner - will add this later. For now, don't care.
   icon # Paperclip (this is the original file, which we'll resize to our largest
        # allowable size, then resize again to small with a new name)
   small_icon_url
   url # This is their homepage, which we link to a lot.
-  links # There are any other urls.
+  concepts
+  links # There can be many other urls, each with its own name/title.
 # rails g scaffold source name:string:index full_name:string abbr:string description:text private_notes:text admin_notes:text icon:attachment url:string small_icon_url:string
 
 link.
   belongs_to :source
-  name # I18n
-  url
   acts_as_list scope: :source
+  # NOTE: name is not I18n'ed; the source gets to specify these and use their
+  # own language; this is not something that will be seen often, anyway.
+  name 
+  url
 # rails g scaffold link source_id:integer name:string url:string position:integer
 
 # This is ONE source's concept of a collection of data (around a set of names)
 concept.
   acts_as_tree dependent: :destroy
-  source
+  belongs_to source
   original_id # This is the (string) identifier the source gave us that they use
               # internally to refer to this concept.
   associations
@@ -55,10 +80,10 @@ synth.
 
 # This reference is for "simple" references, stored only as a string
 literature_reference.
-  is_for # POLY: either medium or name
-  appears_as # What we want the reference to appear as
-# rails g scaffold literature_reference is_for_type:string is_for_id:integer locale:integer:index appears_as:string
-# add_index :literature_references, [:is_for_type, :is_for_id]
+  parent # POLY: medium or name
+  string # What we want the reference to appear as
+# rails g scaffold literature_reference parent_type:string parent_id:integer string:string
+# add_index :literature_references, [:parent_type, :parent_id]
 
 appearance.
   name
@@ -81,13 +106,13 @@ publication.
 # to avoid that problem.
 name.
   string
-  type # I18n
+  type # ENUM - scientific, synonym, common, parents, Ambiguous synonym, etc...
   locale # Might as well make this nil for scientific names.
   preview?
   appearances # BHL
   literature_references
   associations
-# rails g scaffold name string:string locale:integer:index preview:boolean
+# rails g scaffold name string:string type:integer locale:integer:index preview:boolean
 
 # THIS IS AN ABSTRACT CLASS: it's implemented by image, video, sound, map, and
 # article.
@@ -153,8 +178,13 @@ article.
   section # Where in the TOC it shows up (only for aritcles)
   collection_attributions
   old_articles
-# rails g scaffold article guid:string locale:integer:index preview:boolean section_id:integer title:string body:text copyright:string license_id:integer original_url:string javascript_id:integer stylesheet_id:integer section_id:integer
-# rails g scaffold old_article guid:string locale:integer preview:boolean section_id:integer title:string body:text copyright:string license_id:integer original_url:string javascript_id:integer stylesheet_id:integer section_id:integer article_id:integer
+  def toc
+    # This should essentially be something like select(:section_id).uniq ...
+    # ...and, really, we want this defined on an ActiveRecord::Association for
+    # this class, kind of like a scope, but not...
+  end
+# rails g scaffold article guid:string locale:integer:index preview:boolean section_id:integer title:string body:text copyright:string license_id:integer original_url:string javascript_id:integer stylesheet_id:integer
+# rails g scaffold old_article guid:string locale:integer preview:boolean section_id:integer title:string body:text copyright:string license_id:integer original_url:string javascript_id:integer stylesheet_id:integer article_id:integer
 
 map.
   title
@@ -175,21 +205,19 @@ map.
 trait
   subject # POLY: either an association (normal data) or a trait (metadata).
   original_predicate_name # We want to store the source's preferred name, here
-  predicate # alias #known_uri
+  predicate_uri
   def object
-    value || text || uri
+    value || text || object_uri
   end
   value # can be nil; Numerical information, but note that it's stored as a
         # string so we don't have to assert type information.
   text # can be nil; if we have a value, THIS WILL BE THE ORIGINAL IMPORTED
     # STRING (in original_units). ...So be careful! Always read value first!
-  uri # can be nil
+  object_uri # can be nil
   traits # Metadata.
   units # Normalized. ENUM I18n
-  original_units
-  statistical_method
   lifestage
-# rails g scaffold trait subject_type:string subject_id:integer original_predicate_name:string known_uri_id:integer value:string text:string uri:string units:integer original_units:string statistical_method:string source_id:integer lifestage:string
+# rails g scaffold trait subject_type:string subject_id:integer original_predicate_name:string predicate_uri_id:integer value:string text:string object_uri_id:integer units:integer original_units_uri_id:integer
 # add_index :traits, [:subject_type, :subject_id]
 
 translation
@@ -206,16 +234,12 @@ collection_attribution.
 
 # Source, photographer, editor, etc, etc... generalized solution.
 role.
-  translates :name
-  name # I18n
-# rails g scaffold roles
-# NOTE: cannot use #change in migration. Add:
-# Role.create_translation_table! name: :string
-# Role.drop_translation_table!
+  name # ENUM
+# rails g scaffold roles name:id
 
-known_uri.
+uri.
   translates :name, :description
-  uri # Unique by locale
+  string # alias to_s; Unique by locale
   locale
   name
   description
@@ -223,69 +247,78 @@ known_uri.
   # the overview.)
   acts_as_list
   has_and_belongs_to_many :sections
-# rails g scaffold known_uri uri:string locale:integer:index position:integer
-# rails g migration create_known_uris_sections known_uri_id:integer:index section_id:integer:index
+# rails g scaffold uri string:string locale:integer:index position:integer
+# rails g migration create_sections_uris uri_id:integer:index section_id:integer:index
 # NOTE: cannot use #change in migration. Add:
-# KnownUri.create_translation_table! name: :string, description: :text 
-# KnownUri.drop_translation_table!
+# Uri.create_translation_table! name: :string, description: :text 
+# Uri.drop_translation_table!
 
-# Items in a TOC
+# Sections are stored as a kind of enumeration. However, each of those IDs also
+# need to have an order and can be nested in a tree. This table handles those
+# two aspects of a section; the name is handled in the YAML (though it uses type
+# as a hard-coded string for readability).
 section.
-  name # I18n
+  type # ENUM
+  def name ; I18n.t("table_of_contents_sections.#{type}") ; end
   acts_as_tree :order
-# rails g scaffold secion name:string sort_order:integer parent_id:integer
+# rails g scaffold secion type:integer sort_order:integer parent_id:integer
 # As per https://github.com/mceachen/closure_tree :
 # rails g migration create_section_hierarchies 
 
-# TODO: how will we handle the relationships to higher-level taxa?
+# LATER: These two will allow us to store user-added data (associated "from" a
+# synth)
+# LATER: user_site_id 
+# LATER: user_id
+# NOTE: the relationships to higher-level taxa will need special consideration
+# for denormalization (i.e.: through Solr or neo4j).
 association.
-  # NOTE: in our "read-only" starting state, "from" will ALWAYS be a concept...
+  # NOTE: in our "read-only" starting state, "parent" will ALWAYS be a concept...
   # it's only once users are added that it can be a synth:
   parent # POLY: either a synth or a concept
   child # POLY: medium, trait, or name
-  # LATER: These two will allow us to store user-added data (associated "from" a
-  # synth)
-  # LATER: user_site_id 
-  # LATER: user_id
   trusted
   reviewed
   visible
   overview?
+  # NOTE: rating is *legacy*. Tramea will not allow object ratings, only
+  # ordering:
+  rating
+  # num_ratings will help us display *whether* something was actually rated, and
+  # how many times:
+  num_ratings
   # The list order here is a replacement for "ratings" (which IMO never worked):
-  acts_as_list scope: [:from]
+  acts_as_list scope: [:parent]
   # Scopes:
-    by_locale
-    overview
-    images
-    maps
-    articles.
-      toc # AKA table of contents
-    videos
-    sounds
-    names.
-      by_locale
-      related.
-        parents
-        children
-        common.
-          by_locale
-        synonym
-    visible
-    hidden
-    unreviewed
-    trusted
-    untrusted
-# rails g scaffold association parent_type:string parent_id:integer child_type:string child_id:integer by_type:string by_id:integer type:integer trusted:boolean reviewed:boolean visible:boolean overview:boolean subtype:integer position:integer
+  by_locale
+  overview
+  images
+  maps
+  articles
+  videos
+  sounds
+  names
+  visible
+  hidden
+  unreviewed
+  trusted
+  untrusted
+# rails g scaffold association parent_type:string parent_id:integer child_type:string child_id:integer trusted:boolean reviewed:boolean visible:boolean overview:boolean position:integer rating:float num_ratings:integer
 # add_index :associations, [:parent_type, :parent_id]
 # add_index :associations, [:child_type, :child_id]
 
-# Grrr. I wish this could be enumerable, but we don't want to block the
-# repository from telling us about a new license...
 license.
-  abbr # i.e. "cc-by-nc"
-  name # i.e. "Creative Commons Attribution Non-commercial" # I18n
-  description
+  type # ENUM
   icon
+  def abbr 
+    I18n.t("licenses.#{type}.abbr")
+  end
+  def name
+    I18n.t("licenses.#{type}.name")
+  end
+  def description
+    I18n.t("licenses.#{type}.description")
+  end
+# rails g scaffold license type:integer icon:attachment 
 
 # Javascripts and stylesheets are stored on the server, so these tables just
 # point to the script. Note that the EOL Repository *could* tell us about a
@@ -293,6 +326,8 @@ license.
 # adding an entry here.
 javascript.
   name
+# rails g scaffold javascript name:string
 
 stylesheet.
   name
+# rails g scaffold stylesheet name:string
