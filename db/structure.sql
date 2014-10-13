@@ -111,6 +111,22 @@ CREATE TABLE `collection_attributions` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `concept_hierarchies`
+--
+
+DROP TABLE IF EXISTS `concept_hierarchies`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `concept_hierarchies` (
+  `ancestor_id` int(11) NOT NULL,
+  `descendant_id` int(11) NOT NULL,
+  `generations` int(11) NOT NULL,
+  UNIQUE KEY `anc_desc_idx` (`ancestor_id`,`descendant_id`,`generations`),
+  KEY `desc_idx` (`descendant_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `concepts`
 --
 
@@ -469,6 +485,22 @@ CREATE TABLE `schema_migrations` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `section_hierarchies`
+--
+
+DROP TABLE IF EXISTS `section_hierarchies`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `section_hierarchies` (
+  `ancestor_id` int(11) NOT NULL,
+  `descendant_id` int(11) NOT NULL,
+  `generations` int(11) NOT NULL,
+  UNIQUE KEY `anc_desc_idx` (`ancestor_id`,`descendant_id`,`generations`),
+  KEY `desc_idx` (`descendant_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `sections`
 --
 
@@ -710,7 +742,7 @@ CREATE TABLE `videos` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-10-13 15:05:25
+-- Dump completed on 2014-10-13 15:08:50
 INSERT INTO schema_migrations (version) VALUES ('20141013171100');
 
 INSERT INTO schema_migrations (version) VALUES ('20141013171140');
@@ -768,4 +800,8 @@ INSERT INTO schema_migrations (version) VALUES ('20141013174510');
 INSERT INTO schema_migrations (version) VALUES ('20141013174515');
 
 INSERT INTO schema_migrations (version) VALUES ('20141013174522');
+
+INSERT INTO schema_migrations (version) VALUES ('20141013190800');
+
+INSERT INTO schema_migrations (version) VALUES ('20141013190813');
 

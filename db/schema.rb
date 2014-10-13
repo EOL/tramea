@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141013174522) do
+ActiveRecord::Schema.define(version: 20141013190813) do
 
   create_table "appearances", force: true do |t|
     t.integer  "name_id"
@@ -70,6 +70,15 @@ ActiveRecord::Schema.define(version: 20141013174522) do
   end
 
   add_index "collection_attributions", ["medium_id"], name: "index_collection_attributions_on_medium_id", using: :btree
+
+  create_table "concept_hierarchies", id: false, force: true do |t|
+    t.integer "ancestor_id",   null: false
+    t.integer "descendant_id", null: false
+    t.integer "generations",   null: false
+  end
+
+  add_index "concept_hierarchies", ["ancestor_id", "descendant_id", "generations"], name: "anc_desc_idx", unique: true, using: :btree
+  add_index "concept_hierarchies", ["descendant_id"], name: "desc_idx", using: :btree
 
   create_table "concepts", force: true do |t|
     t.integer  "source_id"
@@ -270,6 +279,15 @@ ActiveRecord::Schema.define(version: 20141013174522) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "section_hierarchies", id: false, force: true do |t|
+    t.integer "ancestor_id",   null: false
+    t.integer "descendant_id", null: false
+    t.integer "generations",   null: false
+  end
+
+  add_index "section_hierarchies", ["ancestor_id", "descendant_id", "generations"], name: "anc_desc_idx", unique: true, using: :btree
+  add_index "section_hierarchies", ["descendant_id"], name: "desc_idx", using: :btree
 
   create_table "sections", force: true do |t|
     t.integer  "type"
