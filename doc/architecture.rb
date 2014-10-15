@@ -12,9 +12,6 @@
 # schedule them for inclusion in the code (or perhaps even dynamically add them
 # somehow, though I worry that might introduce garbage).
 
-# TODO: rails g closure_tree:migration concept  ... I couldn't get this to work.
-# and rails g closure_tree:migration section
-# TODO: run things and build the migrations.
 # TODO: Come up with MySQL queries for converting old data to this schema.
 # TODO: Benchmark some of the expected complex queries...
 # TODO: Develop some basic Solr (or whatever) caching and benchmark that...
@@ -76,6 +73,7 @@ synth.
   concepts
   traits # see the filters from concept, above.
   associations # To media, including names.
+  superceded_by # points to another synth.
 # Yes, there's nothing here except an id. That's because it's just a simple
 # collection of concepts:
 # rails g scaffold synth 

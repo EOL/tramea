@@ -346,6 +346,7 @@ ActiveRecord::Schema.define(version: 20141013190813) do
   end
 
   create_table "synths", force: true do |t|
+    t.integer  "superceded_by_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
