@@ -9,6 +9,7 @@ class CreateAssociations < ActiveRecord::Migration
       t.boolean :reviewed
       t.boolean :visible
       t.boolean :overview
+      t.boolean :original_name
       t.integer :position
       t.float :rating
       t.integer :num_ratings

@@ -2,7 +2,6 @@ class CreateTraits < ActiveRecord::Migration
   def change
     create_table :traits do |t|
       t.integer :metadata_for_id
-      t.string :original_predicate_name
       t.integer :predicate_uri_id
       t.string :value
       t.string :text

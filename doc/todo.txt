@@ -1,0 +1,17 @@
+Every medium needs a bibliographic citation: that’s a reference to where the
+medium itself was actually pulled from.
+
+Ensure sections are related to URIs, not Traits.
+
+Articles (and URIs) have many sections, not one, and ONE of them is “primary.”
+
+…Not sure if we should do that with a one-to-many plus many-to-many or with a
+flag on the join model. Hmmmn. The latter is more error-prone…
+
+literature references apply to all associatables, not just media. NBD…
+
+Add some attribution stuff directly to the translations table.
+
+Rename CollectionAttribution to just “Attribution” …tis enough.
+
+Add a “location” (string) to names. It’s rare, but useful.

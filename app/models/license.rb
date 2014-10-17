@@ -1,4 +1,11 @@
 class License < ActiveRecord::Base
+  has_many :datasets
+  has_many :images
+  has_many :videos
+  has_many :maps
+  has_many :articles
+  has_many :sounds
+
   # TODO: (for many classes, only mentioned here.) We need a way to add enums.
   # ...Namely, when we import things from partners, we *can* get new enumerable
   # values. So we'll need a system--probably a rake task--that actually adds
@@ -7,6 +14,7 @@ class License < ActiveRecord::Base
   # of translations and storing integers in the DB).
   enum type: [:public_domain, :all_right_reserved, :cc, :by_sa, :by_nc,
     :by_nc_sa, :cc_zero, :no_known_restrictions, :na]
+
   # TODO: fix the attachment arguments:
   has_attached_file :icon,
     styles: { :medium => "300x300>", :thumb => "100x100>" },
@@ -15,9 +23,11 @@ class License < ActiveRecord::Base
   def abbr 
     I18n.t("licenses.#{type}.abbr")
   end
+
   def name
     I18n.t("licenses.#{type}.name")
   end
+
   def description
     I18n.t("licenses.#{type}.description")
   end
