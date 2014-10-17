@@ -49,7 +49,7 @@ Rails.application.routes.draw do
 
   resources :synths
 
-  resources :concepts
+  resources :nodes
 
   resources :links
 

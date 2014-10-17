@@ -71,16 +71,16 @@ ActiveRecord::Schema.define(version: 20141013190813) do
 
   add_index "collection_attributions", ["medium_id"], name: "index_collection_attributions_on_medium_id", using: :btree
 
-  create_table "concept_hierarchies", id: false, force: true do |t|
+  create_table "node_hierarchies", id: false, force: true do |t|
     t.integer "ancestor_id",   null: false
     t.integer "descendant_id", null: false
     t.integer "generations",   null: false
   end
 
-  add_index "concept_hierarchies", ["ancestor_id", "descendant_id", "generations"], name: "anc_desc_idx", unique: true, using: :btree
-  add_index "concept_hierarchies", ["descendant_id"], name: "desc_idx", using: :btree
+  add_index "node_hierarchies", ["ancestor_id", "descendant_id", "generations"], name: "anc_desc_idx", unique: true, using: :btree
+  add_index "node_hierarchies", ["descendant_id"], name: "desc_idx", using: :btree
 
-  create_table "concepts", force: true do |t|
+  create_table "nodes", force: true do |t|
     t.integer  "source_id"
     t.integer  "parent_id"
     t.integer  "synth_id"
@@ -89,8 +89,8 @@ ActiveRecord::Schema.define(version: 20141013190813) do
     t.datetime "updated_at"
   end
 
-  add_index "concepts", ["source_id"], name: "index_concepts_on_source_id", using: :btree
-  add_index "concepts", ["synth_id"], name: "index_concepts_on_synth_id", using: :btree
+  add_index "nodes", ["source_id"], name: "index_nodes_on_source_id", using: :btree
+  add_index "nodes", ["synth_id"], name: "index_nodes_on_synth_id", using: :btree
 
   create_table "images", force: true do |t|
     t.string   "guid"

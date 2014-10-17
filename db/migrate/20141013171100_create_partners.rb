@@ -1,6 +1,6 @@
-class CreateSources < ActiveRecord::Migration
+class CreatePartners < ActiveRecord::Migration
   def change
-    create_table :sources do |t|
+    create_table :partners do |t|
       t.string :name
       t.string :full_name
       t.string :abbr

@@ -82,52 +82,52 @@
 <ellipse fill="none" stroke="#fcacc6" cx="1417.89" cy="-325.032" rx="4.00001" ry="4.00001"/>
 <polygon fill="#fcacc6" stroke="#fcacc6" points="1669.65,-271.514 1680.37,-273.837 1674.54,-270.475 1679.43,-269.435 1679.43,-269.435 1679.43,-269.435 1674.54,-270.475 1678.5,-265.033 1669.65,-271.514 1669.65,-271.514"/>
 </g>
-<!-- Concept -->
-<g id="node6" class="node"><title>Concept</title>
+<!-- Node -->
+<g id="node6" class="node"><title>Node</title>
 <ellipse fill="none" stroke="black" cx="1746" cy="-422" rx="39.6558" ry="18"/>
-<text text-anchor="middle" x="1746" y="-417.8" font-family="Times,serif" font-size="14.00">Concept</text>
+<text text-anchor="middle" x="1746" y="-417.8" font-family="Times,serif" font-size="14.00">Node</text>
 </g>
-<!-- Concept&#45;&gt;Association -->
-<g id="edge15" class="edge"><title>Concept&#45;&gt;Association</title>
+<!-- Node&#45;&gt;Association -->
+<g id="edge15" class="edge"><title>Node&#45;&gt;Association</title>
 <path fill="none" stroke="#2fa727" d="M1727.62,-398.875C1718.07,-388.943 1705.58,-378.108 1692,-372 1647.11,-351.805 1512.75,-342.847 1432.79,-339.212"/>
 <ellipse fill="none" stroke="#2fa727" cx="1730.45" cy="-401.95" rx="4.00002" ry="4.00002"/>
 <polygon fill="#2fa727" stroke="#2fa727" points="1432.36,-339.193 1422.57,-334.258 1427.36,-338.973 1422.37,-338.754 1422.37,-338.754 1422.37,-338.754 1427.36,-338.973 1422.17,-343.25 1432.36,-339.193 1432.36,-339.193"/>
 </g>
-<!-- Concept&#45;&gt;Concept -->
-<g id="edge10" class="edge"><title>Concept&#45;&gt;Concept</title>
+<!-- Node&#45;&gt;Node -->
+<g id="edge10" class="edge"><title>Node&#45;&gt;Node</title>
 <path fill="none" stroke="#e58c8d" d="M1793.35,-423.977C1799.51,-423.636 1803.58,-422.977 1803.58,-422 1803.58,-421.15 1800.5,-420.541 1795.65,-420.173"/>
 <ellipse fill="none" stroke="#e58c8d" cx="1789.29" cy="-424.104" rx="4" ry="4"/>
 <polygon fill="#e58c8d" stroke="#e58c8d" points="1795.28,-420.159 1785.47,-415.273 1790.29,-419.964 1785.29,-419.77 1785.29,-419.77 1785.29,-419.77 1790.29,-419.964 1785.12,-424.266 1795.28,-420.159 1795.28,-420.159"/>
 <text text-anchor="middle" x="1826.51" y="-417.8" font-family="Times,serif" font-size="14.00">children</text>
 </g>
-<!-- Concept&#45;&gt;Concept -->
-<g id="edge12" class="edge"><title>Concept&#45;&gt;Concept</title>
+<!-- Node&#45;&gt;Node -->
+<g id="edge12" class="edge"><title>Node&#45;&gt;Node</title>
 <path fill="none" stroke="#15982b" d="M1794.74,-426.355C1822.24,-426.99 1849.45,-425.538 1849.45,-422 1849.45,-418.462 1822.24,-417.01 1794.74,-417.645"/>
 <polygon fill="#15982b" stroke="#15982b" points="1794.64,-426.352 1784.79,-421.529 1789.64,-426.19 1784.65,-426.027 1784.65,-426.027 1784.65,-426.027 1789.64,-426.19 1784.5,-430.525 1794.64,-426.352 1794.64,-426.352"/>
 <polygon fill="#15982b" stroke="#15982b" points="1794.64,-417.648 1784.5,-413.475 1789.64,-417.81 1784.65,-417.973 1784.65,-417.973 1784.65,-417.973 1789.64,-417.81 1784.79,-422.471 1794.64,-417.648 1794.64,-417.648"/>
 <text text-anchor="middle" x="1902.71" y="-417.8" font-family="Times,serif" font-size="14.00">self_and_ancestors</text>
 </g>
-<!-- Concept&#45;&gt;Concept -->
-<g id="edge14" class="edge"><title>Concept&#45;&gt;Concept</title>
+<!-- Node&#45;&gt;Node -->
+<g id="edge14" class="edge"><title>Node&#45;&gt;Node</title>
 <path fill="none" stroke="#a6eef8" d="M1794.99,-427.218C1858.54,-430.383 1955.96,-428.644 1955.96,-422 1955.96,-415.356 1858.54,-413.617 1794.99,-416.782"/>
 <polygon fill="#a6eef8" stroke="#a6eef8" points="1794.69,-427.202 1784.96,-422.151 1789.7,-426.923 1784.71,-426.644 1784.71,-426.644 1784.71,-426.644 1789.7,-426.923 1784.46,-431.137 1794.69,-427.202 1794.69,-427.202"/>
 <polygon fill="#a6eef8" stroke="#a6eef8" points="1794.69,-416.798 1784.46,-412.863 1789.7,-417.077 1784.71,-417.356 1784.71,-417.356 1784.71,-417.356 1789.7,-417.077 1784.96,-421.849 1794.69,-416.798 1794.69,-416.798"/>
 <text text-anchor="middle" x="2017" y="-417.8" font-family="Times,serif" font-size="14.00">self_and_descendants</text>
 </g>
-<!-- ConceptHierarchy -->
-<g id="node31" class="node"><title>ConceptHierarchy</title>
+<!-- NodeHierarchy -->
+<g id="node31" class="node"><title>NodeHierarchy</title>
 <ellipse fill="none" stroke="black" cx="1818" cy="-336" rx="74.8603" ry="18"/>
-<text text-anchor="middle" x="1818" y="-331.8" font-family="Times,serif" font-size="14.00">ConceptHierarchy</text>
+<text text-anchor="middle" x="1818" y="-331.8" font-family="Times,serif" font-size="14.00">NodeHierarchy</text>
 </g>
-<!-- Concept&#45;&gt;ConceptHierarchy -->
-<g id="edge11" class="edge"><title>Concept&#45;&gt;ConceptHierarchy</title>
+<!-- Node&#45;&gt;NodeHierarchy -->
+<g id="edge11" class="edge"><title>Node&#45;&gt;NodeHierarchy</title>
 <path fill="none" stroke="#d76a8a" d="M1791.43,-414.374C1823.69,-408.633 1862.97,-399.166 1873,-386 1881,-375.502 1873.61,-365.506 1861.94,-357.313"/>
 <ellipse fill="none" stroke="#d76a8a" cx="1787.35" cy="-415.076" rx="4.00001" ry="4.00001"/>
 <polygon fill="#d76a8a" stroke="#d76a8a" points="1861.81,-357.229 1855.7,-348.125 1857.56,-354.587 1853.32,-351.945 1853.32,-351.945 1853.32,-351.945 1857.56,-354.587 1850.94,-355.765 1861.81,-357.229 1861.81,-357.229"/>
 <text text-anchor="middle" x="1933.52" y="-374.8" font-family="Times,serif" font-size="14.00">ancestor_hierarchies</text>
 </g>
-<!-- Concept&#45;&gt;ConceptHierarchy -->
-<g id="edge13" class="edge"><title>Concept&#45;&gt;ConceptHierarchy</title>
+<!-- Node&#45;&gt;NodeHierarchy -->
+<g id="edge13" class="edge"><title>Node&#45;&gt;NodeHierarchy</title>
 <path fill="none" stroke="#4f4a79" d="M1735.73,-396.628C1733.82,-388.268 1733.69,-379.211 1738.4,-372 1743.2,-364.64 1749.94,-358.818 1757.48,-354.214"/>
 <ellipse fill="none" stroke="#4f4a79" cx="1736.88" cy="-400.509" rx="4.00001" ry="4.00001"/>
 <polygon fill="#4f4a79" stroke="#4f4a79" points="1757.8,-354.042 1768.74,-353.324 1762.22,-351.696 1766.63,-349.35 1766.63,-349.35 1766.63,-349.35 1762.22,-351.696 1764.52,-345.376 1757.8,-354.042 1757.8,-354.042"/>
@@ -563,8 +563,8 @@
 <ellipse fill="none" stroke="black" cx="1623" cy="-495" rx="34.8285" ry="18"/>
 <text text-anchor="middle" x="1623" y="-490.8" font-family="Times,serif" font-size="14.00">Source</text>
 </g>
-<!-- Source&#45;&gt;Concept -->
-<g id="edge88" class="edge"><title>Source&#45;&gt;Concept</title>
+<!-- Source&#45;&gt;Node -->
+<g id="edge88" class="edge"><title>Source&#45;&gt;Node</title>
 <path fill="none" stroke="#37817b" d="M1652.22,-477.132C1670.59,-466.529 1694.32,-452.831 1713.31,-441.868"/>
 <ellipse fill="none" stroke="#37817b" cx="1648.74" cy="-479.143" rx="4.00002" ry="4.00002"/>
 <polygon fill="#37817b" stroke="#37817b" points="1713.55,-441.73 1724.46,-440.628 1717.88,-439.231 1722.21,-436.731 1722.21,-436.731 1722.21,-436.731 1717.88,-439.231 1719.96,-432.834 1713.55,-441.73 1713.55,-441.73"/>
@@ -639,8 +639,8 @@
 <ellipse fill="none" stroke="#5cf33c" cx="1682.95" cy="-581.076" rx="4.00001" ry="4.00001"/>
 <polygon fill="#5cf33c" stroke="#5cf33c" points="1430.42,-342.588 1420.97,-337.031 1425.45,-342.046 1420.48,-341.505 1420.48,-341.505 1420.48,-341.505 1425.45,-342.046 1419.99,-345.978 1430.42,-342.588 1430.42,-342.588"/>
 </g>
-<!-- Synth&#45;&gt;Concept -->
-<g id="edge101" class="edge"><title>Synth&#45;&gt;Concept</title>
+<!-- Synth&#45;&gt;Node -->
+<g id="edge101" class="edge"><title>Synth&#45;&gt;Node</title>
 <path fill="none" stroke="#86f024" d="M1693.47,-579.212C1695.83,-575.235 1698.11,-571.068 1700,-567 1718.23,-527.788 1732.05,-479.4 1739.58,-449.891"/>
 <ellipse fill="none" stroke="#86f024" cx="1691.29" cy="-582.703" rx="4.00002" ry="4.00002"/>
 <polygon fill="#86f024" stroke="#86f024" points="1739.65,-449.628 1746.44,-441.016 1740.86,-444.777 1742.07,-439.926 1742.07,-439.926 1742.07,-439.926 1740.86,-444.777 1737.71,-438.836 1739.65,-449.628 1739.65,-449.628"/>
@@ -747,8 +747,8 @@
 <g id="edge9" class="edge"><title>ActiveRecord::Base&#45;&gt;CollectionAttribution</title>
 <path fill="none" stroke="black" d="M893.34,-677.879C876.457,-670.363 855.076,-662.108 835,-658 694.739,-629.301 332.74,-660.16 191,-640 135.03,-632.039 69,-660.534 69,-604 69,-604 69,-604 69,-421 69,-352.402 284.314,-338.885 408.793,-336.803"/>
 </g>
-<!-- ActiveRecord::Base&#45;&gt;Concept -->
-<g id="edge16" class="edge"><title>ActiveRecord::Base&#45;&gt;Concept</title>
+<!-- ActiveRecord::Base&#45;&gt;Node -->
+<g id="edge16" class="edge"><title>ActiveRecord::Base&#45;&gt;Node</title>
 <path fill="none" stroke="black" d="M1005.57,-691.988C1197.48,-687.575 1669.25,-671.638 1718,-621 1766.16,-570.979 1756.16,-478.266 1749.48,-440.098"/>
 </g>
 <!-- ActiveRecord::Base&#45;&gt;Image -->

@@ -1,0 +1,23 @@
+%h1 Listing nodes
+
+%table
+  %tr
+    %th Source
+    %th Parent
+    %th Original
+    %th
+    %th
+    %th
+
+  - @nodes.each do |node|
+    %tr
+      %td= node.source_id
+      %td= node.parent_id
+      %td= node.original_id
+      %td= link_to 'Show', node
+      %td= link_to 'Edit', edit_node_path(node)
+      %td= link_to 'Destroy', node, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Node', new_node_path

@@ -111,13 +111,13 @@ CREATE TABLE `collection_attributions` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `concept_hierarchies`
+-- Table structure for table `node_hierarchies`
 --
 
-DROP TABLE IF EXISTS `concept_hierarchies`;
+DROP TABLE IF EXISTS `node_hierarchies`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `concept_hierarchies` (
+CREATE TABLE `node_hierarchies` (
   `ancestor_id` int(11) NOT NULL,
   `descendant_id` int(11) NOT NULL,
   `generations` int(11) NOT NULL,
@@ -127,13 +127,13 @@ CREATE TABLE `concept_hierarchies` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `concepts`
+-- Table structure for table `nodes`
 --
 
-DROP TABLE IF EXISTS `concepts`;
+DROP TABLE IF EXISTS `nodes`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `concepts` (
+CREATE TABLE `nodes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `source_id` int(11) DEFAULT NULL,
   `parent_id` int(11) DEFAULT NULL,
@@ -142,8 +142,8 @@ CREATE TABLE `concepts` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `index_concepts_on_source_id` (`source_id`),
-  KEY `index_concepts_on_synth_id` (`synth_id`)
+  KEY `index_nodes_on_source_id` (`source_id`),
+  KEY `index_nodes_on_synth_id` (`synth_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

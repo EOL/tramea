@@ -1,14 +1,14 @@
 require 'rails_helper'
 
-RSpec.describe "concepts/index", :type => :view do
+RSpec.describe "nodes/index", :type => :view do
   before(:each) do
-    assign(:concepts, [
-      Concept.create!(
+    assign(:nodes, [
+      Node.create!(
         :source_id => 1,
         :parent_id => 2,
         :original_id => "Original"
       ),
-      Concept.create!(
+      Node.create!(
         :source_id => 1,
         :parent_id => 2,
         :original_id => "Original"
@@ -16,7 +16,7 @@ RSpec.describe "concepts/index", :type => :view do
     ])
   end
 
-  it "renders a list of concepts" do
+  it "renders a list of nodes" do
     render
     assert_select "tr>td", :text => 1.to_s, :count => 2
     assert_select "tr>td", :text => 2.to_s, :count => 2

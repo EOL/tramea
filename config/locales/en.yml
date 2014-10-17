@@ -20,4 +20,41 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  # TODO: flesh out the licenses.
+  licenses:
+    public_domain:
+      name:
+      abbr: public domain
+      description:
+    all_right_reserved:
+      name:
+      abbr: all rights reserved
+      description:
+    cc:
+      name:
+      abbr: "cc-by 3.0"
+      description:
+    by_sa:
+      name:
+      abbr: "cc-by-sa 3.0"
+      description:
+    by_nc:
+      name:
+      abbr: "cc-by-nc 3.0"
+      description:
+    by_nc_sa:
+      name:
+      abbr: "cc-by-nc-sa 3.0"
+      description:
+    cc_zero:
+      name:
+      abbr: "cc-zero 1.0"
+      description:
+    no_known_restrictions:
+      name:
+      abbr: "no known copyright restrictions"
+      description:
+    na:
+      name:
+      abbr: "not applicable"
+      description:

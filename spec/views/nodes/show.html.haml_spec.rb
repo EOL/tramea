@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe "concepts/show", :type => :view do
+RSpec.describe "nodes/show", :type => :view do
   before(:each) do
-    @concept = assign(:concept, Concept.create!(
+    @node = assign(:node, Node.create!(
       :source_id => 1,
       :parent_id => 2,
       :original_id => "Original"

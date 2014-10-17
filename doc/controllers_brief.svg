@@ -58,13 +58,13 @@
 <g id="edge4" class="edge"><title>ApplicationController&#45;&gt;CollectionAttributionsController</title>
 <path fill="none" stroke="black" d="M74.9431,7.60151C129.789,-3.79753 209.774,-20.4217 267.279,-32.3734"/>
 </g>
-<!-- ConceptsController -->
-<g id="node7" class="node"><title>ConceptsController</title>
+<!-- NodesController -->
+<g id="node7" class="node"><title>NodesController</title>
 <ellipse fill="none" stroke="black" cx="-419.702" cy="-82.725" rx="79.2385" ry="18"/>
-<text text-anchor="middle" x="-419.702" y="-78.525" font-family="Times,serif" font-size="14.00">ConceptsController</text>
+<text text-anchor="middle" x="-419.702" y="-78.525" font-family="Times,serif" font-size="14.00">NodesController</text>
 </g>
-<!-- ApplicationController&#45;&gt;ConceptsController -->
-<g id="edge5" class="edge"><title>ApplicationController&#45;&gt;ConceptsController</title>
+<!-- ApplicationController&#45;&gt;NodesController -->
+<g id="edge5" class="edge"><title>ApplicationController&#45;&gt;NodesController</title>
 <path fill="none" stroke="black" d="M-44.5616,6.79267C-128.219,-13.1699 -282.534,-49.9933 -364.757,-69.6138"/>
 </g>
 <!-- ImagesController -->

@@ -1,6 +1,5 @@
-class Source < ActiveRecord::Base
-  has_many :concepts
-  has_many :links
+class Partner < ActiveRecord::Base
+  has_many :datasets
 
   # TODO: fix these arguments
   has_attached_file :icon,

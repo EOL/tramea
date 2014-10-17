@@ -132,10 +132,10 @@
 	<text transform="matrix(1 0 0 1 1629.4683 205.3798)" font-family="'Times-Roman'" font-size="13.9984">updated_at :datetime</text>
 </g>
 <g id="node6">
-	<title>Concept</title>
+	<title>Node</title>
 	<path fill="none" stroke="#000000" d="M1525.6-335.5h109c6,0,12-6,12-12v-104c0-6-6-12-12-12h-109c-6,0-12,6-12,12v104
 		C1513.6-341.5,1519.6-335.5,1525.6-335.5"/>
-	<text transform="matrix(1 0 0 1 1556.7935 -448.3041)" font-family="'Times-Roman'" font-size="13.9984">Concept</text>
+	<text transform="matrix(1 0 0 1 1556.7935 -448.3041)" font-family="'Times-Roman'" font-size="13.9984">Node</text>
 	<line fill="none" stroke="#000000" x1="1513.6" y1="-441.5" x2="1646.6" y2="-441.5"/>
 	<text transform="matrix(1 0 0 1 1521.615 -426.307)" font-family="'Times-Roman'" font-size="13.9984">id :integer</text>
 	<text transform="matrix(1 0 0 1 1521.615 -412.308)" font-family="'Times-Roman'" font-size="13.9984">source_id :integer</text>

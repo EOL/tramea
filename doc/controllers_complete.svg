@@ -114,10 +114,10 @@
 <g id="edge4" class="edge"><title>ApplicationController&#45;&gt;CollectionAttributionsController</title>
 <path fill="none" stroke="black" d="M73.8292,-107.93C95.4945,-115.67 119.81,-124.356 143.113,-132.681"/>
 </g>
-<!-- ConceptsController -->
-<g id="node7" class="node"><title>ConceptsController</title>
+<!-- nodesController -->
+<g id="node7" class="node"><title>NodesController</title>
 <path fill="none" stroke="black" d="M-324.904,-49.3736C-324.904,-49.3736 -223.256,-49.3736 -223.256,-49.3736 -217.256,-49.3736 -211.256,-55.3736 -211.256,-61.3736 -211.256,-61.3736 -211.256,-239.374 -211.256,-239.374 -211.256,-245.374 -217.256,-251.374 -223.256,-251.374 -223.256,-251.374 -324.904,-251.374 -324.904,-251.374 -330.904,-251.374 -336.904,-245.374 -336.904,-239.374 -336.904,-239.374 -336.904,-61.3736 -336.904,-61.3736 -336.904,-55.3736 -330.904,-49.3736 -324.904,-49.3736"/>
-<text text-anchor="middle" x="-274.08" y="-236.174" font-family="Times,serif" font-size="14.00">ConceptsController</text>
+<text text-anchor="middle" x="-274.08" y="-236.174" font-family="Times,serif" font-size="14.00">NodesController</text>
 <polyline fill="none" stroke="black" points="-336.904,-229.374 -211.256,-229.374 "/>
 <text text-anchor="start" x="-328.904" y="-214.174" font-family="Times,serif" font-size="14.00">create</text>
 <text text-anchor="start" x="-328.904" y="-200.174" font-family="Times,serif" font-size="14.00">destroy</text>
@@ -129,11 +129,11 @@
 <polyline fill="none" stroke="black" points="-336.904,-123.374 -211.256,-123.374 "/>
 <polyline fill="none" stroke="black" points="-336.904,-99.3736 -211.256,-99.3736 "/>
 <text text-anchor="start" x="-328.904" y="-84.1736" font-family="Times,serif" font-size="14.00">_layout</text>
-<text text-anchor="start" x="-328.904" y="-70.1736" font-family="Times,serif" font-size="14.00">concept_params</text>
-<text text-anchor="start" x="-328.904" y="-56.1736" font-family="Times,serif" font-size="14.00">set_concept</text>
+<text text-anchor="start" x="-328.904" y="-70.1736" font-family="Times,serif" font-size="14.00">node_params</text>
+<text text-anchor="start" x="-328.904" y="-56.1736" font-family="Times,serif" font-size="14.00">set_node</text>
 </g>
-<!-- ApplicationController&#45;&gt;ConceptsController -->
-<g id="edge5" class="edge"><title>ApplicationController&#45;&gt;ConceptsController</title>
+<!-- ApplicationController&#45;&gt;NodesController -->
+<g id="edge5" class="edge"><title>ApplicationController&#45;&gt;NodesController</title>
 <path fill="none" stroke="black" d="M-66.2089,-99.9756C-110.769,-110.779 -167.957,-124.644 -211.067,-135.096"/>
 </g>
 <!-- ImagesController -->
