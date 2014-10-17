@@ -3,7 +3,7 @@
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
 #
-# Note that this schema.rb definition is the authoritative source for your
+# Note that this schema.rb definition is the authoritative partner for your
 # database schema. If you need to create the application database on another
 # system, you should be using db:schema:load, not running all the migrations
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
@@ -81,7 +81,7 @@ ActiveRecord::Schema.define(version: 20141013190813) do
   add_index "node_hierarchies", ["descendant_id"], name: "desc_idx", using: :btree
 
   create_table "nodes", force: true do |t|
-    t.integer  "source_id"
+    t.integer  "partner_id"
     t.integer  "parent_id"
     t.integer  "synth_id"
     t.string   "original_id"
@@ -89,7 +89,7 @@ ActiveRecord::Schema.define(version: 20141013190813) do
     t.datetime "updated_at"
   end
 
-  add_index "nodes", ["source_id"], name: "index_nodes_on_source_id", using: :btree
+  add_index "nodes", ["partner_id"], name: "index_nodes_on_partner_id", using: :btree
   add_index "nodes", ["synth_id"], name: "index_nodes_on_synth_id", using: :btree
 
   create_table "images", force: true do |t|
@@ -127,7 +127,7 @@ ActiveRecord::Schema.define(version: 20141013190813) do
   end
 
   create_table "links", force: true do |t|
-    t.integer  "source_id"
+    t.integer  "partner_id"
     t.string   "name"
     t.string   "url"
     t.integer  "position"
@@ -323,7 +323,7 @@ ActiveRecord::Schema.define(version: 20141013190813) do
 
   add_index "sounds", ["locale"], name: "index_sounds_on_locale", using: :btree
 
-  create_table "sources", force: true do |t|
+  create_table "partners", force: true do |t|
     t.string   "name"
     t.string   "full_name"
     t.string   "abbr"

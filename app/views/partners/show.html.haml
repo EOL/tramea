@@ -1,0 +1,33 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @partner.name
+%p
+  %b Full name:
+  = @partner.full_name
+%p
+  %b Abbr:
+  = @partner.abbr
+%p
+  %b Description:
+  = @partner.description
+%p
+  %b Private notes:
+  = @partner.private_notes
+%p
+  %b Admin notes:
+  = @partner.admin_notes
+%p
+  %b Icon:
+  = @partner.icon
+%p
+  %b Url:
+  = @partner.url
+%p
+  %b Small icon url:
+  = @partner.small_icon_url
+
+= link_to 'Edit', edit_partner_path(@partner)
+\|
+= link_to 'Back', partners_path

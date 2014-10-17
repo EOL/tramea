@@ -4,12 +4,12 @@ RSpec.describe "nodes/index", :type => :view do
   before(:each) do
     assign(:nodes, [
       Node.create!(
-        :source_id => 1,
+        :partner_id => 1,
         :parent_id => 2,
         :original_id => "Original"
       ),
       Node.create!(
-        :source_id => 1,
+        :partner_id => 1,
         :parent_id => 2,
         :original_id => "Original"
       )

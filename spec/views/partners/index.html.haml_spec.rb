@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe "sources/index", :type => :view do
+RSpec.describe "partners/index", :type => :view do
   before(:each) do
-    assign(:sources, [
-      Source.create!(
+    assign(:partners, [
+      Partner.create!(
         :name => "Name",
         :full_name => "Full Name",
         :abbr => "Abbr",
@@ -14,7 +14,7 @@ RSpec.describe "sources/index", :type => :view do
         :url => "Url",
         :small_icon_url => "Small Icon Url"
       ),
-      Source.create!(
+      Partner.create!(
         :name => "Name",
         :full_name => "Full Name",
         :abbr => "Abbr",
@@ -28,7 +28,7 @@ RSpec.describe "sources/index", :type => :view do
     ])
   end
 
-  it "renders a list of sources" do
+  it "renders a list of partners" do
     render
     assert_select "tr>td", :text => "Name".to_s, :count => 2
     assert_select "tr>td", :text => "Full Name".to_s, :count => 2

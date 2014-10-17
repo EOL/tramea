@@ -1,7 +1,7 @@
-class CreateSources < ActiveRecord::Migration
+class CreatePartners < ActiveRecord::Migration
   def change
     create_table :datasets do |t|
-      t.integer :source_id
+      t.integer :partner_id
       t.string :name
       t.string :full_name
       t.string :abbr

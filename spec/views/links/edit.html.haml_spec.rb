@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "links/edit", :type => :view do
   before(:each) do
     @link = assign(:link, Link.create!(
-      :source_id => 1,
+      :partner_id => 1,
       :name => "MyString",
       :url => "MyString",
       :position => 1
@@ -15,7 +15,7 @@ RSpec.describe "links/edit", :type => :view do
 
     assert_select "form[action=?][method=?]", link_path(@link), "post" do
 
-      assert_select "input#link_source_id[name=?]", "link[source_id]"
+      assert_select "input#link_partner_id[name=?]", "link[partner_id]"
 
       assert_select "input#link_name[name=?]", "link[name]"
 

@@ -163,7 +163,7 @@
 <text text-anchor="middle" x="2384.51" y="-1127.3" font-family="Times,serif" font-size="14.00">Node</text>
 <polyline fill="none" stroke="black" points="2318,-1120.5 2451.01,-1120.5 "/>
 <text text-anchor="start" x="2326" y="-1105.3" font-family="Times,serif" font-size="14.00">id :integer</text>
-<text text-anchor="start" x="2326" y="-1091.3" font-family="Times,serif" font-size="14.00">source_id :integer</text>
+<text text-anchor="start" x="2326" y="-1091.3" font-family="Times,serif" font-size="14.00">partner_id :integer</text>
 <text text-anchor="start" x="2326" y="-1077.3" font-family="Times,serif" font-size="14.00">parent_id :integer</text>
 <text text-anchor="start" x="2326" y="-1063.3" font-family="Times,serif" font-size="14.00">synth_id :integer</text>
 <text text-anchor="start" x="2326" y="-1049.3" font-family="Times,serif" font-size="14.00">original_id :string</text>
@@ -514,7 +514,7 @@
 <text text-anchor="middle" x="2194.51" y="-1127.3" font-family="Times,serif" font-size="14.00">Link</text>
 <polyline fill="none" stroke="black" points="2128,-1120.5 2261.01,-1120.5 "/>
 <text text-anchor="start" x="2136" y="-1105.3" font-family="Times,serif" font-size="14.00">id :integer</text>
-<text text-anchor="start" x="2136" y="-1091.3" font-family="Times,serif" font-size="14.00">source_id :integer</text>
+<text text-anchor="start" x="2136" y="-1091.3" font-family="Times,serif" font-size="14.00">partner_id :integer</text>
 <text text-anchor="start" x="2136" y="-1077.3" font-family="Times,serif" font-size="14.00">name :string</text>
 <text text-anchor="start" x="2136" y="-1063.3" font-family="Times,serif" font-size="14.00">url :string</text>
 <text text-anchor="start" x="2136" y="-1049.3" font-family="Times,serif" font-size="14.00">position :integer</text>
@@ -846,10 +846,10 @@
 <ellipse fill="none" stroke="#2ef6be" cx="1280.08" cy="-1290.1" rx="4.00002" ry="4.00002"/>
 <polygon fill="#2ef6be" stroke="#2ef6be" points="1399.88,-854.791 1403.88,-844.581 1399.64,-849.797 1399.39,-844.803 1399.39,-844.803 1399.39,-844.803 1399.64,-849.797 1394.89,-845.024 1399.88,-854.791 1399.88,-854.791"/>
 </g>
-<!-- Source -->
-<g id="node23" class="node"><title>Source</title>
+<!-- Partner -->
+<g id="node23" class="node"><title>Partner</title>
 <path fill="none" stroke="black" d="M2128.45,-1250.5C2128.45,-1250.5 2268.56,-1250.5 2268.56,-1250.5 2274.56,-1250.5 2280.56,-1256.5 2280.56,-1262.5 2280.56,-1262.5 2280.56,-1464.5 2280.56,-1464.5 2280.56,-1470.5 2274.56,-1476.5 2268.56,-1476.5 2268.56,-1476.5 2128.45,-1476.5 2128.45,-1476.5 2122.45,-1476.5 2116.45,-1470.5 2116.45,-1464.5 2116.45,-1464.5 2116.45,-1262.5 2116.45,-1262.5 2116.45,-1256.5 2122.45,-1250.5 2128.45,-1250.5"/>
-<text text-anchor="middle" x="2198.51" y="-1461.3" font-family="Times,serif" font-size="14.00">Source</text>
+<text text-anchor="middle" x="2198.51" y="-1461.3" font-family="Times,serif" font-size="14.00">Partner</text>
 <polyline fill="none" stroke="black" points="2116.45,-1454.5 2280.56,-1454.5 "/>
 <text text-anchor="start" x="2124.45" y="-1439.3" font-family="Times,serif" font-size="14.00">id :integer</text>
 <text text-anchor="start" x="2124.45" y="-1425.3" font-family="Times,serif" font-size="14.00">name :string</text>
@@ -866,14 +866,14 @@
 <text text-anchor="start" x="2124.45" y="-1271.3" font-family="Times,serif" font-size="14.00">created_at :datetime</text>
 <text text-anchor="start" x="2124.45" y="-1257.3" font-family="Times,serif" font-size="14.00">updated_at :datetime</text>
 </g>
-<!-- Source&#45;&gt;Node -->
-<g id="edge88" class="edge"><title>Source&#45;&gt;Node</title>
+<!-- Partner&#45;&gt;Node -->
+<g id="edge88" class="edge"><title>Partner&#45;&gt;Node</title>
 <path fill="none" stroke="#5e9953" d="M2276.81,-1243.36C2297.4,-1212.03 2318.98,-1179.2 2337.36,-1151.23"/>
 <ellipse fill="none" stroke="#5e9953" cx="2274.48" cy="-1246.9" rx="4.00002" ry="4.00002"/>
 <polygon fill="#5e9953" stroke="#5e9953" points="2337.47,-1151.06 2346.72,-1145.18 2340.22,-1146.88 2342.96,-1142.71 2342.96,-1142.71 2342.96,-1142.71 2340.22,-1146.88 2339.2,-1140.23 2337.47,-1151.06 2337.47,-1151.06"/>
 </g>
-<!-- Source&#45;&gt;Link -->
-<g id="edge89" class="edge"><title>Source&#45;&gt;Link</title>
+<!-- Partner&#45;&gt;Link -->
+<g id="edge89" class="edge"><title>Partner&#45;&gt;Link</title>
 <path fill="none" stroke="#501b4a" d="M2196.8,-1242.06C2196.37,-1211.75 2195.93,-1180.12 2195.54,-1152.91"/>
 <ellipse fill="none" stroke="#501b4a" cx="2196.86" cy="-1246.24" rx="4" ry="4"/>
 <polygon fill="#501b4a" stroke="#501b4a" points="2195.54,-1152.7 2199.9,-1142.64 2195.47,-1147.71 2195.4,-1142.71 2195.4,-1142.71 2195.4,-1142.71 2195.47,-1147.71 2190.9,-1142.77 2195.54,-1152.7 2195.54,-1152.7"/>
@@ -957,8 +957,8 @@
 <ellipse fill="none" stroke="#01d4bb" cx="2300.5" cy="-1631.65" rx="4.00002" ry="4.00002"/>
 <polygon fill="#01d4bb" stroke="#01d4bb" points="2376.95,-1152.54 2382.46,-1143.06 2377.47,-1147.56 2377.99,-1142.59 2377.99,-1142.59 2377.99,-1142.59 2377.47,-1147.56 2373.51,-1142.12 2376.95,-1152.54 2376.95,-1152.54"/>
 </g>
-<!-- Synth&#45;&gt;Source -->
-<g id="edge102" class="edge"><title>Synth&#45;&gt;Source</title>
+<!-- Synth&#45;&gt;Partner -->
+<g id="edge102" class="edge"><title>Synth&#45;&gt;Partner</title>
 <path fill="none" stroke="#5f48af" d="M2265.01,-1625.4C2255.67,-1588.77 2242.05,-1535.33 2229.56,-1486.34"/>
 <polygon fill="#5f48af" stroke="#5f48af" points="2265.09,-1625.71 2263.2,-1636.51 2266.32,-1630.55 2267.56,-1635.4 2267.56,-1635.4 2267.56,-1635.4 2266.32,-1630.55 2271.92,-1634.29 2265.09,-1625.71 2265.09,-1625.71"/>
 <polygon fill="#5f48af" stroke="#5f48af" points="2229.55,-1486.3 2231.44,-1475.5 2228.32,-1481.46 2227.08,-1476.61 2227.08,-1476.61 2227.08,-1476.61 2228.32,-1481.46 2222.72,-1477.72 2229.55,-1486.3 2229.55,-1486.3"/>
@@ -1127,8 +1127,8 @@
 <g id="edge87" class="edge"><title>ActiveRecord::Base&#45;&gt;Sound</title>
 <path fill="none" stroke="black" d="M1317.25,-1798.37C1304.34,-1746.36 1264.78,-1587.08 1237.37,-1476.71"/>
 </g>
-<!-- ActiveRecord::Base&#45;&gt;Source -->
-<g id="edge90" class="edge"><title>ActiveRecord::Base&#45;&gt;Source</title>
+<!-- ActiveRecord::Base&#45;&gt;Partner -->
+<g id="edge90" class="edge"><title>ActiveRecord::Base&#45;&gt;Partner</title>
 <path fill="none" stroke="black" d="M1402.69,-1815.28C1591.85,-1814.03 2049.93,-1806.38 2102.51,-1762 2184.01,-1693.19 2202.91,-1568.23 2204.62,-1476.72"/>
 </g>
 <!-- ActiveRecord::Base&#45;&gt;Stylesheet -->

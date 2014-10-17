@@ -488,10 +488,10 @@
 <g id="edge21" class="edge"><title>ApplicationController&#45;&gt;SoundsController</title>
 <path fill="none" stroke="black" d="M-66.2528,-51.2157C-105.745,-33.1304 -155.842,-9.81357 -200.001,11.8862 -233.643,28.4177 -270.875,47.665 -300.788,63.3676"/>
 </g>
-<!-- SourcesController -->
-<g id="node24" class="node"><title>SourcesController</title>
+<!-- PartnersController -->
+<g id="node24" class="node"><title>PartnersController</title>
 <path fill="none" stroke="black" d="M153.201,-320.233C153.201,-320.233 247.07,-320.233 247.07,-320.233 253.07,-320.233 259.07,-326.233 259.07,-332.233 259.07,-332.233 259.07,-510.233 259.07,-510.233 259.07,-516.233 253.07,-522.233 247.07,-522.233 247.07,-522.233 153.201,-522.233 153.201,-522.233 147.201,-522.233 141.201,-516.233 141.201,-510.233 141.201,-510.233 141.201,-332.233 141.201,-332.233 141.201,-326.233 147.201,-320.233 153.201,-320.233"/>
-<text text-anchor="middle" x="200.136" y="-507.033" font-family="Times,serif" font-size="14.00">SourcesController</text>
+<text text-anchor="middle" x="200.136" y="-507.033" font-family="Times,serif" font-size="14.00">PartnersController</text>
 <polyline fill="none" stroke="black" points="141.201,-500.233 259.07,-500.233 "/>
 <text text-anchor="start" x="149.201" y="-485.033" font-family="Times,serif" font-size="14.00">create</text>
 <text text-anchor="start" x="149.201" y="-471.033" font-family="Times,serif" font-size="14.00">destroy</text>
@@ -503,11 +503,11 @@
 <polyline fill="none" stroke="black" points="141.201,-394.233 259.07,-394.233 "/>
 <polyline fill="none" stroke="black" points="141.201,-370.233 259.07,-370.233 "/>
 <text text-anchor="start" x="149.201" y="-355.033" font-family="Times,serif" font-size="14.00">_layout</text>
-<text text-anchor="start" x="149.201" y="-341.033" font-family="Times,serif" font-size="14.00">set_source</text>
-<text text-anchor="start" x="149.201" y="-327.033" font-family="Times,serif" font-size="14.00">source_params</text>
+<text text-anchor="start" x="149.201" y="-341.033" font-family="Times,serif" font-size="14.00">set_partner</text>
+<text text-anchor="start" x="149.201" y="-327.033" font-family="Times,serif" font-size="14.00">partner_params</text>
 </g>
-<!-- ApplicationController&#45;&gt;SourcesController -->
-<g id="edge22" class="edge"><title>ApplicationController&#45;&gt;SourcesController</title>
+<!-- ApplicationController&#45;&gt;PartnersController -->
+<g id="edge22" class="edge"><title>ApplicationController&#45;&gt;PartnersController</title>
 <path fill="none" stroke="black" d="M30.8172,-129.291C59.1516,-178.146 104.688,-256.66 141.404,-319.967"/>
 </g>
 <!-- StylesheetsController -->

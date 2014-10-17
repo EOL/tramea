@@ -211,13 +211,13 @@
 <g id="edge21" class="edge"><title>ApplicationController&#45;&gt;SoundsController</title>
 <path fill="none" stroke="black" d="M-41.1132,34.872C-124.465,57.0575 -283.251,99.3212 -363.855,120.775"/>
 </g>
-<!-- SourcesController -->
-<g id="node24" class="node"><title>SourcesController</title>
+<!-- PartnersController -->
+<g id="node24" class="node"><title>PartnersController</title>
 <ellipse fill="none" stroke="black" cx="161.748" cy="-109.474" rx="74.4103" ry="18"/>
-<text text-anchor="middle" x="161.748" y="-105.274" font-family="Times,serif" font-size="14.00">SourcesController</text>
+<text text-anchor="middle" x="161.748" y="-105.274" font-family="Times,serif" font-size="14.00">PartnersController</text>
 </g>
-<!-- ApplicationController&#45;&gt;SourcesController -->
-<g id="edge22" class="edge"><title>ApplicationController&#45;&gt;SourcesController</title>
+<!-- ApplicationController&#45;&gt;PartnersController -->
+<g id="edge22" class="edge"><title>ApplicationController&#45;&gt;PartnersController</title>
 <path fill="none" stroke="black" d="M32.9589,2.9713C61.3709,-21.8351 113.016,-66.9266 141.514,-91.8076"/>
 </g>
 <!-- StylesheetsController -->

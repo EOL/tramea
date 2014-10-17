@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :link do
-    source_id 1
+    partner_id 1
     name "MyString"
     url "MyString"
     position 1

@@ -4,13 +4,13 @@ RSpec.describe "links/index", :type => :view do
   before(:each) do
     assign(:links, [
       Link.create!(
-        :source_id => 1,
+        :partner_id => 1,
         :name => "Name",
         :url => "Url",
         :position => 2
       ),
       Link.create!(
-        :source_id => 1,
+        :partner_id => 1,
         :name => "Name",
         :url => "Url",
         :position => 2

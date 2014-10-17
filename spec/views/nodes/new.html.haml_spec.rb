@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "nodes/new", :type => :view do
   before(:each) do
     assign(:node, Node.new(
-      :source_id => 1,
+      :partner_id => 1,
       :parent_id => 1,
       :original_id => "MyString"
     ))
@@ -14,7 +14,7 @@ RSpec.describe "nodes/new", :type => :view do
 
     assert_select "form[action=?][method=?]", nodes_path, "post" do
 
-      assert_select "input#node_source_id[name=?]", "node[source_id]"
+      assert_select "input#node_partner_id[name=?]", "node[partner_id]"
 
       assert_select "input#node_parent_id[name=?]", "node[parent_id]"
 

@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :node do
-    source_id 1
+    partner_id 1
     parent_id 1
     original_id "MyString"
   end

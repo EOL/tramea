@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe "sources/show", :type => :view do
+RSpec.describe "partners/show", :type => :view do
   before(:each) do
-    @source = assign(:source, Source.create!(
+    @partner = assign(:partner, Partner.create!(
       :name => "Name",
       :full_name => "Full Name",
       :abbr => "Abbr",

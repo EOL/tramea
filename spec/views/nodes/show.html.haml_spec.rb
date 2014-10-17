@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "nodes/show", :type => :view do
   before(:each) do
     @node = assign(:node, Node.create!(
-      :source_id => 1,
+      :partner_id => 1,
       :parent_id => 2,
       :original_id => "Original"
     ))

@@ -138,7 +138,7 @@
 	<text transform="matrix(1 0 0 1 1556.7935 -448.3041)" font-family="'Times-Roman'" font-size="13.9984">Node</text>
 	<line fill="none" stroke="#000000" x1="1513.6" y1="-441.5" x2="1646.6" y2="-441.5"/>
 	<text transform="matrix(1 0 0 1 1521.615 -426.307)" font-family="'Times-Roman'" font-size="13.9984">id :integer</text>
-	<text transform="matrix(1 0 0 1 1521.615 -412.308)" font-family="'Times-Roman'" font-size="13.9984">source_id :integer</text>
+	<text transform="matrix(1 0 0 1 1521.615 -412.308)" font-family="'Times-Roman'" font-size="13.9984">partner_id :integer</text>
 	<text transform="matrix(1 0 0 1 1521.615 -398.3099)" font-family="'Times-Roman'" font-size="13.9984">parent_id :integer</text>
 	<text transform="matrix(1 0 0 1 1521.615 -384.3119)" font-family="'Times-Roman'" font-size="13.9984">synth_id :integer</text>
 	<text transform="matrix(1 0 0 1 1521.615 -370.3129)" font-family="'Times-Roman'" font-size="13.9984">original_id :string</text>
@@ -264,7 +264,7 @@
 	<text transform="matrix(1 0 0 1 1310.4243 -137.1808)" font-family="'Times-Roman'" font-size="13.9984">Link</text>
 	<line fill="none" stroke="#000000" x1="1257.1" y1="-130.4" x2="1390.1" y2="-130.4"/>
 	<text transform="matrix(1 0 0 1 1265.1399 -115.1838)" font-family="'Times-Roman'" font-size="13.9984">id :integer</text>
-	<text transform="matrix(1 0 0 1 1265.1399 -101.1848)" font-family="'Times-Roman'" font-size="13.9984">source_id :integer</text>
+	<text transform="matrix(1 0 0 1 1265.1399 -101.1848)" font-family="'Times-Roman'" font-size="13.9984">partner_id :integer</text>
 	<text transform="matrix(1 0 0 1 1265.1399 -87.1867)" font-family="'Times-Roman'" font-size="13.9984">name :string</text>
 	<text transform="matrix(1 0 0 1 1265.1399 -73.1887)" font-family="'Times-Roman'" font-size="13.9984">url :string</text>
 	<text transform="matrix(1 0 0 1 1265.1399 -59.1896)" font-family="'Times-Roman'" font-size="13.9984">position :integer</text>
@@ -341,10 +341,10 @@
 	<text transform="matrix(1 0 0 1 1576.8474 530.7434)" font-family="'Times-Roman'" font-size="13.9984">updated_at :datetime</text>
 </g>
 <g id="node23">
-	<title>Source</title>
+	<title>Partner</title>
 	<path fill="none" stroke="#000000" d="M1269.1-237.3h140.1c6,0,12-6,12-12v-202c0-6-6-12-12-12h-140.1c-6,0-12,6-12,12v202
 		C1257.1-243.3,1263.1-237.3,1269.1-237.3"/>
-	<text transform="matrix(1 0 0 1 1319.7561 -448.0374)" font-family="'Times-Roman'" font-size="13.9984">Source</text>
+	<text transform="matrix(1 0 0 1 1319.7561 -448.0374)" font-family="'Times-Roman'" font-size="13.9984">Partner</text>
 	<line fill="none" stroke="#000000" x1="1257.1" y1="-441.2" x2="1421.2" y2="-441.2"/>
 	<text transform="matrix(1 0 0 1 1265.1399 -426.0403)" font-family="'Times-Roman'" font-size="13.9984">id :integer</text>
 	<text transform="matrix(1 0 0 1 1265.1399 -412.0413)" font-family="'Times-Roman'" font-size="13.9984">name :string</text>

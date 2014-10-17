@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "links/show", :type => :view do
   before(:each) do
     @link = assign(:link, Link.create!(
-      :source_id => 1,
+      :partner_id => 1,
       :name => "Name",
       :url => "Url",
       :position => 2

@@ -1,59 +1,59 @@
 Rails.application.routes.draw do
-  resources :stylesheets
+  repartners :stylesheets
 
-  resources :javascripts
+  repartners :javascripts
 
-  resources :licenses
+  repartners :licenses
 
-  resources :associations
+  repartners :associations
 
-  resources :secions
+  repartners :secions
 
-  resources :uris
+  repartners :uris
 
-  resources :roles
+  repartners :roles
 
-  resources :collection_attributions
+  repartners :collection_attributions
 
-  resources :translations
+  repartners :translations
 
-  resources :traits
+  repartners :traits
 
-  resources :old_maps
+  repartners :old_maps
 
-  resources :maps
+  repartners :maps
 
-  resources :old_articles
+  repartners :old_articles
 
-  resources :articles
+  repartners :articles
 
-  resources :old_sounds
+  repartners :old_sounds
 
-  resources :sounds
+  repartners :sounds
 
-  resources :old_videos
+  repartners :old_videos
 
-  resources :videos
+  repartners :videos
 
-  resources :old_images
+  repartners :old_images
 
-  resources :images
+  repartners :images
 
-  resources :names
+  repartners :names
 
-  resources :publications
+  repartners :publications
 
-  resources :appearances
+  repartners :appearances
 
-  resources :literature_references
+  repartners :literature_references
 
-  resources :synths
+  repartners :synths
 
-  resources :nodes
+  repartners :nodes
 
-  resources :links
+  repartners :links
 
-  resources :sources
+  repartners :partners
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -67,11 +67,11 @@ Rails.application.routes.draw do
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
-  # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+  # Example repartner route (maps HTTP verbs to controller actions automatically):
+  #   repartners :products
 
-  # Example resource route with options:
-  #   resources :products do
+  # Example repartner route with options:
+  #   repartners :products do
   #     member do
   #       get 'short'
   #       post 'toggle'
@@ -82,31 +82,31 @@ Rails.application.routes.draw do
   #     end
   #   end
 
-  # Example resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
+  # Example repartner route with sub-repartners:
+  #   repartners :products do
+  #     repartners :comments, :sales
+  #     repartner :seller
   #   end
 
-  # Example resource route with more complex sub-resources:
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
+  # Example repartner route with more complex sub-repartners:
+  #   repartners :products do
+  #     repartners :comments
+  #     repartners :sales do
   #       get 'recent', on: :collection
   #     end
   #   end
 
-  # Example resource route with concerns:
+  # Example repartner route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
   #   end
-  #   resources :posts, concerns: :toggleable
-  #   resources :photos, concerns: :toggleable
+  #   repartners :posts, concerns: :toggleable
+  #   repartners :photos, concerns: :toggleable
 
-  # Example resource route within a namespace:
+  # Example repartner route within a namespace:
   #   namespace :admin do
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
+  #     repartners :products
   #   end
 end

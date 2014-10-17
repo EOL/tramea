@@ -135,14 +135,14 @@ DROP TABLE IF EXISTS `nodes`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `nodes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `source_id` int(11) DEFAULT NULL,
+  `partner_id` int(11) DEFAULT NULL,
   `parent_id` int(11) DEFAULT NULL,
   `synth_id` int(11) DEFAULT NULL,
   `original_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `index_nodes_on_source_id` (`source_id`),
+  KEY `index_nodes_on_partner_id` (`partner_id`),
   KEY `index_nodes_on_synth_id` (`synth_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -219,7 +219,7 @@ DROP TABLE IF EXISTS `links`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `links` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `source_id` int(11) DEFAULT NULL,
+  `partner_id` int(11) DEFAULT NULL,
   `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `url` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `position` int(11) DEFAULT NULL,
@@ -563,13 +563,13 @@ CREATE TABLE `sounds` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `sources`
+-- Table structure for table `partners`
 --
 
-DROP TABLE IF EXISTS `sources`;
+DROP TABLE IF EXISTS `partners`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `sources` (
+CREATE TABLE `partners` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `full_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,

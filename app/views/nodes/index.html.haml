@@ -2,7 +2,7 @@
 
 %table
   %tr
-    %th Source
+    %th Partner
     %th Parent
     %th Original
     %th
@@ -11,7 +11,7 @@
 
   - @nodes.each do |node|
     %tr
-      %td= node.source_id
+      %td= node.partner_id
       %td= node.parent_id
       %td= node.original_id
       %td= link_to 'Show', node

@@ -558,19 +558,19 @@
 <ellipse fill="none" stroke="#8d7804" cx="888.856" cy="-481.495" rx="4.00002" ry="4.00002"/>
 <polygon fill="#8d7804" stroke="#8d7804" points="949.611,-363.933 953.148,-353.554 949.139,-358.955 948.668,-353.978 948.668,-353.978 948.668,-353.978 949.139,-358.955 944.188,-354.402 949.611,-363.933 949.611,-363.933"/>
 </g>
-<!-- Source -->
-<g id="node23" class="node"><title>Source</title>
+<!-- Partner -->
+<g id="node23" class="node"><title>Partner</title>
 <ellipse fill="none" stroke="black" cx="1623" cy="-495" rx="34.8285" ry="18"/>
-<text text-anchor="middle" x="1623" y="-490.8" font-family="Times,serif" font-size="14.00">Source</text>
+<text text-anchor="middle" x="1623" y="-490.8" font-family="Times,serif" font-size="14.00">Partner</text>
 </g>
-<!-- Source&#45;&gt;Node -->
-<g id="edge88" class="edge"><title>Source&#45;&gt;Node</title>
+<!-- Partner&#45;&gt;Node -->
+<g id="edge88" class="edge"><title>Partner&#45;&gt;Node</title>
 <path fill="none" stroke="#37817b" d="M1652.22,-477.132C1670.59,-466.529 1694.32,-452.831 1713.31,-441.868"/>
 <ellipse fill="none" stroke="#37817b" cx="1648.74" cy="-479.143" rx="4.00002" ry="4.00002"/>
 <polygon fill="#37817b" stroke="#37817b" points="1713.55,-441.73 1724.46,-440.628 1717.88,-439.231 1722.21,-436.731 1722.21,-436.731 1722.21,-436.731 1717.88,-439.231 1719.96,-432.834 1713.55,-441.73 1713.55,-441.73"/>
 </g>
-<!-- Source&#45;&gt;Link -->
-<g id="edge89" class="edge"><title>Source&#45;&gt;Link</title>
+<!-- Partner&#45;&gt;Link -->
+<g id="edge89" class="edge"><title>Partner&#45;&gt;Link</title>
 <path fill="none" stroke="#77c0ce" d="M1623,-468.791C1623,-462.832 1623,-456.45 1623,-450.399"/>
 <ellipse fill="none" stroke="#77c0ce" cx="1623" cy="-472.813" rx="4" ry="4"/>
 <polygon fill="#77c0ce" stroke="#77c0ce" points="1623,-450.029 1627.5,-440.029 1623,-445.029 1623,-440.029 1623,-440.029 1623,-440.029 1623,-445.029 1618.5,-440.029 1623,-450.029 1623,-450.029"/>
@@ -645,8 +645,8 @@
 <ellipse fill="none" stroke="#86f024" cx="1691.29" cy="-582.703" rx="4.00002" ry="4.00002"/>
 <polygon fill="#86f024" stroke="#86f024" points="1739.65,-449.628 1746.44,-441.016 1740.86,-444.777 1742.07,-439.926 1742.07,-439.926 1742.07,-439.926 1740.86,-444.777 1737.71,-438.836 1739.65,-449.628 1739.65,-449.628"/>
 </g>
-<!-- Synth&#45;&gt;Source -->
-<g id="edge102" class="edge"><title>Synth&#45;&gt;Source</title>
+<!-- Synth&#45;&gt;Partner -->
+<g id="edge102" class="edge"><title>Synth&#45;&gt;Partner</title>
 <path fill="none" stroke="#aaad02" d="M1664.68,-576.321C1656.06,-559.707 1644.88,-538.162 1636.27,-521.569"/>
 <polygon fill="#aaad02" stroke="#aaad02" points="1664.8,-576.561 1665.41,-587.51 1667.1,-580.999 1669.41,-585.438 1669.41,-585.438 1669.41,-585.438 1667.1,-580.999 1673.4,-583.365 1664.8,-576.561 1664.8,-576.561"/>
 <polygon fill="#aaad02" stroke="#aaad02" points="1636.14,-521.322 1635.53,-510.374 1633.84,-516.884 1631.53,-512.446 1631.53,-512.446 1631.53,-512.446 1633.84,-516.884 1627.54,-514.519 1636.14,-521.322 1636.14,-521.322"/>
@@ -815,8 +815,8 @@
 <g id="edge87" class="edge"><title>ActiveRecord::Base&#45;&gt;Sound</title>
 <path fill="none" stroke="black" d="M919.345,-676.319C907.022,-638.873 877.865,-550.282 865.595,-513.001"/>
 </g>
-<!-- ActiveRecord::Base&#45;&gt;Source -->
-<g id="edge90" class="edge"><title>ActiveRecord::Base&#45;&gt;Source</title>
+<!-- ActiveRecord::Base&#45;&gt;Partner -->
+<g id="edge90" class="edge"><title>ActiveRecord::Base&#45;&gt;Partner</title>
 <path fill="none" stroke="black" d="M1005.53,-691.742C1169.44,-687.468 1530.1,-674.249 1574,-640 1613.77,-608.974 1621.47,-544.086 1622.82,-513.136"/>
 </g>
 <!-- ActiveRecord::Base&#45;&gt;Stylesheet -->
