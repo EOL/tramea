@@ -73,7 +73,6 @@ synth.
   concepts
   traits # see the filters from concept, above.
   associations # To media, including names.
-  superceded_by # points to another synth.
 # Yes, there's nothing here except an id. That's because it's just a simple
 # collection of concepts:
 # rails g scaffold synth 
@@ -203,7 +202,7 @@ map.
 
 # These guys are exceptions because they don't store most of the media
 trait
-  subject # POLY: either an association (normal data) or a trait (metadata).
+  metadata_for # nil for primary data
   original_predicate_name # We want to store the source's preferred name, here
   predicate_uri
   def object
@@ -216,7 +215,7 @@ trait
   object_uri # can be nil
   traits # Metadata.
   units # Normalized. ENUM I18n
-# rails g scaffold trait subject_type:string subject_id:integer original_predicate_name:string predicate_uri_id:integer value:string text:string object_uri_id:integer units:integer original_units_uri_id:integer
+# rails g scaffold trait metadata_for_id:integer original_predicate_name:string predicate_uri_id:integer value:string text:string object_uri_id:integer units:integer original_units_uri_id:integer
 # add_index :traits, [:subject_type, :subject_id]
 
 translation
