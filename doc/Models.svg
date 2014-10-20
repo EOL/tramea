@@ -71,10 +71,10 @@
 	<text transform="matrix(1 0 0 1 2227.7214 -170.9369)" font-family="'Times-Roman'" font-size="13.9984">updated_at :datetime</text>
 </g>
 <g id="node5">
-	<title>CollectionAttribution</title>
+	<title>Attribution</title>
 	<path fill="none" stroke="#000000" d="M2361.3,537.5h115.2c6,0,12-6,12-12v-118c0-6-6-12-12-12h-115.2c-6,0-12,6-12,12v118
 		C2349.3,531.5,2355.3,537.5,2361.3,537.5"/>
-	<text transform="matrix(1 0 0 1 2358.6243 410.7579)" font-family="'Times-Roman'" font-size="13.9984">CollectionAttribution</text>
+	<text transform="matrix(1 0 0 1 2358.6243 410.7579)" font-family="'Times-Roman'" font-size="13.9984">Attribution</text>
 	<line fill="none" stroke="#000000" x1="2349.3" y1="417.6" x2="2488.5" y2="417.6"/>
 	<text transform="matrix(1 0 0 1 2357.2747 432.755)" font-family="'Times-Roman'" font-size="13.9984">id :integer</text>
 	<text transform="matrix(1 0 0 1 2357.2747 446.754)" font-family="'Times-Roman'" font-size="13.9984">medium_type :integer</text>
@@ -311,7 +311,7 @@
 	<text transform="matrix(1 0 0 1 2360.3914 651.0803)" font-family="'Times-Roman'" font-size="13.9984">created_at :datetime</text>
 	<text transform="matrix(1 0 0 1 2360.3914 665.0789)" font-family="'Times-Roman'" font-size="13.9984">updated_at :datetime</text>
 </g>
-<title>Role-&gt;CollectionAttribution</title>
+<title>Role-&gt;Attribution</title>
 <g id="node21">
 	<title>Section</title>
 	<path fill="none" stroke="#000000" d="M1797.7,509.5h109c6,0,12-6,12-12v-90c0-6-6-12-12-12h-109c-6,0-12,6-12,12v90

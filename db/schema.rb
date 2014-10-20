@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 20141013190813) do
   add_index "associations", ["child_type", "child_id"], name: "index_associations_on_child_type_and_child_id", using: :btree
   add_index "associations", ["parent_type", "parent_id"], name: "index_associations_on_parent_type_and_parent_id", using: :btree
 
-  create_table "collection_attributions", force: true do |t|
+  create_table "attributions", force: true do |t|
     t.integer  "medium_type"
     t.integer  "medium_id"
     t.string   "who"
@@ -69,7 +69,7 @@ ActiveRecord::Schema.define(version: 20141013190813) do
     t.datetime "updated_at"
   end
 
-  add_index "collection_attributions", ["medium_id"], name: "index_collection_attributions_on_medium_id", using: :btree
+  add_index "attributions", ["medium_id"], name: "index_attributions_on_medium_id", using: :btree
 
   create_table "node_hierarchies", id: false, force: true do |t|
     t.integer "ancestor_id",   null: false

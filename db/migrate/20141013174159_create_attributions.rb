@@ -1,6 +1,6 @@
-class CreateCollectionAttributions < ActiveRecord::Migration
+class CreateAttributions < ActiveRecord::Migration
   def change
-    create_table :collection_attributions do |t|
+    create_table :attributions do |t|
       t.integer :medium_type
       t.integer :medium_id
       t.string :who
@@ -9,6 +9,6 @@ class CreateCollectionAttributions < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :collection_attributions, :medium_id
+    add_index :attributions, :medium_id
   end
 end

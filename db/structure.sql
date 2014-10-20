@@ -90,13 +90,13 @@ CREATE TABLE `associations` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `collection_attributions`
+-- Table structure for table `attributions`
 --
 
-DROP TABLE IF EXISTS `collection_attributions`;
+DROP TABLE IF EXISTS `attributions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `collection_attributions` (
+CREATE TABLE `attributions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `medium_type` int(11) DEFAULT NULL,
   `medium_id` int(11) DEFAULT NULL,
@@ -106,7 +106,7 @@ CREATE TABLE `collection_attributions` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `index_collection_attributions_on_medium_id` (`medium_id`)
+  KEY `index_attributions_on_medium_id` (`medium_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

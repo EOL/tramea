@@ -38,13 +38,13 @@
 <ellipse fill="none" stroke="#733334" cx="461.461" cy="-412.495" rx="4.00001" ry="4.00001"/>
 <polygon fill="#733334" stroke="#733334" points="1309.3,-338.498 1319.49,-342.547 1314.29,-338.275 1319.29,-338.052 1319.29,-338.052 1319.29,-338.052 1314.29,-338.275 1319.09,-333.556 1309.3,-338.498 1309.3,-338.498"/>
 </g>
-<!-- CollectionAttribution -->
-<g id="node5" class="node"><title>CollectionAttribution</title>
+<!-- Attribution -->
+<g id="node5" class="node"><title>Attribution</title>
 <ellipse fill="none" stroke="black" cx="495" cy="-336" rx="86.0051" ry="18"/>
-<text text-anchor="middle" x="495" y="-331.8" font-family="Times,serif" font-size="14.00">CollectionAttribution</text>
+<text text-anchor="middle" x="495" y="-331.8" font-family="Times,serif" font-size="14.00">Attribution</text>
 </g>
-<!-- Article&#45;&gt;CollectionAttribution -->
-<g id="edge5" class="edge"><title>Article&#45;&gt;CollectionAttribution</title>
+<!-- Article&#45;&gt;Attribution -->
+<g id="edge5" class="edge"><title>Article&#45;&gt;Attribution</title>
 <path fill="none" stroke="#e2fe0c" d="M425.116,-395.659C425.632,-387.546 427.46,-378.889 432,-372 435.615,-366.515 440.396,-361.808 445.714,-357.79"/>
 <ellipse fill="none" stroke="#e2fe0c" cx="425.055" cy="-399.82" rx="4" ry="4"/>
 <polygon fill="#e2fe0c" stroke="#e2fe0c" points="446.081,-357.548 456.904,-355.784 450.252,-354.789 454.422,-352.031 454.422,-352.031 454.422,-352.031 450.252,-354.789 451.94,-348.278 446.081,-357.548 446.081,-357.548"/>
@@ -144,8 +144,8 @@
 <ellipse fill="none" stroke="#a0c471" cx="1208.54" cy="-486.864" rx="4.00001" ry="4.00001"/>
 <polygon fill="#a0c471" stroke="#a0c471" points="1413.79,-354.943 1407.72,-345.812 1409.56,-352.282 1405.32,-349.622 1405.32,-349.622 1405.32,-349.622 1409.56,-352.282 1402.93,-353.432 1413.79,-354.943 1413.79,-354.943"/>
 </g>
-<!-- Image&#45;&gt;CollectionAttribution -->
-<g id="edge20" class="edge"><title>Image&#45;&gt;CollectionAttribution</title>
+<!-- Image&#45;&gt;Attribution -->
+<g id="edge20" class="edge"><title>Image&#45;&gt;Attribution</title>
 <path fill="none" stroke="#89bc25" d="M1135.96,-488.905C1076.85,-480.808 961.312,-463.485 865,-440 813.379,-427.413 802.05,-418.731 751,-404 714.967,-393.602 620.771,-369.216 557.255,-352.913"/>
 <ellipse fill="none" stroke="#89bc25" cx="1139.95" cy="-489.448" rx="4.00001" ry="4.00001"/>
 <polygon fill="#89bc25" stroke="#89bc25" points="557.025,-352.854 548.456,-346.01 552.182,-351.611 547.338,-350.369 547.338,-350.369 547.338,-350.369 552.182,-351.611 546.22,-354.728 557.025,-352.854 557.025,-352.854"/>
@@ -277,8 +277,8 @@
 <ellipse fill="none" stroke="#2f192c" cx="929.733" cy="-413.502" rx="4.00001" ry="4.00001"/>
 <polygon fill="#2f192c" stroke="#2f192c" points="1317.31,-347.844 1328.02,-350.22 1322.21,-346.829 1327.11,-345.814 1327.11,-345.814 1327.11,-345.814 1322.21,-346.829 1326.19,-341.407 1317.31,-347.844 1317.31,-347.844"/>
 </g>
-<!-- Map&#45;&gt;CollectionAttribution -->
-<g id="edge38" class="edge"><title>Map&#45;&gt;CollectionAttribution</title>
+<!-- Map&#45;&gt;Attribution -->
+<g id="edge38" class="edge"><title>Map&#45;&gt;Attribution</title>
 <path fill="none" stroke="#3f1a38" d="M867.789,-413.022C825.459,-402.956 749.974,-385.348 685,-372 646.874,-364.167 604.271,-356.244 569.085,-349.921"/>
 <ellipse fill="none" stroke="#3f1a38" cx="871.909" cy="-414.004" rx="4.00001" ry="4.00001"/>
 <polygon fill="#3f1a38" stroke="#3f1a38" points="568.737,-349.859 559.686,-343.668 563.815,-348.978 558.893,-348.098 558.893,-348.098 558.893,-348.098 563.815,-348.978 558.1,-352.527 568.737,-349.859 568.737,-349.859"/>
@@ -324,8 +324,8 @@
 <ellipse fill="none" stroke="#d12a0b" cx="604.201" cy="-408.212" rx="4.00001" ry="4.00001"/>
 <polygon fill="#d12a0b" stroke="#d12a0b" points="1312.39,-343.612 1322.86,-346.872 1317.35,-343.008 1322.32,-342.405 1322.32,-342.405 1322.32,-342.405 1317.35,-343.008 1321.77,-337.938 1312.39,-343.612 1312.39,-343.612"/>
 </g>
-<!-- OldArticle&#45;&gt;CollectionAttribution -->
-<g id="edge47" class="edge"><title>OldArticle&#45;&gt;CollectionAttribution</title>
+<!-- OldArticle&#45;&gt;Attribution -->
+<g id="edge47" class="edge"><title>OldArticle&#45;&gt;Attribution</title>
 <path fill="none" stroke="#979099" d="M546.777,-398.257C537.251,-386.988 525.731,-373.357 515.977,-361.818"/>
 <ellipse fill="none" stroke="#979099" cx="549.391" cy="-401.349" rx="4.00002" ry="4.00002"/>
 <polygon fill="#979099" stroke="#979099" points="515.697,-361.486 512.678,-350.944 512.469,-357.667 509.241,-353.849 509.241,-353.849 509.241,-353.849 512.469,-357.667 505.804,-356.754 515.697,-361.486 515.697,-361.486"/>
@@ -348,8 +348,8 @@
 <ellipse fill="none" stroke="#63c091" cx="1278.55" cy="-405.255" rx="4.00002" ry="4.00002"/>
 <polygon fill="#63c091" stroke="#63c091" points="1344.94,-359.413 1355.5,-356.47 1348.78,-356.213 1352.62,-353.013 1352.62,-353.013 1352.62,-353.013 1348.78,-356.213 1349.74,-349.555 1344.94,-359.413 1344.94,-359.413"/>
 </g>
-<!-- OldImage&#45;&gt;CollectionAttribution -->
-<g id="edge52" class="edge"><title>OldImage&#45;&gt;CollectionAttribution</title>
+<!-- OldImage&#45;&gt;Attribution -->
+<g id="edge52" class="edge"><title>OldImage&#45;&gt;Attribution</title>
 <path fill="none" stroke="#0c4e09" d="M1197.49,-415.299C1112.6,-405.949 937.968,-386.907 790,-372 705.605,-363.498 684.134,-364.784 600,-354 590.109,-352.732 579.719,-351.243 569.48,-349.682"/>
 <ellipse fill="none" stroke="#0c4e09" cx="1201.69" cy="-415.762" rx="4.00001" ry="4.00001"/>
 <polygon fill="#0c4e09" stroke="#0c4e09" points="569.198,-349.638 560.007,-343.656 564.257,-348.87 559.316,-348.102 559.316,-348.102 559.316,-348.102 564.257,-348.87 558.625,-352.549 569.198,-349.638 569.198,-349.638"/>
@@ -378,8 +378,8 @@
 <ellipse fill="none" stroke="#b5b397" cx="367.384" cy="-408.235" rx="4.00001" ry="4.00001"/>
 <polygon fill="#b5b397" stroke="#b5b397" points="1310.31,-340.658 1320.57,-344.546 1315.3,-340.356 1320.29,-340.054 1320.29,-340.054 1320.29,-340.054 1315.3,-340.356 1320.02,-335.562 1310.31,-340.658 1310.31,-340.658"/>
 </g>
-<!-- OldMap&#45;&gt;CollectionAttribution -->
-<g id="edge58" class="edge"><title>OldMap&#45;&gt;CollectionAttribution</title>
+<!-- OldMap&#45;&gt;Attribution -->
+<g id="edge58" class="edge"><title>OldMap&#45;&gt;Attribution</title>
 <path fill="none" stroke="#b81deb" d="M366.074,-403.144C382.817,-393.664 403.903,-381.949 423,-372 432.528,-367.036 442.866,-361.879 452.657,-357.098"/>
 <ellipse fill="none" stroke="#b81deb" cx="362.187" cy="-405.352" rx="4.00002" ry="4.00002"/>
 <polygon fill="#b81deb" stroke="#b81deb" points="452.834,-357.012 463.796,-356.697 457.333,-354.83 461.832,-352.648 461.832,-352.648 461.832,-352.648 457.333,-354.83 459.868,-348.599 452.834,-357.012 452.834,-357.012"/>
@@ -402,8 +402,8 @@
 <ellipse fill="none" stroke="#9f4706" cx="726.163" cy="-416.311" rx="4" ry="4"/>
 <polygon fill="#9f4706" stroke="#9f4706" points="1311.03,-342.124 1321.46,-345.523 1316,-341.586 1320.97,-341.049 1320.97,-341.049 1320.97,-341.049 1316,-341.586 1320.49,-336.575 1311.03,-342.124 1311.03,-342.124"/>
 </g>
-<!-- OldSound&#45;&gt;CollectionAttribution -->
-<g id="edge63" class="edge"><title>OldSound&#45;&gt;CollectionAttribution</title>
+<!-- OldSound&#45;&gt;Attribution -->
+<g id="edge63" class="edge"><title>OldSound&#45;&gt;Attribution</title>
 <path fill="none" stroke="#1e8ea0" d="M641.83,-404.397C612.118,-390.759 569.942,-371.4 538.41,-356.926"/>
 <ellipse fill="none" stroke="#1e8ea0" cx="645.771" cy="-406.206" rx="4.00002" ry="4.00002"/>
 <polygon fill="#1e8ea0" stroke="#1e8ea0" points="538.08,-356.775 530.869,-348.513 533.536,-354.689 528.992,-352.603 528.992,-352.603 528.992,-352.603 533.536,-354.689 527.115,-356.693 538.08,-356.775 538.08,-356.775"/>
@@ -432,8 +432,8 @@
 <ellipse fill="none" stroke="#df0773" cx="1072.35" cy="-413.563" rx="4.00001" ry="4.00001"/>
 <polygon fill="#df0773" stroke="#df0773" points="1325.28,-351.963 1336.17,-353.208 1330.04,-350.442 1334.8,-348.921 1334.8,-348.921 1334.8,-348.921 1330.04,-350.442 1333.43,-344.634 1325.28,-351.963 1325.28,-351.963"/>
 </g>
-<!-- OldVideo&#45;&gt;CollectionAttribution -->
-<g id="edge69" class="edge"><title>OldVideo&#45;&gt;CollectionAttribution</title>
+<!-- OldVideo&#45;&gt;Attribution -->
+<g id="edge69" class="edge"><title>OldVideo&#45;&gt;Attribution</title>
 <path fill="none" stroke="#77511a" d="M980.56,-411.84C966.549,-409.215 951.172,-406.413 937,-404 844.795,-388.299 821.542,-385.574 729,-372 671.724,-363.599 657.242,-362.627 600,-354 590.345,-352.545 580.199,-350.966 570.177,-349.376"/>
 <ellipse fill="none" stroke="#77511a" cx="984.701" cy="-412.62" rx="4.00001" ry="4.00001"/>
 <polygon fill="#77511a" stroke="#77511a" points="570.093,-349.363 560.928,-343.343 565.156,-348.574 560.218,-347.786 560.218,-347.786 560.218,-347.786 565.156,-348.574 559.509,-352.23 570.093,-349.363 570.093,-349.363"/>
@@ -466,8 +466,8 @@
 <ellipse fill="none" stroke="black" cx="27" cy="-549" rx="27" ry="18"/>
 <text text-anchor="middle" x="27" y="-544.8" font-family="Times,serif" font-size="14.00">Role</text>
 </g>
-<!-- Role&#45;&gt;CollectionAttribution -->
-<g id="edge73" class="edge"><title>Role&#45;&gt;CollectionAttribution</title>
+<!-- Role&#45;&gt;Attribution -->
+<g id="edge73" class="edge"><title>Role&#45;&gt;Attribution</title>
 <path fill="none" stroke="#6e5f2f" d="M22.4446,-522.993C17.0059,-484.35 13.2863,-410.566 55,-372 79.6964,-349.167 277.46,-341.191 399.297,-338.432"/>
 <ellipse fill="none" stroke="#6e5f2f" cx="23.0842" cy="-527.173" rx="4.00001" ry="4.00001"/>
 <polygon fill="#6e5f2f" stroke="#6e5f2f" points="399.389,-338.43 409.485,-342.711 404.388,-338.321 409.387,-338.212 409.387,-338.212 409.387,-338.212 404.388,-338.321 409.289,-333.713 399.389,-338.43 399.389,-338.43"/>
@@ -534,8 +534,8 @@
 <ellipse fill="none" stroke="#9f49ea" cx="893.392" cy="-486.035" rx="4.00001" ry="4.00001"/>
 <polygon fill="#9f49ea" stroke="#9f49ea" points="1365.67,-363.958 1372.37,-355.277 1366.83,-359.095 1367.99,-354.231 1367.99,-354.231 1367.99,-354.231 1366.83,-359.095 1363.62,-353.186 1365.67,-363.958 1365.67,-363.958"/>
 </g>
-<!-- Sound&#45;&gt;CollectionAttribution -->
-<g id="edge85" class="edge"><title>Sound&#45;&gt;CollectionAttribution</title>
+<!-- Sound&#45;&gt;Attribution -->
+<g id="edge85" class="edge"><title>Sound&#45;&gt;Attribution</title>
 <path fill="none" stroke="#ceea8b" d="M818.783,-493.253C693.214,-490.557 321.774,-479.297 286,-440 241.501,-391.118 338.973,-362.673 415.299,-348.491"/>
 <ellipse fill="none" stroke="#ceea8b" cx="823.043" cy="-493.342" rx="4" ry="4"/>
 <polygon fill="#ceea8b" stroke="#ceea8b" points="415.595,-348.438 426.234,-351.095 420.516,-347.552 425.437,-346.667 425.437,-346.667 425.437,-346.667 420.516,-347.552 424.64,-342.238 415.595,-348.438 415.595,-348.438"/>
@@ -702,8 +702,8 @@
 <ellipse fill="none" stroke="#3d3ecc" cx="1014.17" cy="-489.888" rx="4.00001" ry="4.00001"/>
 <polygon fill="#3d3ecc" stroke="#3d3ecc" points="1383.83,-363.13 1384.61,-352.192 1382.11,-358.436 1380.39,-353.741 1380.39,-353.741 1380.39,-353.741 1382.11,-358.436 1376.16,-355.29 1383.83,-363.13 1383.83,-363.13"/>
 </g>
-<!-- Video&#45;&gt;CollectionAttribution -->
-<g id="edge116" class="edge"><title>Video&#45;&gt;CollectionAttribution</title>
+<!-- Video&#45;&gt;Attribution -->
+<g id="edge116" class="edge"><title>Video&#45;&gt;Attribution</title>
 <path fill="none" stroke="#6a7c75" d="M944.068,-485.218C930.9,-482.252 915.836,-479.151 902,-477 815.322,-463.524 572.292,-500.736 509,-440 489.014,-420.821 487.961,-387.613 490.323,-364.093"/>
 <ellipse fill="none" stroke="#6a7c75" cx="948.095" cy="-486.143" rx="4.00001" ry="4.00001"/>
 <polygon fill="#6a7c75" stroke="#6a7c75" points="490.338,-363.975 496.057,-354.619 490.965,-359.014 491.592,-354.054 491.592,-354.054 491.592,-354.054 490.965,-359.014 487.128,-353.489 490.338,-363.975 490.338,-363.975"/>
@@ -743,8 +743,8 @@
 <g id="edge8" class="edge"><title>ActiveRecord::Base&#45;&gt;Association</title>
 <path fill="none" stroke="black" d="M1003.9,-689.755C1113.78,-683.568 1306.54,-668.917 1370,-640 1473.82,-592.694 1478.09,-517.87 1471,-404 1470.11,-389.695 1475.93,-383.21 1467,-372 1455.06,-357.016 1436.11,-348.445 1418.19,-343.544"/>
 </g>
-<!-- ActiveRecord::Base&#45;&gt;CollectionAttribution -->
-<g id="edge9" class="edge"><title>ActiveRecord::Base&#45;&gt;CollectionAttribution</title>
+<!-- ActiveRecord::Base&#45;&gt;Attribution -->
+<g id="edge9" class="edge"><title>ActiveRecord::Base&#45;&gt;Attribution</title>
 <path fill="none" stroke="black" d="M893.34,-677.879C876.457,-670.363 855.076,-662.108 835,-658 694.739,-629.301 332.74,-660.16 191,-640 135.03,-632.039 69,-660.534 69,-604 69,-604 69,-604 69,-421 69,-352.402 284.314,-338.885 408.793,-336.803"/>
 </g>
 <!-- ActiveRecord::Base&#45;&gt;Node -->

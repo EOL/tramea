@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   resource :roles
 
-  resource :collection_attributions
+  resource :attributions
 
   resource :translations
 

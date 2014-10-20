@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe "collection_attributions/show", :type => :view do
+RSpec.describe "attributions/show", :type => :view do
   before(:each) do
-    @collection_attribution = assign(:collection_attribution, CollectionAttribution.create!(
+    @attribution = assign(:attribution, Attribution.create!(
       :medium_type => 1,
       :medium_id => 2,
       :who => "Who",

@@ -1,3 +1,3 @@
 class Role < ActiveRecord::Base
-  has_many :collection_attributions
+  has_many :attributions
 end

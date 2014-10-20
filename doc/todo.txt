@@ -12,6 +12,6 @@ literature references apply to all associatables, not just media. NBD…
 
 Add some attribution stuff directly to the translations table.
 
-Rename CollectionAttribution to just “Attribution” …tis enough.
+Rename Attribution to just “Attribution” …tis enough.
 
 Add a “location” (string) to names. It’s rare, but useful.

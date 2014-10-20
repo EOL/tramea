@@ -1,0 +1,27 @@
+%h1 Listing attributions
+
+%table
+  %tr
+    %th Medium type
+    %th Medium
+    %th Who
+    %th Url
+    %th Role
+    %th
+    %th
+    %th
+
+  - @attributions.each do |attribution|
+    %tr
+      %td= attribution.medium_type
+      %td= attribution.medium_id
+      %td= attribution.who
+      %td= attribution.url
+      %td= attribution.role_id
+      %td= link_to 'Show', attribution
+      %td= link_to 'Edit', edit_attribution_path(attribution)
+      %td= link_to 'Destroy', attribution, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Collection attribution', new_attribution_path

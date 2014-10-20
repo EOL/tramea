@@ -1,7 +1,7 @@
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
 FactoryGirl.define do
-  factory :collection_attribution do
+  factory :attribution do
     medium_type 1
     medium_id 1
     who "MyString"

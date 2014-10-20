@@ -92,10 +92,10 @@
 <g id="edge3" class="edge"><title>ApplicationController&#45;&gt;AssociationsController</title>
 <path fill="none" stroke="black" d="M-31.3657,-129.016C-51.5323,-156.8 -76.231,-193.513 -93.8617,-228.631 -162.364,-365.08 -216.507,-533.835 -247.032,-639.368"/>
 </g>
-<!-- CollectionAttributionsController -->
-<g id="node6" class="node"><title>CollectionAttributionsController</title>
+<!-- AttributionsController -->
+<g id="node6" class="node"><title>AttributionsController</title>
 <path fill="none" stroke="black" d="M155.552,-67.4798C155.552,-67.4798 331.09,-67.4798 331.09,-67.4798 337.09,-67.4798 343.09,-73.4798 343.09,-79.4798 343.09,-79.4798 343.09,-257.48 343.09,-257.48 343.09,-263.48 337.09,-269.48 331.09,-269.48 331.09,-269.48 155.552,-269.48 155.552,-269.48 149.552,-269.48 143.552,-263.48 143.552,-257.48 143.552,-257.48 143.552,-79.4798 143.552,-79.4798 143.552,-73.4798 149.552,-67.4798 155.552,-67.4798"/>
-<text text-anchor="middle" x="243.321" y="-254.28" font-family="Times,serif" font-size="14.00">CollectionAttributionsController</text>
+<text text-anchor="middle" x="243.321" y="-254.28" font-family="Times,serif" font-size="14.00">AttributionsController</text>
 <polyline fill="none" stroke="black" points="143.552,-247.48 343.09,-247.48 "/>
 <text text-anchor="start" x="151.552" y="-232.28" font-family="Times,serif" font-size="14.00">create</text>
 <text text-anchor="start" x="151.552" y="-218.28" font-family="Times,serif" font-size="14.00">destroy</text>
@@ -107,11 +107,11 @@
 <polyline fill="none" stroke="black" points="143.552,-141.48 343.09,-141.48 "/>
 <polyline fill="none" stroke="black" points="143.552,-117.48 343.09,-117.48 "/>
 <text text-anchor="start" x="151.552" y="-102.28" font-family="Times,serif" font-size="14.00">_layout</text>
-<text text-anchor="start" x="151.552" y="-88.2798" font-family="Times,serif" font-size="14.00">collection_attribution_params</text>
-<text text-anchor="start" x="151.552" y="-74.2798" font-family="Times,serif" font-size="14.00">set_collection_attribution</text>
+<text text-anchor="start" x="151.552" y="-88.2798" font-family="Times,serif" font-size="14.00">attribution_params</text>
+<text text-anchor="start" x="151.552" y="-74.2798" font-family="Times,serif" font-size="14.00">set_attribution</text>
 </g>
-<!-- ApplicationController&#45;&gt;CollectionAttributionsController -->
-<g id="edge4" class="edge"><title>ApplicationController&#45;&gt;CollectionAttributionsController</title>
+<!-- ApplicationController&#45;&gt;AttributionsController -->
+<g id="edge4" class="edge"><title>ApplicationController&#45;&gt;AttributionsController</title>
 <path fill="none" stroke="black" d="M73.8292,-107.93C95.4945,-115.67 119.81,-124.356 143.113,-132.681"/>
 </g>
 <!-- nodesController -->

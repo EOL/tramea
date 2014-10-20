@@ -1,9 +1,9 @@
-= form_for @collection_attribution do |f|
-  - if @collection_attribution.errors.any?
+= form_for @attribution do |f|
+  - if @attribution.errors.any?
     #error_explanation
-      %h2= "#{pluralize(@collection_attribution.errors.count, "error")} prohibited this collection_attribution from being saved:"
+      %h2= "#{pluralize(@attribution.errors.count, "error")} prohibited this attribution from being saved:"
       %ul
-        - @collection_attribution.errors.full_messages.each do |msg|
+        - @attribution.errors.full_messages.each do |msg|
           %li= msg
 
   .field
