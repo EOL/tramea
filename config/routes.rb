@@ -1,59 +1,61 @@
 Rails.application.routes.draw do
-  repartners :stylesheets
+  resources :datasets
 
-  repartners :javascripts
+  resource :stylesheets
 
-  repartners :licenses
+  resource :javascripts
 
-  repartners :associations
+  resource :licenses
 
-  repartners :secions
+  resource :associations
 
-  repartners :uris
+  resource :secions
 
-  repartners :roles
+  resource :uris
 
-  repartners :collection_attributions
+  resource :roles
 
-  repartners :translations
+  resource :collection_attributions
 
-  repartners :traits
+  resource :translations
 
-  repartners :old_maps
+  resource :traits
 
-  repartners :maps
+  resource :old_maps
 
-  repartners :old_articles
+  resource :maps
 
-  repartners :articles
+  resource :old_articles
 
-  repartners :old_sounds
+  resource :articles
 
-  repartners :sounds
+  resource :old_sounds
 
-  repartners :old_videos
+  resource :sounds
 
-  repartners :videos
+  resource :old_videos
 
-  repartners :old_images
+  resource :videos
 
-  repartners :images
+  resource :old_images
 
-  repartners :names
+  resource :images
 
-  repartners :publications
+  resource :names
 
-  repartners :appearances
+  resource :publications
 
-  repartners :literature_references
+  resource :appearances
 
-  repartners :synths
+  resource :literature_references
 
-  repartners :nodes
+  resource :synths
 
-  repartners :links
+  resource :nodes
 
-  repartners :partners
+  resource :links
+
+  resource :partners
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -68,10 +70,10 @@ Rails.application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example repartner route (maps HTTP verbs to controller actions automatically):
-  #   repartners :products
+  #   resource :products
 
   # Example repartner route with options:
-  #   repartners :products do
+  #   resource :products do
   #     member do
   #       get 'short'
   #       post 'toggle'
@@ -82,16 +84,16 @@ Rails.application.routes.draw do
   #     end
   #   end
 
-  # Example repartner route with sub-repartners:
-  #   repartners :products do
-  #     repartners :comments, :sales
+  # Example repartner route with sub-resource:
+  #   resource :products do
+  #     resource :comments, :sales
   #     repartner :seller
   #   end
 
-  # Example repartner route with more complex sub-repartners:
-  #   repartners :products do
-  #     repartners :comments
-  #     repartners :sales do
+  # Example repartner route with more complex sub-resource:
+  #   resource :products do
+  #     resource :comments
+  #     resource :sales do
   #       get 'recent', on: :collection
   #     end
   #   end
@@ -100,13 +102,13 @@ Rails.application.routes.draw do
   #   concern :toggleable do
   #     post 'toggle'
   #   end
-  #   repartners :posts, concerns: :toggleable
-  #   repartners :photos, concerns: :toggleable
+  #   resource :posts, concerns: :toggleable
+  #   resource :photos, concerns: :toggleable
 
   # Example repartner route within a namespace:
   #   namespace :admin do
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
-  #     repartners :products
+  #     resource :products
   #   end
 end

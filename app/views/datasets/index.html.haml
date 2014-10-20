@@ -1,0 +1,35 @@
+%h1 Listing datasets
+
+%table
+  %tr
+    %th Partner
+    %th Name
+    %th Full name
+    %th Abbr
+    %th Description
+    %th Private notes
+    %th Admin notes
+    %th Url
+    %th License
+    %th
+    %th
+    %th
+
+  - @datasets.each do |dataset|
+    %tr
+      %td= dataset.partner_id
+      %td= dataset.name
+      %td= dataset.full_name
+      %td= dataset.abbr
+      %td= dataset.description
+      %td= dataset.private_notes
+      %td= dataset.admin_notes
+      %td= dataset.url
+      %td= dataset.license_id
+      %td= link_to 'Show', dataset
+      %td= link_to 'Edit', edit_dataset_path(dataset)
+      %td= link_to 'Destroy', dataset, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Dataset', new_dataset_path

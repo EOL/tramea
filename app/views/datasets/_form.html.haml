@@ -1,0 +1,37 @@
+= form_for @dataset do |f|
+  - if @dataset.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@dataset.errors.count, "error")} prohibited this dataset from being saved:"
+      %ul
+        - @dataset.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :partner_id
+    = f.number_field :partner_id
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :full_name
+    = f.text_field :full_name
+  .field
+    = f.label :abbr
+    = f.text_field :abbr
+  .field
+    = f.label :description
+    = f.text_area :description
+  .field
+    = f.label :private_notes
+    = f.text_area :private_notes
+  .field
+    = f.label :admin_notes
+    = f.text_area :admin_notes
+  .field
+    = f.label :url
+    = f.text_field :url
+  .field
+    = f.label :license_id
+    = f.number_field :license_id
+  .actions
+    = f.submit 'Save'
