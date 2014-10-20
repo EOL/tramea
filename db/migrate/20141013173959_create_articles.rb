@@ -4,7 +4,6 @@ class CreateArticles < ActiveRecord::Migration
       t.string :guid
       t.integer :locale
       t.boolean :preview
-      t.integer :section_id
       t.string :title
       t.text :body
       t.string :copyright

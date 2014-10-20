@@ -1,10 +1,11 @@
-class CreateSectionsUris < ActiveRecord::Migration
+class CreateUriSections < ActiveRecord::Migration
   def change
-    create_table :sections_uris do |t|
+    create_table :uri_sections do |t|
       t.integer :uri_id
       t.integer :section_id
+      t.boolean :primary
     end
-    add_index :sections_uris, :uri_id
-    add_index :sections_uris, :section_id
+    add_index :uri_sections, :uri_id
+    add_index :uri_sections, :section_id
   end
 end

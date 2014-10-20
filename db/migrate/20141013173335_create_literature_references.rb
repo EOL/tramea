@@ -4,6 +4,7 @@ class CreateLiteratureReferences < ActiveRecord::Migration
       t.string :parent_type
       t.integer :parent_id
       t.string :string
+      t.boolean :bibliographic_citation
 
       t.timestamps
     end

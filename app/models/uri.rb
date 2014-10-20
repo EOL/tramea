@@ -8,7 +8,7 @@ class Uri < ActiveRecord::Base
   has_many :original_units, class_name: "Uri",
     foreign_key: "original_units_uri_id"
 
-  has_and_belongs_to_many :sections
+  has_many :sections, through: :uri_sections
 
   def to_s
     string
