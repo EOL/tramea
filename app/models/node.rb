@@ -8,7 +8,22 @@ class Node < ActiveRecord::Base
 
   # NOTE: Yes, this is HUGE and obnoxious. But I do believe this is is the best
   # way to deal with ranks. :\
+  # NOTE: normalized using:
+  # map {|s| s.gsub(/[\W]+/, '_').gsub(/_$/, '').gsub(/^_/, # '').downcase.
+  #   sub("sub_", "sub").sub("super_", "super") }.sort.uniq
+  # NOTE: I also removed things that I thought weren't ranks and things that
+  # were abbreviations or duplicates; this list WILL change once we hear from SPG.
   enum rank: %q[
-    kingdom phylum class order family superfamily genus species subspecies
+    class cohort convar cultivar division family form forma genus hybrid
+    hybrid_formula informal infraclass infradivision infrakingdom infraorder
+    infraspecies infraspecificname infrasubspecificname kingdom lusus microgene
+    monster mutant nothoform nothogenus nothospecies nothosubspecies nothotaxon
+    nothovariety order parvorder phylum prole pseudovariety race section series
+    species species_group species_subgroup status stirps subclass subdivision
+    subfamily subform subgenus subkingdom suborder subphylum subsection
+    subseries subspecies subsubf subtaxon subtribe subvariety sugenus
+    supercohort superclass superfamily superkingdom superorder superphylum
+    supertribe tax_vag taxon tribe unranked variety
   ].map(&:to_sym)
+
 end

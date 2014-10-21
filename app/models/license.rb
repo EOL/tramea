@@ -6,7 +6,7 @@ class License < ActiveRecord::Base
   has_many :articles
   has_many :sounds
 
-  # TODO: (for many classes, only mentioned here.) We need a way to add enums.
+  # TODO: (this also applies to node#rank) We need a way to add enums.
   # ...Namely, when we import things from partners, we *can* get new enumerable
   # values. So we'll need a system--probably a rake task--that actually adds
   # that data to the database AND to the associated class! ...A little scary,
