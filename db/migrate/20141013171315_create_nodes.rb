@@ -4,6 +4,7 @@ class CreateNodes < ActiveRecord::Migration
       t.integer :partner_id
       t.integer :parent_id
       t.integer :synth_id
+      t.integer :rank
       t.string :original_id
 
       t.timestamps
