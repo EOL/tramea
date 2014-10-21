@@ -10,6 +10,7 @@ class Article < ActiveRecord::Base
 
   has_many :attributions, as: :medium
   has_many :literature_references, as: :parent
+  has_many :article_sections
   has_many :sections, through: :article_sections
   has_many :old_articles
 

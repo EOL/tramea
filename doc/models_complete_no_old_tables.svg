@@ -120,35 +120,6 @@
 	<polygon fill="#4BDF39" stroke="#4BDF39" points="1822.3,1197.4 1825.4,1207.9 1821.6,1202.3 1820.9,1207.3 1820.9,1207.3 
 		1820.9,1207.3 1821.6,1202.3 1816.5,1206.6 1822.3,1197.4 	"/>
 </g>
-<g id="node14">
-	<title>OldArticle</title>
-	<path fill="none" stroke="#000000" d="M2035.7,643.5H2147c6,0,12-6,12-12v-216c0-6-6-12-12-12h-111.4c-6,0-12,6-12,12v216
-		C2023.7,637.5,2029.7,643.5,2035.7,643.5"/>
-	<text transform="matrix(1 0 0 1 2061.4175 418.7)" font-family="'Times-Roman'" font-size="14">OldArticle</text>
-	<line fill="none" stroke="#000000" x1="2023.7" y1="425.5" x2="2159" y2="425.5"/>
-	<text transform="matrix(1 0 0 1 2031.675 440.7)" font-family="'Times-Roman'" font-size="14">id :integer</text>
-	<text transform="matrix(1 0 0 1 2031.675 454.7)" font-family="'Times-Roman'" font-size="14">guid :string</text>
-	<text transform="matrix(1 0 0 1 2031.675 468.7)" font-family="'Times-Roman'" font-size="14">locale :integer</text>
-	<text transform="matrix(1 0 0 1 2031.675 482.7)" font-family="'Times-Roman'" font-size="14">preview :boolean</text>
-	<text transform="matrix(1 0 0 1 2031.675 496.7)" font-family="'Times-Roman'" font-size="14">section_id :integer</text>
-	<text transform="matrix(1 0 0 1 2031.675 510.7)" font-family="'Times-Roman'" font-size="14">title :string</text>
-	<text transform="matrix(1 0 0 1 2031.675 524.7)" font-family="'Times-Roman'" font-size="14">body :text</text>
-	<text transform="matrix(1 0 0 1 2031.675 538.7)" font-family="'Times-Roman'" font-size="14">copyright :string</text>
-	<text transform="matrix(1 0 0 1 2031.675 552.7)" font-family="'Times-Roman'" font-size="14">license_id :integer</text>
-	<text transform="matrix(1 0 0 1 2031.675 566.7)" font-family="'Times-Roman'" font-size="14">original_url :string</text>
-	<text transform="matrix(1 0 0 1 2031.675 580.7)" font-family="'Times-Roman'" font-size="14">javascript_id :integer</text>
-	<text transform="matrix(1 0 0 1 2031.675 594.7)" font-family="'Times-Roman'" font-size="14">stylesheet_id :integer</text>
-	<text transform="matrix(1 0 0 1 2031.675 608.7)" font-family="'Times-Roman'" font-size="14">article_id :integer</text>
-	<text transform="matrix(1 0 0 1 2031.675 622.7)" font-family="'Times-Roman'" font-size="14">created_at :datetime</text>
-	<text transform="matrix(1 0 0 1 2031.675 636.7)" font-family="'Times-Roman'" font-size="14">updated_at :datetime</text>
-</g>
-<g id="edge7">
-	<title>Article-&gt;OldArticle</title>
-	<path fill="none" stroke="#E7529C" d="M2096.3,338.7c-0.5,17.8-1,36.4-1.5,54.6"/>
-	<ellipse fill="none" stroke="#E7529C" cx="2096.4" cy="334.6" rx="4" ry="4"/>
-	<polygon fill="#E7529C" stroke="#E7529C" points="2094.8,393.3 2099.1,403.5 2094.7,398.3 2094.6,403.3 2094.6,403.3 2094.6,403.3 
-		2094.7,398.3 2090.1,403.2 2094.8,393.3 	"/>
-</g>
 <g id="node22">
 	<title>Section</title>
 	<path fill="none" stroke="#000000" d="M2933.8,580.5h109c6,0,12-6,12-12v-90c0-6-6-12-12-12h-109c-6,0-12,6-12,12v90
@@ -303,36 +274,6 @@
 	<polygon fill="#3A55F6" stroke="#3A55F6" points="1706.5,1259.6 1717,1256.3 1711.5,1260.2 1716.4,1260.8 1716.4,1260.8 
 		1716.4,1260.8 1711.5,1260.2 1715.9,1265.3 1706.5,1259.6 	"/>
 </g>
-<g id="node15">
-	<title>OldImage</title>
-	<path fill="none" stroke="#000000" d="M1407.1,650.5h110.6c6,0,12-6,12-12v-230c0-6-6-12-12-12h-110.6c-6,0-12,6-12,12v230
-		C1395.1,644.5,1401.1,650.5,1407.1,650.5"/>
-	<text transform="matrix(1 0 0 1 1434.3623 411.7)" font-family="'Times-Roman'" font-size="14">OldImage</text>
-	<line fill="none" stroke="#000000" x1="1395.1" y1="418.5" x2="1529.7" y2="418.5"/>
-	<text transform="matrix(1 0 0 1 1403.051 433.7)" font-family="'Times-Roman'" font-size="14">id :integer</text>
-	<text transform="matrix(1 0 0 1 1403.051 447.7)" font-family="'Times-Roman'" font-size="14">guid :string</text>
-	<text transform="matrix(1 0 0 1 1403.051 461.7)" font-family="'Times-Roman'" font-size="14">locale :integer</text>
-	<text transform="matrix(1 0 0 1 1403.051 475.7)" font-family="'Times-Roman'" font-size="14">preview :boolean</text>
-	<text transform="matrix(1 0 0 1 1403.051 489.7)" font-family="'Times-Roman'" font-size="14">title :string</text>
-	<text transform="matrix(1 0 0 1 1403.051 503.7)" font-family="'Times-Roman'" font-size="14">description :text</text>
-	<text transform="matrix(1 0 0 1 1403.051 517.7)" font-family="'Times-Roman'" font-size="14">copyright :string</text>
-	<text transform="matrix(1 0 0 1 1403.051 531.7)" font-family="'Times-Roman'" font-size="14">string :string</text>
-	<text transform="matrix(1 0 0 1 1403.051 545.7)" font-family="'Times-Roman'" font-size="14">license_id :integer</text>
-	<text transform="matrix(1 0 0 1 1403.051 559.7)" font-family="'Times-Roman'" font-size="14">original_url :string</text>
-	<text transform="matrix(1 0 0 1 1403.051 573.7)" font-family="'Times-Roman'" font-size="14">full_size_url :string</text>
-	<text transform="matrix(1 0 0 1 1403.051 587.7)" font-family="'Times-Roman'" font-size="14">crop_url :string</text>
-	<text transform="matrix(1 0 0 1 1403.051 601.7)" font-family="'Times-Roman'" font-size="14">thumbnail_url :string</text>
-	<text transform="matrix(1 0 0 1 1403.051 615.7)" font-family="'Times-Roman'" font-size="14">image_id :integer</text>
-	<text transform="matrix(1 0 0 1 1403.051 629.7)" font-family="'Times-Roman'" font-size="14">created_at :datetime</text>
-	<text transform="matrix(1 0 0 1 1403.051 643.7)" font-family="'Times-Roman'" font-size="14">updated_at :datetime</text>
-</g>
-<g id="edge18">
-	<title>Image-&gt;OldImage</title>
-	<path fill="none" stroke="#BB3818" d="M1487.9,345.9c-1.9,13.3-3.9,26.8-5.8,40.2"/>
-	<ellipse fill="none" stroke="#BB3818" cx="1488.5" cy="341.7" rx="4" ry="4"/>
-	<polygon fill="#BB3818" stroke="#BB3818" points="1482,386.5 1485.1,397 1481.3,391.4 1480.6,396.4 1480.6,396.4 1480.6,396.4 
-		1481.3,391.4 1476.2,395.7 1482,386.5 	"/>
-</g>
 <g id="edge16">
 	<title>Image-&gt;Translation</title>
 	<path fill="none" stroke="#D69975" d="M1542.2,345.5C1578,456.1,1633,610.2,1675.4,658c61.3,69.3,158,115.5,227.6,141.9"/>
@@ -389,104 +330,6 @@
 	<ellipse fill="none" stroke="#DE1541" cx="2273.2" cy="-6.9" rx="4" ry="4"/>
 	<polygon fill="#DE1541" stroke="#DE1541" points="1899.2,156.3 1894.2,166.1 1895.3,159.5 1891.4,162.6 1891.4,162.6 1891.4,162.6 
 		1895.3,159.5 1888.6,159.1 1899.2,156.3 	"/>
-</g>
-<g id="edge24">
-	<title>Javascript-&gt;OldArticle</title>
-	<path fill="none" stroke="#62249C" d="M2281.1-2.2c-18.1,77.5-56.4,230-104.7,354.2c-5.4,13.8-11.4,28-17.8,41.9"/>
-	<ellipse fill="none" stroke="#62249C" cx="2282.1" cy="-6.4" rx="4" ry="4"/>
-	<polygon fill="#62249C" stroke="#62249C" points="2158.5,394 2158.4,405 2156.4,398.6 2154.3,403.1 2154.3,403.1 2154.3,403.1 
-		2156.4,398.6 2150.2,401.2 2158.5,394 	"/>
-</g>
-<g id="node16">
-	<title>OldMap</title>
-	<path fill="none" stroke="#000000" d="M1767.7,657.5H1879c6,0,12-6,12-12v-244c0-6-6-12-12-12h-111.4c-6,0-12,6-12,12v244
-		C1755.7,651.5,1761.7,657.5,1767.7,657.5"/>
-	<text transform="matrix(1 0 0 1 1800.021 404.7)" font-family="'Times-Roman'" font-size="14">OldMap</text>
-	<line fill="none" stroke="#000000" x1="1755.7" y1="411.5" x2="1891" y2="411.5"/>
-	<text transform="matrix(1 0 0 1 1763.675 426.7)" font-family="'Times-Roman'" font-size="14">id :integer</text>
-	<text transform="matrix(1 0 0 1 1763.675 440.7)" font-family="'Times-Roman'" font-size="14">guid :string</text>
-	<text transform="matrix(1 0 0 1 1763.675 454.7)" font-family="'Times-Roman'" font-size="14">locale :integer</text>
-	<text transform="matrix(1 0 0 1 1763.675 468.7)" font-family="'Times-Roman'" font-size="14">preview :boolean</text>
-	<text transform="matrix(1 0 0 1 1763.675 482.7)" font-family="'Times-Roman'" font-size="14">title :string</text>
-	<text transform="matrix(1 0 0 1 1763.675 496.7)" font-family="'Times-Roman'" font-size="14">description :text</text>
-	<text transform="matrix(1 0 0 1 1763.675 510.7)" font-family="'Times-Roman'" font-size="14">copyright :string</text>
-	<text transform="matrix(1 0 0 1 1763.675 524.7)" font-family="'Times-Roman'" font-size="14">license_id :integer</text>
-	<text transform="matrix(1 0 0 1 1763.675 538.7)" font-family="'Times-Roman'" font-size="14">original_url :string</text>
-	<text transform="matrix(1 0 0 1 1763.675 552.7)" font-family="'Times-Roman'" font-size="14">full_size_url :string</text>
-	<text transform="matrix(1 0 0 1 1763.675 566.7)" font-family="'Times-Roman'" font-size="14">crop_url :string</text>
-	<text transform="matrix(1 0 0 1 1763.675 580.7)" font-family="'Times-Roman'" font-size="14">thumbnail_url :string</text>
-	<text transform="matrix(1 0 0 1 1763.675 594.7)" font-family="'Times-Roman'" font-size="14">javascript_id :integer</text>
-	<text transform="matrix(1 0 0 1 1763.675 608.7)" font-family="'Times-Roman'" font-size="14">stylesheet_id :integer</text>
-	<text transform="matrix(1 0 0 1 1763.675 622.7)" font-family="'Times-Roman'" font-size="14">map_id :integer</text>
-	<text transform="matrix(1 0 0 1 1763.675 636.7)" font-family="'Times-Roman'" font-size="14">created_at :datetime</text>
-	<text transform="matrix(1 0 0 1 1763.675 650.7)" font-family="'Times-Roman'" font-size="14">updated_at :datetime</text>
-</g>
-<g id="edge25">
-	<title>Javascript-&gt;OldMap</title>
-	<path fill="none" stroke="#43A955" d="M2270.2-3.1c-12.6,22.6-30.6,47.8-53.9,63.1c-36.6,24.2-159.4,10.1-194,37
-		c-6.3,4.9-78.5,161.2-134.2,283"/>
-	<ellipse fill="none" stroke="#43A955" cx="2272.2" cy="-6.9" rx="4" ry="4"/>
-	<polygon fill="#43A955" stroke="#43A955" points="1888,380.3 1888,391.3 1885.9,384.9 1883.9,389.4 1883.9,389.4 1883.9,389.4 
-		1885.9,384.9 1879.8,387.5 1888,380.3 	"/>
-</g>
-<g id="node17">
-	<title>OldSound</title>
-	<path fill="none" stroke="#000000" d="M2609.7,643.5H2721c6,0,12-6,12-12v-216c0-6-6-12-12-12h-111.4c-6,0-12,6-12,12v216
-		C2597.7,637.5,2603.7,643.5,2609.7,643.5"/>
-	<text transform="matrix(1 0 0 1 2636.9619 418.7)" font-family="'Times-Roman'" font-size="14">OldSound</text>
-	<line fill="none" stroke="#000000" x1="2597.7" y1="425.5" x2="2733" y2="425.5"/>
-	<text transform="matrix(1 0 0 1 2605.675 440.7)" font-family="'Times-Roman'" font-size="14">id :integer</text>
-	<text transform="matrix(1 0 0 1 2605.675 454.7)" font-family="'Times-Roman'" font-size="14">guid :string</text>
-	<text transform="matrix(1 0 0 1 2605.675 468.7)" font-family="'Times-Roman'" font-size="14">locale :integer</text>
-	<text transform="matrix(1 0 0 1 2605.675 482.7)" font-family="'Times-Roman'" font-size="14">preview :boolean</text>
-	<text transform="matrix(1 0 0 1 2605.675 496.7)" font-family="'Times-Roman'" font-size="14">title :string</text>
-	<text transform="matrix(1 0 0 1 2605.675 510.7)" font-family="'Times-Roman'" font-size="14">description :text</text>
-	<text transform="matrix(1 0 0 1 2605.675 524.7)" font-family="'Times-Roman'" font-size="14">copyright :string</text>
-	<text transform="matrix(1 0 0 1 2605.675 538.7)" font-family="'Times-Roman'" font-size="14">license_id :integer</text>
-	<text transform="matrix(1 0 0 1 2605.675 552.7)" font-family="'Times-Roman'" font-size="14">original_url :string</text>
-	<text transform="matrix(1 0 0 1 2605.675 566.7)" font-family="'Times-Roman'" font-size="14">url :string</text>
-	<text transform="matrix(1 0 0 1 2605.675 580.7)" font-family="'Times-Roman'" font-size="14">javascript_id :integer</text>
-	<text transform="matrix(1 0 0 1 2605.675 594.7)" font-family="'Times-Roman'" font-size="14">stylesheet_id :integer</text>
-	<text transform="matrix(1 0 0 1 2605.675 608.7)" font-family="'Times-Roman'" font-size="14">sound_id :integer</text>
-	<text transform="matrix(1 0 0 1 2605.675 622.7)" font-family="'Times-Roman'" font-size="14">created_at :datetime</text>
-	<text transform="matrix(1 0 0 1 2605.675 636.7)" font-family="'Times-Roman'" font-size="14">updated_at :datetime</text>
-</g>
-<g id="edge26">
-	<title>Javascript-&gt;OldSound</title>
-	<path fill="none" stroke="#8BE1C7" d="M2331.9-4.2c20.3,22.2,46.6,47.2,74.5,64.2c45.5,27.7,76.8-1.1,114,37
-		c82.6,84.6,36.9,143.4,76,255c4.8,13.6,10,27.7,15.4,41.7"/>
-	<ellipse fill="none" stroke="#8BE1C7" cx="2329" cy="-7.4" rx="4" ry="4"/>
-	<polygon fill="#8BE1C7" stroke="#8BE1C7" points="2611.9,394 2619.7,401.7 2613.7,398.7 2615.5,403.3 2615.5,403.3 2615.5,403.3 
-		2613.7,398.7 2611.3,405 2611.9,394 	"/>
-</g>
-<g id="node18">
-	<title>OldVideo</title>
-	<path fill="none" stroke="#000000" d="M2303.7,643.5H2415c6,0,12-6,12-12v-216c0-6-6-12-12-12h-111.4c-6,0-12,6-12,12v216
-		C2291.7,637.5,2297.7,643.5,2303.7,643.5"/>
-	<text transform="matrix(1 0 0 1 2332.165 418.7)" font-family="'Times-Roman'" font-size="14">OldVideo</text>
-	<line fill="none" stroke="#000000" x1="2291.7" y1="425.5" x2="2427" y2="425.5"/>
-	<text transform="matrix(1 0 0 1 2299.675 440.7)" font-family="'Times-Roman'" font-size="14">id :integer</text>
-	<text transform="matrix(1 0 0 1 2299.675 454.7)" font-family="'Times-Roman'" font-size="14">guid :string</text>
-	<text transform="matrix(1 0 0 1 2299.675 468.7)" font-family="'Times-Roman'" font-size="14">locale :integer</text>
-	<text transform="matrix(1 0 0 1 2299.675 482.7)" font-family="'Times-Roman'" font-size="14">preview :boolean</text>
-	<text transform="matrix(1 0 0 1 2299.675 496.7)" font-family="'Times-Roman'" font-size="14">title :string</text>
-	<text transform="matrix(1 0 0 1 2299.675 510.7)" font-family="'Times-Roman'" font-size="14">description :text</text>
-	<text transform="matrix(1 0 0 1 2299.675 524.7)" font-family="'Times-Roman'" font-size="14">copyright :string</text>
-	<text transform="matrix(1 0 0 1 2299.675 538.7)" font-family="'Times-Roman'" font-size="14">license_id :integer</text>
-	<text transform="matrix(1 0 0 1 2299.675 552.7)" font-family="'Times-Roman'" font-size="14">original_url :string</text>
-	<text transform="matrix(1 0 0 1 2299.675 566.7)" font-family="'Times-Roman'" font-size="14">url :string</text>
-	<text transform="matrix(1 0 0 1 2299.675 580.7)" font-family="'Times-Roman'" font-size="14">javascript_id :integer</text>
-	<text transform="matrix(1 0 0 1 2299.675 594.7)" font-family="'Times-Roman'" font-size="14">stylesheet_id :integer</text>
-	<text transform="matrix(1 0 0 1 2299.675 608.7)" font-family="'Times-Roman'" font-size="14">video_id :integer</text>
-	<text transform="matrix(1 0 0 1 2299.675 622.7)" font-family="'Times-Roman'" font-size="14">created_at :datetime</text>
-	<text transform="matrix(1 0 0 1 2299.675 636.7)" font-family="'Times-Roman'" font-size="14">updated_at :datetime</text>
-</g>
-<g id="edge27">
-	<title>Javascript-&gt;OldVideo</title>
-	<path fill="none" stroke="#153898" d="M2283.8-2.4c-12,80.1-29,241.4,1.5,373.4c1.7,7.5,3.9,15.1,6.4,22.6"/>
-	<ellipse fill="none" stroke="#153898" cx="2284.4" cy="-6.4" rx="4" ry="4"/>
-	<polygon fill="#153898" stroke="#153898" points="2291.8,393.7 2299.3,401.7 2293.4,398.5 2295.1,403.2 2295.1,403.2 2295.1,403.2 
-		2293.4,398.5 2290.8,404.7 2291.8,393.7 	"/>
 </g>
 <g id="node23">
 	<title>Sound</title>
@@ -628,13 +471,6 @@
 	<polygon fill="#298618" stroke="#298618" points="1707,1248.9 1717.8,1247.4 1711.8,1250.3 1716.6,1251.7 1716.6,1251.7 
 		1716.6,1251.7 1711.8,1250.3 1715.3,1256 1707,1248.9 	"/>
 </g>
-<g id="edge41">
-	<title>Map-&gt;OldMap</title>
-	<path fill="none" stroke="#21AD9B" d="M1823.4,360c0,6.2,0,12.4,0,18.7"/>
-	<ellipse fill="none" stroke="#21AD9B" cx="1823.4" cy="355.9" rx="4" ry="4"/>
-	<polygon fill="#21AD9B" stroke="#21AD9B" points="1823.4,379.1 1827.9,389.1 1823.4,384.1 1823.4,389.1 1823.4,389.1 1823.4,389.1 
-		1823.4,384.1 1818.9,389.1 1823.4,379.1 	"/>
-</g>
 <g id="edge39">
 	<title>Map-&gt;Translation</title>
 	<path fill="none" stroke="#773569" d="M1752.1,350c-44.2,95.5-79.9,224.7-5.7,308c23.1,25.9,126-1.1,155,18
@@ -736,167 +572,6 @@
 	<polygon fill="#63EF52" stroke="#63EF52" points="3921.1,800.5 3927.9,809.1 3922.3,805.4 3923.6,810.2 3923.6,810.2 3923.6,810.2 
 		3922.3,805.4 3919.2,811.3 3921.1,800.5 	"/>
 	<text transform="matrix(1 0 0 1 3870.3547 687.2)" font-family="'Times-Roman'" font-size="14">descendant_hierarchies</text>
-</g>
-<g id="edge54">
-	<title>OldArticle-&gt;Association</title>
-	<path fill="none" stroke="#ADE14E" d="M2164.8,616c14.5,15.1,30.3,29.8,46.5,42c14.6,11,20.8,9.4,37,18
-		c61.4,32.5,129.3,71.5,180.9,101.9"/>
-	<ellipse fill="none" stroke="#ADE14E" cx="2161.9" cy="612.8" rx="4" ry="4"/>
-	<polygon fill="#ADE14E" stroke="#ADE14E" points="2429.4,778 2440.3,779.1 2433.7,780.5 2438,783 2438,783 2438,783 2433.7,780.5 
-		2435.7,786.9 2429.4,778 	"/>
-</g>
-<g id="edge57">
-	<title>OldArticle-&gt;Attribution</title>
-	<path fill="none" stroke="#D7BD14" d="M2017.4,601.2c-24.8,21.6-53.8,42.9-84,56.8c-45,20.7-64.3-1-110,18
-		c-47.3,19.7-94.1,52-131.3,81.8"/>
-	<ellipse fill="none" stroke="#D7BD14" cx="2020.6" cy="598.4" rx="4" ry="4"/>
-	<polygon fill="#D7BD14" stroke="#D7BD14" points="1692,757.8 1687.1,767.6 1688.1,761 1684.2,764.1 1684.2,764.1 1684.2,764.1 
-		1688.1,761 1681.4,760.6 1692,757.8 	"/>
-</g>
-<g id="edge56">
-	<title>OldArticle-&gt;LiteratureReference</title>
-	<path fill="none" stroke="#0261C2" d="M2106,651.8c5.1,86.6,2.4,202.2-33.6,297.2c-37.7,99.3-118.7,191.3-180.3,251.1"/>
-	<ellipse fill="none" stroke="#0261C2" cx="2105.7" cy="647.8" rx="4" ry="4"/>
-	<polygon fill="#0261C2" stroke="#0261C2" points="1891.8,1200.3 1887.7,1210.5 1888.2,1203.8 1884.6,1207.3 1884.6,1207.3 
-		1884.6,1207.3 1888.2,1203.8 1881.5,1204 1891.8,1200.3 	"/>
-</g>
-<g id="edge55">
-	<title>OldArticle-&gt;Translation</title>
-	<path fill="none" stroke="#4EF776" d="M2062.4,651.4c-3.7,13.1-7.8,26.2-12.1,38.6c-6.7,19.2-15,39.5-23.4,58.3"/>
-	<ellipse fill="none" stroke="#4EF776" cx="2063.5" cy="647.5" rx="4" ry="4"/>
-	<polygon fill="#4EF776" stroke="#4EF776" points="2027,748.4 2027,759.3 2024.9,752.9 2022.9,757.5 2022.9,757.5 2022.9,757.5 
-		2024.9,752.9 2018.8,755.6 2027,748.4 	"/>
-</g>
-<g id="edge59">
-	<title>OldImage-&gt;Association</title>
-	<path fill="none" stroke="#9145D7" d="M1536.9,566.8c55.9,29.9,135.3,68.6,209.4,91.2c140.2,42.7,182.6,19.6,326,50
-		c125.2,26.5,267.8,67.2,355.8,93.6"/>
-	<ellipse fill="none" stroke="#9145D7" cx="1533.4" cy="564.9" rx="4" ry="4"/>
-	<polygon fill="#9145D7" stroke="#9145D7" points="2428.3,801.6 2439.1,800.2 2433.1,803.1 2437.9,804.5 2437.9,804.5 2437.9,804.5 
-		2433.1,803.1 2436.6,808.8 2428.3,801.6 	"/>
-</g>
-<g id="edge62">
-	<title>OldImage-&gt;Attribution</title>
-	<path fill="none" stroke="#36DEAE" d="M1529.4,658.1c15.4,30.7,31.3,62.4,45.1,89.9"/>
-	<ellipse fill="none" stroke="#36DEAE" cx="1527.5" cy="654.4" rx="4" ry="4"/>
-	<polygon fill="#36DEAE" stroke="#36DEAE" points="1574.6,748.3 1583.1,755.2 1576.8,752.7 1579.1,757.2 1579.1,757.2 1579.1,757.2 
-		1576.8,752.7 1575.1,759.2 1574.6,748.3 	"/>
-</g>
-<g id="edge61">
-	<title>OldImage-&gt;LiteratureReference</title>
-	<path fill="none" stroke="#E0A8B0" d="M1467,658.6c7.4,86.4,25.3,199.3,68.3,290.4c46.6,98.8,132.1,190.9,195.8,251"/>
-	<ellipse fill="none" stroke="#E0A8B0" cx="1466.7" cy="654.5" rx="4" ry="4"/>
-	<polygon fill="#E0A8B0" stroke="#E0A8B0" points="1731.5,1200.4 1741.9,1203.9 1735.2,1203.8 1738.8,1207.2 1738.8,1207.2 
-		1738.8,1207.2 1735.2,1203.8 1735.8,1210.5 1731.5,1200.4 	"/>
-</g>
-<g id="edge63">
-	<title>OldImage-&gt;OldImage</title>
-	<path fill="none" stroke="#9E94D0" d="M1537.1,501.2c6.5,4.7,10.5,12.2,10.5,22.3c0,9.3-3.4,16.3-8.9,21.1"/>
-	<ellipse fill="none" stroke="#9E94D0" cx="1533.5" cy="499.3" rx="4" ry="4"/>
-	<polygon fill="#9E94D0" stroke="#9E94D0" points="1538.6,544.6 1532.2,553.5 1534.3,547.1 1529.9,549.6 1529.9,549.6 1529.9,549.6 
-		1534.3,547.1 1527.7,545.7 1538.6,544.6 	"/>
-</g>
-<g id="edge60">
-	<title>OldImage-&gt;Translation</title>
-	<path fill="none" stroke="#2B64F1" d="M1535.3,634.5c8.2,8.6,16.9,16.6,26,23.5c50,37.8,73.6,27.1,132,50
-		c71.1,27.8,151.3,60.4,210.1,84.5"/>
-	<ellipse fill="none" stroke="#2B64F1" cx="1532.5" cy="631.4" rx="4" ry="4"/>
-	<polygon fill="#2B64F1" stroke="#2B64F1" points="1903.5,792.5 1914.5,792.2 1908.1,794.4 1912.8,796.3 1912.8,796.3 1912.8,796.3 
-		1908.1,794.4 1911,800.5 1903.5,792.5 	"/>
-</g>
-<g id="edge65">
-	<title>OldMap-&gt;Association</title>
-	<path fill="none" stroke="#71B97A" d="M1897.8,583.9c34.1,25.2,75.9,53.5,116.5,74.1c138.4,70.1,312.3,121.8,413.8,148.7"/>
-	<ellipse fill="none" stroke="#71B97A" cx="1894.3" cy="581.3" rx="4" ry="4"/>
-	<polygon fill="#71B97A" stroke="#71B97A" points="2428.3,806.7 2439.1,804.9 2433.2,808 2438,809.3 2438,809.3 2438,809.3 
-		2433.2,808 2436.9,813.6 2428.3,806.7 	"/>
-</g>
-<g id="edge68">
-	<title>OldMap-&gt;Attribution</title>
-	<path fill="none" stroke="#CC69B2" d="M1750.4,607.4c-17.8,21.7-36.3,45.5-52,68.6c-15.5,22.7-30.6,48.5-43.6,72.3"/>
-	<ellipse fill="none" stroke="#CC69B2" cx="1753.1" cy="604.1" rx="4" ry="4"/>
-	<polygon fill="#CC69B2" stroke="#CC69B2" points="1654.6,748.5 1653.8,759.4 1652.2,752.9 1649.8,757.3 1649.8,757.3 1649.8,757.3 
-		1652.2,752.9 1645.9,755.1 1654.6,748.5 	"/>
-</g>
-<g id="edge67">
-	<title>OldMap-&gt;LiteratureReference</title>
-	<path fill="none" stroke="#D0F266" d="M1799.3,665.8c-0.3,3.4-0.6,6.8-0.9,10.2c-18.6,227.2-19.4,285.8,0,513
-		c0.2,2.7,0.5,5.5,0.8,8.3"/>
-	<ellipse fill="none" stroke="#D0F266" cx="1799.7" cy="661.8" rx="4" ry="4"/>
-	<polygon fill="#D0F266" stroke="#D0F266" points="1799.2,1197.5 1804.9,1206.9 1799.8,1202.5 1800.4,1207.5 1800.4,1207.5 
-		1800.4,1207.5 1799.8,1202.5 1796,1208 1799.2,1197.5 	"/>
-</g>
-<g id="edge66">
-	<title>OldMap-&gt;Translation</title>
-	<path fill="none" stroke="#1F29DD" d="M1897.4,580.4c28.7,25.8,58.7,58.9,76,95.6c10.3,21.9,15.1,47.4,17.1,71.3"/>
-	<ellipse fill="none" stroke="#1F29DD" cx="1894.3" cy="577.6" rx="4" ry="4"/>
-	<polygon fill="#1F29DD" stroke="#1F29DD" points="1990.5,747.4 1995.6,757.1 1990.8,752.4 1991.2,757.4 1991.2,757.4 1991.2,757.4 
-		1990.8,752.4 1986.7,757.7 1990.5,747.4 	"/>
-</g>
-<g id="edge70">
-	<title>OldSound-&gt;Association</title>
-	<path fill="none" stroke="#F3111A" d="M2601.4,651.1c-8,15.8-16.2,32.1-24.2,47.9"/>
-	<ellipse fill="none" stroke="#F3111A" cx="2603.3" cy="647.4" rx="4" ry="4"/>
-	<polygon fill="#F3111A" stroke="#F3111A" points="2577.1,699.4 2576.6,710.3 2574.8,703.8 2572.5,708.3 2572.5,708.3 2572.5,708.3 
-		2574.8,703.8 2568.5,706.3 2577.1,699.4 	"/>
-</g>
-<g id="edge73">
-	<title>OldSound-&gt;Attribution</title>
-	<path fill="none" stroke="#5B7732" d="M2590.6,579.3c-42.9,28.5-99.2,61-154.3,78.7c-226.1,72.6-301.5-7-532,50
-		c-74,18.3-153.8,52.3-210.9,79.4"/>
-	<ellipse fill="none" stroke="#5B7732" cx="2594.1" cy="576.9" rx="4" ry="4"/>
-	<polygon fill="#5B7732" stroke="#5B7732" points="1693.2,787.5 1686.1,795.9 1688.7,789.7 1684.2,791.8 1684.2,791.8 1684.2,791.8 
-		1688.7,789.7 1682.2,787.8 1693.2,787.5 	"/>
-</g>
-<g id="edge72">
-	<title>OldSound-&gt;LiteratureReference</title>
-	<path fill="none" stroke="#9CF9B7" d="M2701.1,651.9c32.3,145.2,57.1,380.4-71.8,518.1c-47.8,51.1-500.9,82.9-711,94.9"/>
-	<ellipse fill="none" stroke="#9CF9B7" cx="2700.2" cy="647.6" rx="4" ry="4"/>
-	<polygon fill="#9CF9B7" stroke="#9CF9B7" points="1918.2,1264.9 1908.5,1270 1913.2,1265.2 1908.2,1265.5 1908.2,1265.5 
-		1908.2,1265.5 1913.2,1265.2 1908,1261 1918.2,1264.9 	"/>
-</g>
-<g id="edge74">
-	<title>OldSound-&gt;OldSound</title>
-	<path fill="none" stroke="#CC05E7" d="M2740.5,501.2c6.5,4.7,10.6,12.2,10.6,22.3c0,9.3-3.4,16.3-9,21.1"/>
-	<ellipse fill="none" stroke="#CC05E7" cx="2736.8" cy="499.2" rx="4" ry="4"/>
-	<polygon fill="#CC05E7" stroke="#CC05E7" points="2741.9,544.6 2735.5,553.5 2737.6,547.1 2733.2,549.6 2733.2,549.6 2733.2,549.6 
-		2737.6,547.1 2731,545.7 2741.9,544.6 	"/>
-</g>
-<g id="edge71">
-	<title>OldSound-&gt;Translation</title>
-	<path fill="none" stroke="#725E61" d="M2593.8,649.3c-3.3,3.1-6.8,6-10.4,8.7c-20.7,15.7-349.9,104.5-509.5,146.9"/>
-	<ellipse fill="none" stroke="#725E61" cx="2596.8" cy="646.3" rx="4" ry="4"/>
-	<polygon fill="#725E61" stroke="#725E61" points="2073.7,804.9 2065.2,811.9 2068.9,806.2 2064.1,807.5 2064.1,807.5 2064.1,807.5 
-		2068.9,806.2 2062.9,803.2 2073.7,804.9 	"/>
-</g>
-<g id="edge76">
-	<title>OldVideo-&gt;Association</title>
-	<path fill="none" stroke="#7384AB" d="M2421.9,651.2c6.5,13.1,13.1,26.2,19.5,38.8c1.6,3.1,3.1,6.2,4.8,9.4"/>
-	<ellipse fill="none" stroke="#7384AB" cx="2420" cy="647.5" rx="4" ry="4"/>
-	<polygon fill="#7384AB" stroke="#7384AB" points="2446.1,699.4 2454.7,706.3 2448.4,703.9 2450.7,708.3 2450.7,708.3 2450.7,708.3 
-		2448.4,703.9 2446.6,710.4 2446.1,699.4 	"/>
-</g>
-<g id="edge79">
-	<title>OldVideo-&gt;Attribution</title>
-	<path fill="none" stroke="#951AD4" d="M2290,649c-4,3.3-8.3,6.3-12.7,9c-53.2,32.1-218.1,5.9-279,18c-43.3,8.6-52.7,16.5-94,32
-		c-71.9,27-152.7,60.6-210.7,85.2"/>
-	<ellipse fill="none" stroke="#951AD4" cx="2293.2" cy="646.3" rx="4" ry="4"/>
-	<polygon fill="#951AD4" stroke="#951AD4" points="1693.4,793.4 1685.9,801.4 1688.8,795.3 1684.2,797.3 1684.2,797.3 1684.2,797.3 
-		1688.8,795.3 1682.4,793.1 1693.4,793.4 	"/>
-</g>
-<g id="edge78">
-	<title>OldVideo-&gt;LiteratureReference</title>
-	<path fill="none" stroke="#F891DC" d="M2314,651c-55.8,141.1-162.3,369.1-314.6,519c-23.4,23.1-53.3,42.3-82.2,57.5"/>
-	<ellipse fill="none" stroke="#F891DC" cx="2315.4" cy="647.2" rx="4" ry="4"/>
-	<polygon fill="#F891DC" stroke="#F891DC" points="1917.1,1227.5 1910.3,1236.1 1912.7,1229.8 1908.2,1232.1 1908.2,1232.1 
-		1908.2,1232.1 1912.7,1229.8 1906.2,1228.1 1917.1,1227.5 	"/>
-</g>
-<g id="edge77">
-	<title>OldVideo-&gt;Translation</title>
-	<path fill="none" stroke="#3C5B8F" d="M2285.8,649.2c-2.8,3-5.6,6-8.5,8.8c-59.3,58.1-142.3,104.1-204.1,133.4"/>
-	<ellipse fill="none" stroke="#3C5B8F" cx="2288.8" cy="645.8" rx="4" ry="4"/>
-	<polygon fill="#3C5B8F" stroke="#3C5B8F" points="2073,791.5 2065.8,799.9 2068.4,793.7 2063.9,795.8 2063.9,795.8 2063.9,795.8 
-		2068.4,793.7 2062,791.7 2073,791.5 	"/>
 </g>
 <g id="node19">
 	<title>Partner</title>
@@ -1084,13 +759,6 @@
 	<polygon fill="#CFD808" stroke="#CFD808" points="1918.1,1268.2 1908.2,1272.9 1913.1,1268.3 1908.1,1268.5 1908.1,1268.5 
 		1908.1,1268.5 1913.1,1268.3 1908,1264 1918.1,1268.2 	"/>
 </g>
-<g id="edge100">
-	<title>Sound-&gt;OldSound</title>
-	<path fill="none" stroke="#6FE616" d="M2670.1,345.8c-0.4,15.5-0.8,31.4-1.3,47.1"/>
-	<ellipse fill="none" stroke="#6FE616" cx="2670.2" cy="341.8" rx="4" ry="4"/>
-	<polygon fill="#6FE616" stroke="#6FE616" points="2668.8,393.1 2673.1,403.2 2668.7,398.1 2668.6,403.1 2668.6,403.1 2668.6,403.1 
-		2668.7,398.1 2664.1,403 2668.8,393.1 	"/>
-</g>
 <g id="edge97">
 	<title>Sound-&gt;Translation</title>
 	<path fill="none" stroke="#A60260" d="M2610.5,344.9c-65.6,124-160.8,301.5-174.2,313.1c-105.3,91.5-264.9,135.9-362.5,155.6"/>
@@ -1124,37 +792,6 @@
 	<ellipse fill="none" stroke="#E177B5" cx="2449" cy="-7.2" rx="4" ry="4"/>
 	<polygon fill="#E177B5" stroke="#E177B5" points="1899.2,163.6 1893.7,173 1895.2,166.5 1891.1,169.4 1891.1,169.4 1891.1,169.4 
 		1895.2,166.5 1888.5,165.7 1899.2,163.6 	"/>
-</g>
-<g id="edge106">
-	<title>Stylesheet-&gt;OldArticle</title>
-	<path fill="none" stroke="#1D37AD" d="M2449.3-3.7c-14.2,20.2-31.3,43.5-48,63.7c-14.4,17.4-21.8,18.6-35,37
-		c-75,104.2-49.2,160.4-136,255c-20.4,22.3-35.9,15.4-57,37c-2.4,2.5-4.8,5-7.1,7.7"/>
-	<ellipse fill="none" stroke="#1D37AD" cx="2451.7" cy="-7.1" rx="4" ry="4"/>
-	<polygon fill="#1D37AD" stroke="#1D37AD" points="2165.8,397.2 2162.7,407.7 2162.5,401 2159.3,404.8 2159.3,404.8 2159.3,404.8 
-		2162.5,401 2155.9,401.9 2165.8,397.2 	"/>
-</g>
-<g id="edge107">
-	<title>Stylesheet-&gt;OldMap</title>
-	<path fill="none" stroke="#E64328" d="M2443.7-4c-20.2,22.5-46.8,47.8-75.4,64c-56.7,32.2-97.3-10.5-142,37
-		c-79.1,84.1,34,175.7-50,255c-88.4,83.4-169.2-29.4-271,37c-2.2,1.4-4.3,2.9-6.4,4.5"/>
-	<ellipse fill="none" stroke="#E64328" cx="2446.6" cy="-7.3" rx="4" ry="4"/>
-	<polygon fill="#E64328" stroke="#E64328" points="1898.8,393.6 1893.9,403.5 1894.9,396.8 1891.1,400 1891.1,400 1891.1,400 
-		1894.9,396.8 1888.2,396.5 1898.8,393.6 	"/>
-</g>
-<g id="edge108">
-	<title>Stylesheet-&gt;OldSound</title>
-	<path fill="none" stroke="#034282" d="M2519.7-4c19.8,22.6,46,48,74.6,64c62.2,34.8,111.8-18.9,156,37
-		c67.8,85.8,31.4,211.1-12.9,303.5"/>
-	<ellipse fill="none" stroke="#034282" cx="2516.9" cy="-7.3" rx="4" ry="4"/>
-	<polygon fill="#034282" stroke="#034282" points="2737.4,400.7 2737.1,411.6 2735.2,405.2 2733,409.7 2733,409.7 2733,409.7 
-		2735.2,405.2 2729,407.7 2737.4,400.7 	"/>
-</g>
-<g id="edge109">
-	<title>Stylesheet-&gt;OldVideo</title>
-	<path fill="none" stroke="#686D70" d="M2501.3-2.4c26.6,78.6,66.9,234.2,19.1,354.4c-17.5,44.1-52.5,83.4-85.4,113.2"/>
-	<ellipse fill="none" stroke="#686D70" cx="2499.9" cy="-6.5" rx="4" ry="4"/>
-	<polygon fill="#686D70" stroke="#686D70" points="2434.6,465.5 2430.1,475.5 2430.8,468.8 2427.1,472.1 2427.1,472.1 2427.1,472.1 
-		2430.8,468.8 2424.1,468.8 2434.6,465.5 	"/>
 </g>
 <g id="edge104">
 	<title>Stylesheet-&gt;Sound</title>
@@ -1286,13 +923,6 @@
 	<ellipse fill="none" stroke="#6B5F16" cx="2514.2" cy="298.3" rx="4" ry="4"/>
 	<polygon fill="#6B5F16" stroke="#6B5F16" points="1918.1,1264.3 1908.4,1269.4 1913.1,1264.6 1908.1,1264.9 1908.1,1264.9 
 		1908.1,1264.9 1913.1,1264.6 1907.8,1260.4 1918.1,1264.3 	"/>
-</g>
-<g id="edge129">
-	<title>Video-&gt;OldVideo</title>
-	<path fill="none" stroke="#11B92F" d="M2437.8,345.8c-1.5,8.6-3.3,17.1-5.5,25.2c-2,7.5-4.4,15.1-7.1,22.7"/>
-	<ellipse fill="none" stroke="#11B92F" cx="2438.5" cy="341.8" rx="4" ry="4"/>
-	<polygon fill="#11B92F" stroke="#11B92F" points="2425.2,393.9 2426,404.9 2423.5,398.6 2421.7,403.3 2421.7,403.3 2421.7,403.3 
-		2423.5,398.6 2417.5,401.8 2425.2,393.9 	"/>
 </g>
 <g id="edge126">
 	<title>Video-&gt;Translation</title>
