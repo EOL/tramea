@@ -1,4 +1,4 @@
-class CreatePartners < ActiveRecord::Migration
+class CreateDatasets < ActiveRecord::Migration
   def change
     create_table :datasets do |t|
       t.integer :partner_id

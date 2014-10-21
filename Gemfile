@@ -6,6 +6,8 @@ gem "rails", "4.1.6"
 #
 #  PLEASE KEEP THE REST ALPHABETICAL.
 #
+#  (I group them by letter to make this easier.)
+#
 
 # Sort tables:
 gem "acts_as_list"

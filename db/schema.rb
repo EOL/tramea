@@ -3,7 +3,7 @@
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
 #
-# Note that this schema.rb definition is the authoritative partner for your
+# Note that this schema.rb definition is the authoritative source for your
 # database schema. If you need to create the application database on another
 # system, you should be using db:schema:load, not running all the migrations
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
@@ -22,11 +22,19 @@ ActiveRecord::Schema.define(version: 20141013190813) do
     t.datetime "updated_at"
   end
 
+  create_table "article_sections", force: true do |t|
+    t.integer "article_id"
+    t.integer "section_id"
+    t.boolean "primary"
+  end
+
+  add_index "article_sections", ["article_id"], name: "index_article_sections_on_article_id", using: :btree
+  add_index "article_sections", ["section_id"], name: "index_article_sections_on_section_id", using: :btree
+
   create_table "articles", force: true do |t|
     t.string   "guid"
     t.integer  "locale"
     t.boolean  "preview"
-    t.integer  "section_id"
     t.string   "title"
     t.text     "body"
     t.string   "copyright"
@@ -49,8 +57,9 @@ ActiveRecord::Schema.define(version: 20141013190813) do
     t.boolean  "reviewed"
     t.boolean  "visible"
     t.boolean  "overview"
+    t.boolean  "original_name"
     t.integer  "position"
-    t.float    "rating",      limit: 24
+    t.float    "rating",        limit: 24
     t.integer  "num_ratings"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -71,26 +80,19 @@ ActiveRecord::Schema.define(version: 20141013190813) do
 
   add_index "attributions", ["medium_id"], name: "index_attributions_on_medium_id", using: :btree
 
-  create_table "node_hierarchies", id: false, force: true do |t|
-    t.integer "ancestor_id",   null: false
-    t.integer "descendant_id", null: false
-    t.integer "generations",   null: false
-  end
-
-  add_index "node_hierarchies", ["ancestor_id", "descendant_id", "generations"], name: "anc_desc_idx", unique: true, using: :btree
-  add_index "node_hierarchies", ["descendant_id"], name: "desc_idx", using: :btree
-
-  create_table "nodes", force: true do |t|
+  create_table "datasets", force: true do |t|
     t.integer  "partner_id"
-    t.integer  "parent_id"
-    t.integer  "synth_id"
-    t.string   "original_id"
+    t.string   "name"
+    t.string   "full_name"
+    t.string   "abbr"
+    t.text     "description"
+    t.text     "private_notes"
+    t.text     "admin_notes"
+    t.string   "url"
+    t.integer  "license_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "nodes", ["partner_id"], name: "index_nodes_on_partner_id", using: :btree
-  add_index "nodes", ["synth_id"], name: "index_nodes_on_synth_id", using: :btree
 
   create_table "images", force: true do |t|
     t.string   "guid"
@@ -139,6 +141,7 @@ ActiveRecord::Schema.define(version: 20141013190813) do
     t.string   "parent_type"
     t.integer  "parent_id"
     t.string   "string"
+    t.boolean  "bibliographic_citation"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -167,6 +170,7 @@ ActiveRecord::Schema.define(version: 20141013190813) do
 
   create_table "names", force: true do |t|
     t.string   "string"
+    t.string   "location"
     t.integer  "type"
     t.integer  "locale"
     t.boolean  "preview"
@@ -175,6 +179,28 @@ ActiveRecord::Schema.define(version: 20141013190813) do
   end
 
   add_index "names", ["locale"], name: "index_names_on_locale", using: :btree
+
+  create_table "node_hierarchies", id: false, force: true do |t|
+    t.integer "ancestor_id",   null: false
+    t.integer "descendant_id", null: false
+    t.integer "generations",   null: false
+  end
+
+  add_index "node_hierarchies", ["ancestor_id", "descendant_id", "generations"], name: "anc_desc_idx", unique: true, using: :btree
+  add_index "node_hierarchies", ["descendant_id"], name: "desc_idx", using: :btree
+
+  create_table "nodes", force: true do |t|
+    t.integer  "partner_id"
+    t.integer  "parent_id"
+    t.integer  "synth_id"
+    t.integer  "rank"
+    t.string   "original_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "nodes", ["partner_id"], name: "index_nodes_on_partner_id", using: :btree
+  add_index "nodes", ["synth_id"], name: "index_nodes_on_synth_id", using: :btree
 
   create_table "old_articles", force: true do |t|
     t.string   "guid"
@@ -264,6 +290,22 @@ ActiveRecord::Schema.define(version: 20141013190813) do
     t.datetime "updated_at"
   end
 
+  create_table "partners", force: true do |t|
+    t.string   "name"
+    t.string   "full_name"
+    t.string   "abbr"
+    t.text     "description"
+    t.text     "private_notes"
+    t.text     "admin_notes"
+    t.string   "icon_file_name"
+    t.string   "icon_content_type"
+    t.integer  "icon_file_size"
+    t.datetime "icon_updated_at"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "publications", force: true do |t|
     t.string   "title"
     t.string   "url"
@@ -297,14 +339,6 @@ ActiveRecord::Schema.define(version: 20141013190813) do
     t.datetime "updated_at"
   end
 
-  create_table "sections_uris", force: true do |t|
-    t.integer "uri_id"
-    t.integer "section_id"
-  end
-
-  add_index "sections_uris", ["section_id"], name: "index_sections_uris_on_section_id", using: :btree
-  add_index "sections_uris", ["uri_id"], name: "index_sections_uris_on_uri_id", using: :btree
-
   create_table "sounds", force: true do |t|
     t.string   "guid"
     t.integer  "locale"
@@ -323,22 +357,6 @@ ActiveRecord::Schema.define(version: 20141013190813) do
 
   add_index "sounds", ["locale"], name: "index_sounds_on_locale", using: :btree
 
-  create_table "partners", force: true do |t|
-    t.string   "name"
-    t.string   "full_name"
-    t.string   "abbr"
-    t.text     "description"
-    t.text     "private_notes"
-    t.text     "admin_notes"
-    t.string   "icon_file_name"
-    t.string   "icon_content_type"
-    t.integer  "icon_file_size"
-    t.datetime "icon_updated_at"
-    t.string   "url"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "stylesheets", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -353,7 +371,6 @@ ActiveRecord::Schema.define(version: 20141013190813) do
 
   create_table "traits", force: true do |t|
     t.integer  "metadata_for_id"
-    t.string   "original_predicate_name"
     t.integer  "predicate_uri_id"
     t.string   "value"
     t.string   "text"
@@ -371,11 +388,21 @@ ActiveRecord::Schema.define(version: 20141013190813) do
     t.integer  "of_medium_id"
     t.string   "to_medium_type"
     t.integer  "to_medium_id"
+    t.string   "translated_by"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "translations", ["of_medium_type", "of_medium_id"], name: "index_translations_on_of_medium_type_and_of_medium_id", using: :btree
+
+  create_table "uri_sections", force: true do |t|
+    t.integer "uri_id"
+    t.integer "section_id"
+    t.boolean "primary"
+  end
+
+  add_index "uri_sections", ["section_id"], name: "index_uri_sections_on_section_id", using: :btree
+  add_index "uri_sections", ["uri_id"], name: "index_uri_sections_on_uri_id", using: :btree
 
   create_table "uri_translations", force: true do |t|
     t.integer  "uri_id",      null: false
