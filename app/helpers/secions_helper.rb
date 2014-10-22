@@ -1,2 +1,0 @@
-module SecionsHelper
-end
