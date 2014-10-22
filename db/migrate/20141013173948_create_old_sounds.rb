@@ -11,9 +11,9 @@ class CreateOldSounds < ActiveRecord::Migration
       t.string :url
       t.integer :javascript_id
       t.integer :stylesheet_id
-      t.integer :sound_id
 
       t.timestamps
     end
+    add_index :old_sounds, :guid
   end
 end

@@ -9,7 +9,6 @@ class CreateUris < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :uris, :locale
     Uri.create_translation_table! name: :string, description: :text
   end
   def down

@@ -8,6 +8,5 @@ class CreateNames < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :names, :locale
   end
 end

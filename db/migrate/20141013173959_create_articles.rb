@@ -13,6 +13,6 @@ class CreateArticles < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :articles, :locale
+    add_index :articles, :guid
   end
 end

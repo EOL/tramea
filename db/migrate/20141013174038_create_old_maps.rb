@@ -13,9 +13,9 @@ class CreateOldMaps < ActiveRecord::Migration
       t.string :thumbnail_url
       t.integer :javascript_id
       t.integer :stylesheet_id
-      t.integer :map_id
 
       t.timestamps
     end
+    add_index :old_maps, :guid
   end
 end

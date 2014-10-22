@@ -14,6 +14,6 @@ class CreateImages < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :images, :locale
+    add_index :images, :guid
   end
 end

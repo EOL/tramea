@@ -15,5 +15,6 @@ class CreateOldArticles < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index :old_articles, :guid
   end
 end

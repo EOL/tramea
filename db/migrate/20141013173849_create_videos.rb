@@ -14,6 +14,6 @@ class CreateVideos < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :videos, :locale
+    add_index :videos, :guid
   end
 end

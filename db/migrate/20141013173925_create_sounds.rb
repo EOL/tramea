@@ -14,6 +14,6 @@ class CreateSounds < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :sounds, :locale
+    add_index :sounds, :guid
   end
 end

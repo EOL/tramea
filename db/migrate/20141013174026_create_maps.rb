@@ -16,6 +16,6 @@ class CreateMaps < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :maps, :locale
+    add_index :maps, :guid
   end
 end

@@ -12,9 +12,9 @@ class CreateOldImages < ActiveRecord::Migration
       t.string :full_size_url
       t.string :crop_url
       t.string :thumbnail_url
-      t.integer :image_id
 
       t.timestamps
     end
+    add_index :old_images, :guid
   end
 end
