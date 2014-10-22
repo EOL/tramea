@@ -4,7 +4,6 @@ FactoryGirl.define do
   factory :article do
     guid "MyString"
     locale 1
-    preview false
     section_id 1
     title "MyString"
     body "MyText"

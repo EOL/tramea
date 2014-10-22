@@ -6,14 +6,12 @@ RSpec.describe "names/index", :type => :view do
       Name.create!(
         :string => "String",
         :type => 1,
-        :locale => 2,
-        :preview => false
+        :locale => 2
       ),
       Name.create!(
         :string => "String",
         :type => 1,
-        :locale => 2,
-        :preview => false
+        :locale => 2
       )
     ])
   end

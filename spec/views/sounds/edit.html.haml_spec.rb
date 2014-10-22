@@ -5,7 +5,6 @@ RSpec.describe "sounds/edit", :type => :view do
     @sound = assign(:sound, Sound.create!(
       :guid => "MyString",
       :locale => 1,
-      :preview => false,
       :title => "MyString",
       :description => "MyText",
       :copyright => "MyString",
@@ -25,8 +24,6 @@ RSpec.describe "sounds/edit", :type => :view do
       assert_select "input#sound_guid[name=?]", "sound[guid]"
 
       assert_select "input#sound_locale[name=?]", "sound[locale]"
-
-      assert_select "input#sound_preview[name=?]", "sound[preview]"
 
       assert_select "input#sound_title[name=?]", "sound[title]"
 

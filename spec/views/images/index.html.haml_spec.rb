@@ -6,7 +6,6 @@ RSpec.describe "images/index", :type => :view do
       Image.create!(
         :guid => "Guid",
         :locale => 1,
-        :preview => false,
         :title => "Title",
         :description => "MyText",
         :copyright => "Copyright",
@@ -19,7 +18,6 @@ RSpec.describe "images/index", :type => :view do
       Image.create!(
         :guid => "Guid",
         :locale => 1,
-        :preview => false,
         :title => "Title",
         :description => "MyText",
         :copyright => "Copyright",

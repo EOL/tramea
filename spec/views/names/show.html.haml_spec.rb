@@ -5,8 +5,7 @@ RSpec.describe "names/show", :type => :view do
     @name = assign(:name, Name.create!(
       :string => "String",
       :type => 1,
-      :locale => 2,
-      :preview => false
+      :locale => 2
     ))
   end
 

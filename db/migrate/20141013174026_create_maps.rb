@@ -3,7 +3,6 @@ class CreateMaps < ActiveRecord::Migration
     create_table :maps do |t|
       t.string :guid
       t.integer :locale
-      t.boolean :preview
       t.string :title
       t.text :description
       t.string :copyright

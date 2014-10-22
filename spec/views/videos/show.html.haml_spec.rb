@@ -5,7 +5,6 @@ RSpec.describe "videos/show", :type => :view do
     @video = assign(:video, Video.create!(
       :guid => "Guid",
       :locale => 1,
-      :preview => false,
       :title => "Title",
       :description => "MyText",
       :copyright => "Copyright",

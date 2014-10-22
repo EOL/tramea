@@ -5,7 +5,6 @@ RSpec.describe "maps/edit", :type => :view do
     @map = assign(:map, Map.create!(
       :guid => "MyString",
       :locale => 1,
-      :preview => false,
       :title => "MyString",
       :description => "MyText",
       :copyright => "MyString",
@@ -27,8 +26,6 @@ RSpec.describe "maps/edit", :type => :view do
       assert_select "input#map_guid[name=?]", "map[guid]"
 
       assert_select "input#map_locale[name=?]", "map[locale]"
-
-      assert_select "input#map_preview[name=?]", "map[preview]"
 
       assert_select "input#map_title[name=?]", "map[title]"
 

@@ -5,7 +5,6 @@ RSpec.describe "images/edit", :type => :view do
     @image = assign(:image, Image.create!(
       :guid => "MyString",
       :locale => 1,
-      :preview => false,
       :title => "MyString",
       :description => "MyText",
       :copyright => "MyString",
@@ -25,8 +24,6 @@ RSpec.describe "images/edit", :type => :view do
       assert_select "input#image_guid[name=?]", "image[guid]"
 
       assert_select "input#image_locale[name=?]", "image[locale]"
-
-      assert_select "input#image_preview[name=?]", "image[preview]"
 
       assert_select "input#image_title[name=?]", "image[title]"
 

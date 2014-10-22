@@ -4,7 +4,6 @@ FactoryGirl.define do
   factory :sound do
     guid "MyString"
     locale 1
-    preview false
     title "MyString"
     description "MyText"
     copyright "MyString"

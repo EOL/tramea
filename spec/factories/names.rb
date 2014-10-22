@@ -5,6 +5,5 @@ FactoryGirl.define do
     string "MyString"
     type 1
     locale 1
-    preview false
   end
 end

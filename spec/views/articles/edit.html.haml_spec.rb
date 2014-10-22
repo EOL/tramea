@@ -5,7 +5,6 @@ RSpec.describe "articles/edit", :type => :view do
     @article = assign(:article, Article.create!(
       :guid => "MyString",
       :locale => 1,
-      :preview => false,
       :section_id => 1,
       :title => "MyString",
       :body => "MyText",
@@ -25,8 +24,6 @@ RSpec.describe "articles/edit", :type => :view do
       assert_select "input#article_guid[name=?]", "article[guid]"
 
       assert_select "input#article_locale[name=?]", "article[locale]"
-
-      assert_select "input#article_preview[name=?]", "article[preview]"
 
       assert_select "input#article_section_id[name=?]", "article[section_id]"
 

@@ -3,7 +3,6 @@ class CreateImages < ActiveRecord::Migration
     create_table :images do |t|
       t.string :guid
       t.integer :locale
-      t.boolean :preview
       t.string :title
       t.text :description
       t.string :copyright

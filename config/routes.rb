@@ -21,23 +21,13 @@ Rails.application.routes.draw do
 
   resource :traits
 
-  resource :old_maps
-
   resource :maps
-
-  resource :old_articles
 
   resource :articles
 
-  resource :old_sounds
-
   resource :sounds
 
-  resource :old_videos
-
   resource :videos
-
-  resource :old_images
 
   resource :images
 

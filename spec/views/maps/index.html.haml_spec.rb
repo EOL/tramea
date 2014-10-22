@@ -6,7 +6,6 @@ RSpec.describe "maps/index", :type => :view do
       Map.create!(
         :guid => "Guid",
         :locale => 1,
-        :preview => false,
         :title => "Title",
         :description => "MyText",
         :copyright => "Copyright",
@@ -21,7 +20,6 @@ RSpec.describe "maps/index", :type => :view do
       Map.create!(
         :guid => "Guid",
         :locale => 1,
-        :preview => false,
         :title => "Title",
         :description => "MyText",
         :copyright => "Copyright",

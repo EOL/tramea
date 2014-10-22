@@ -5,7 +5,6 @@ RSpec.describe "articles/show", :type => :view do
     @article = assign(:article, Article.create!(
       :guid => "Guid",
       :locale => 1,
-      :preview => false,
       :section_id => 2,
       :title => "Title",
       :body => "MyText",

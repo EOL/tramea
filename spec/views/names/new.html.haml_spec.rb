@@ -5,8 +5,7 @@ RSpec.describe "names/new", :type => :view do
     assign(:name, Name.new(
       :string => "MyString",
       :type => 1,
-      :locale => 1,
-      :preview => false
+      :locale => 1
     ))
   end
 
@@ -20,8 +19,6 @@ RSpec.describe "names/new", :type => :view do
       assert_select "input#name_type[name=?]", "name[type]"
 
       assert_select "input#name_locale[name=?]", "name[locale]"
-
-      assert_select "input#name_preview[name=?]", "name[preview]"
     end
   end
 end

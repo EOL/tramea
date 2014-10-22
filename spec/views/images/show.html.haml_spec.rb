@@ -5,7 +5,6 @@ RSpec.describe "images/show", :type => :view do
     @image = assign(:image, Image.create!(
       :guid => "Guid",
       :locale => 1,
-      :preview => false,
       :title => "Title",
       :description => "MyText",
       :copyright => "Copyright",

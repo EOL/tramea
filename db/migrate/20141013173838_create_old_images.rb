@@ -3,7 +3,6 @@ class CreateOldImages < ActiveRecord::Migration
     create_table :old_images do |t|
       t.string :guid
       t.integer :locale
-      t.boolean :preview
       t.string :title
       t.text :description
       t.string :copyright

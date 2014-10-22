@@ -5,7 +5,6 @@ RSpec.describe "maps/show", :type => :view do
     @map = assign(:map, Map.create!(
       :guid => "Guid",
       :locale => 1,
-      :preview => false,
       :title => "Title",
       :description => "MyText",
       :copyright => "Copyright",

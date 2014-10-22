@@ -6,7 +6,6 @@ RSpec.describe "articles/index", :type => :view do
       Article.create!(
         :guid => "Guid",
         :locale => 1,
-        :preview => false,
         :section_id => 2,
         :title => "Title",
         :body => "MyText",
@@ -19,7 +18,6 @@ RSpec.describe "articles/index", :type => :view do
       Article.create!(
         :guid => "Guid",
         :locale => 1,
-        :preview => false,
         :section_id => 2,
         :title => "Title",
         :body => "MyText",

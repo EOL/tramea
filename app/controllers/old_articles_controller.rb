@@ -69,6 +69,6 @@ class OldArticlesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def old_article_params
-      params.require(:old_article).permit(:guid, :locale, :preview, :section_id, :title, :body, :copyright, :license_id, :original_url, :javascript_id, :stylesheet_id, :article_id)
+      params.require(:old_article).permit(:guid, :locale, :section_id, :title, :body, :copyright, :license_id, :original_url, :javascript_id, :stylesheet_id, :article_id)
     end
 end

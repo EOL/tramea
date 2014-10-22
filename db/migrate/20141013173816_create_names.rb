@@ -5,7 +5,6 @@ class CreateNames < ActiveRecord::Migration
       t.string :location
       t.integer :type
       t.integer :locale
-      t.boolean :preview
 
       t.timestamps
     end

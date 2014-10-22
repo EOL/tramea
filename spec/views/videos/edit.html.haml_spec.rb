@@ -5,7 +5,6 @@ RSpec.describe "videos/edit", :type => :view do
     @video = assign(:video, Video.create!(
       :guid => "MyString",
       :locale => 1,
-      :preview => false,
       :title => "MyString",
       :description => "MyText",
       :copyright => "MyString",
@@ -25,8 +24,6 @@ RSpec.describe "videos/edit", :type => :view do
       assert_select "input#video_guid[name=?]", "video[guid]"
 
       assert_select "input#video_locale[name=?]", "video[locale]"
-
-      assert_select "input#video_preview[name=?]", "video[preview]"
 
       assert_select "input#video_title[name=?]", "video[title]"
 

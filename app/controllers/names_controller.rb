@@ -69,6 +69,6 @@ class NamesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def name_params
-      params.require(:name).permit(:string, :type, :locale, :preview)
+      params.require(:name).permit(:string, :type, :locale)
     end
 end

@@ -3,7 +3,6 @@ class CreateArticles < ActiveRecord::Migration
     create_table :articles do |t|
       t.string :guid
       t.integer :locale
-      t.boolean :preview
       t.string :title
       t.text :body
       t.string :copyright

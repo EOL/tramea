@@ -69,6 +69,6 @@ class OldImagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def old_image_params
-      params.require(:old_image).permit(:guid, :locale, :preview, :title, :description, :copyright, :string, :license_id, :original_url, :full_size_url, :crop_url, :thumbnail_url, :image_id)
+      params.require(:old_image).permit(:guid, :locale, :title, :description, :copyright, :string, :license_id, :original_url, :full_size_url, :crop_url, :thumbnail_url, :image_id)
     end
 end

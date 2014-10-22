@@ -6,7 +6,6 @@ RSpec.describe "videos/index", :type => :view do
       Video.create!(
         :guid => "Guid",
         :locale => 1,
-        :preview => false,
         :title => "Title",
         :description => "MyText",
         :copyright => "Copyright",
@@ -19,7 +18,6 @@ RSpec.describe "videos/index", :type => :view do
       Video.create!(
         :guid => "Guid",
         :locale => 1,
-        :preview => false,
         :title => "Title",
         :description => "MyText",
         :copyright => "Copyright",

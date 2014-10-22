@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(version: 20141013190813) do
   create_table "articles", force: true do |t|
     t.string   "guid"
     t.integer  "locale"
-    t.boolean  "preview"
     t.string   "title"
     t.text     "body"
     t.string   "copyright"
@@ -97,7 +96,6 @@ ActiveRecord::Schema.define(version: 20141013190813) do
   create_table "images", force: true do |t|
     t.string   "guid"
     t.integer  "locale"
-    t.boolean  "preview"
     t.string   "title"
     t.text     "description"
     t.string   "copyright"
@@ -151,7 +149,6 @@ ActiveRecord::Schema.define(version: 20141013190813) do
   create_table "maps", force: true do |t|
     t.string   "guid"
     t.integer  "locale"
-    t.boolean  "preview"
     t.string   "title"
     t.text     "description"
     t.string   "copyright"
@@ -173,7 +170,6 @@ ActiveRecord::Schema.define(version: 20141013190813) do
     t.string   "location"
     t.integer  "type"
     t.integer  "locale"
-    t.boolean  "preview"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -205,7 +201,6 @@ ActiveRecord::Schema.define(version: 20141013190813) do
   create_table "old_articles", force: true do |t|
     t.string   "guid"
     t.integer  "locale"
-    t.boolean  "preview"
     t.integer  "section_id"
     t.string   "title"
     t.text     "body"
@@ -222,7 +217,6 @@ ActiveRecord::Schema.define(version: 20141013190813) do
   create_table "old_images", force: true do |t|
     t.string   "guid"
     t.integer  "locale"
-    t.boolean  "preview"
     t.string   "title"
     t.text     "description"
     t.string   "copyright"
@@ -240,7 +234,6 @@ ActiveRecord::Schema.define(version: 20141013190813) do
   create_table "old_maps", force: true do |t|
     t.string   "guid"
     t.integer  "locale"
-    t.boolean  "preview"
     t.string   "title"
     t.text     "description"
     t.string   "copyright"
@@ -259,7 +252,6 @@ ActiveRecord::Schema.define(version: 20141013190813) do
   create_table "old_sounds", force: true do |t|
     t.string   "guid"
     t.integer  "locale"
-    t.boolean  "preview"
     t.string   "title"
     t.text     "description"
     t.string   "copyright"
@@ -276,7 +268,6 @@ ActiveRecord::Schema.define(version: 20141013190813) do
   create_table "old_videos", force: true do |t|
     t.string   "guid"
     t.integer  "locale"
-    t.boolean  "preview"
     t.string   "title"
     t.text     "description"
     t.string   "copyright"
@@ -342,7 +333,6 @@ ActiveRecord::Schema.define(version: 20141013190813) do
   create_table "sounds", force: true do |t|
     t.string   "guid"
     t.integer  "locale"
-    t.boolean  "preview"
     t.string   "title"
     t.text     "description"
     t.string   "copyright"
@@ -431,7 +421,6 @@ ActiveRecord::Schema.define(version: 20141013190813) do
   create_table "videos", force: true do |t|
     t.string   "guid"
     t.integer  "locale"
-    t.boolean  "preview"
     t.string   "title"
     t.text     "description"
     t.string   "copyright"

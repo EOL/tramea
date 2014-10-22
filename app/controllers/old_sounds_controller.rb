@@ -69,6 +69,6 @@ class OldSoundsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def old_sound_params
-      params.require(:old_sound).permit(:guid, :locale, :preview, :title, :description, :copyright, :license_id, :original_url, :url, :javascript_id, :stylesheet_id, :sound_id)
+      params.require(:old_sound).permit(:guid, :locale, :title, :description, :copyright, :license_id, :original_url, :url, :javascript_id, :stylesheet_id, :sound_id)
     end
 end
