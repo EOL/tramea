@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141013190813) do
+ActiveRecord::Schema.define(version: 20141022190532) do
 
   create_table "appearances", force: true do |t|
     t.integer  "name_id"
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 20141013190813) do
     t.datetime "updated_at"
   end
 
-  add_index "articles", ["locale"], name: "index_articles_on_locale", using: :btree
+  add_index "articles", ["guid"], name: "index_articles_on_guid", using: :btree
 
   create_table "associations", force: true do |t|
     t.string   "parent_type"
@@ -108,7 +108,7 @@ ActiveRecord::Schema.define(version: 20141013190813) do
     t.datetime "updated_at"
   end
 
-  add_index "images", ["locale"], name: "index_images_on_locale", using: :btree
+  add_index "images", ["guid"], name: "index_images_on_guid", using: :btree
 
   create_table "javascripts", force: true do |t|
     t.string   "name"
@@ -163,7 +163,7 @@ ActiveRecord::Schema.define(version: 20141013190813) do
     t.datetime "updated_at"
   end
 
-  add_index "maps", ["locale"], name: "index_maps_on_locale", using: :btree
+  add_index "maps", ["guid"], name: "index_maps_on_guid", using: :btree
 
   create_table "names", force: true do |t|
     t.string   "string"
@@ -173,8 +173,6 @@ ActiveRecord::Schema.define(version: 20141013190813) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "names", ["locale"], name: "index_names_on_locale", using: :btree
 
   create_table "node_hierarchies", id: false, force: true do |t|
     t.integer "ancestor_id",   null: false
@@ -198,10 +196,19 @@ ActiveRecord::Schema.define(version: 20141013190813) do
   add_index "nodes", ["partner_id"], name: "index_nodes_on_partner_id", using: :btree
   add_index "nodes", ["synth_id"], name: "index_nodes_on_synth_id", using: :btree
 
+  create_table "old_article_sections", force: true do |t|
+    t.integer  "article_id"
+    t.integer  "section_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "old_article_sections", ["article_id"], name: "index_old_article_sections_on_article_id", using: :btree
+  add_index "old_article_sections", ["section_id"], name: "index_old_article_sections_on_section_id", using: :btree
+
   create_table "old_articles", force: true do |t|
     t.string   "guid"
     t.integer  "locale"
-    t.integer  "section_id"
     t.string   "title"
     t.text     "body"
     t.string   "copyright"
@@ -213,6 +220,8 @@ ActiveRecord::Schema.define(version: 20141013190813) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "old_articles", ["guid"], name: "index_old_articles_on_guid", using: :btree
 
   create_table "old_images", force: true do |t|
     t.string   "guid"
@@ -226,10 +235,11 @@ ActiveRecord::Schema.define(version: 20141013190813) do
     t.string   "full_size_url"
     t.string   "crop_url"
     t.string   "thumbnail_url"
-    t.integer  "image_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "old_images", ["guid"], name: "index_old_images_on_guid", using: :btree
 
   create_table "old_maps", force: true do |t|
     t.string   "guid"
@@ -244,10 +254,11 @@ ActiveRecord::Schema.define(version: 20141013190813) do
     t.string   "thumbnail_url"
     t.integer  "javascript_id"
     t.integer  "stylesheet_id"
-    t.integer  "map_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "old_maps", ["guid"], name: "index_old_maps_on_guid", using: :btree
 
   create_table "old_sounds", force: true do |t|
     t.string   "guid"
@@ -260,10 +271,11 @@ ActiveRecord::Schema.define(version: 20141013190813) do
     t.string   "url"
     t.integer  "javascript_id"
     t.integer  "stylesheet_id"
-    t.integer  "sound_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "old_sounds", ["guid"], name: "index_old_sounds_on_guid", using: :btree
 
   create_table "old_videos", force: true do |t|
     t.string   "guid"
@@ -276,10 +288,11 @@ ActiveRecord::Schema.define(version: 20141013190813) do
     t.string   "url"
     t.integer  "javascript_id"
     t.integer  "stylesheet_id"
-    t.integer  "video_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "old_videos", ["guid"], name: "index_old_videos_on_guid", using: :btree
 
   create_table "partners", force: true do |t|
     t.string   "name"
@@ -345,7 +358,7 @@ ActiveRecord::Schema.define(version: 20141013190813) do
     t.datetime "updated_at"
   end
 
-  add_index "sounds", ["locale"], name: "index_sounds_on_locale", using: :btree
+  add_index "sounds", ["guid"], name: "index_sounds_on_guid", using: :btree
 
   create_table "stylesheets", force: true do |t|
     t.string   "name"
@@ -416,8 +429,6 @@ ActiveRecord::Schema.define(version: 20141013190813) do
     t.datetime "updated_at"
   end
 
-  add_index "uris", ["locale"], name: "index_uris_on_locale", using: :btree
-
   create_table "videos", force: true do |t|
     t.string   "guid"
     t.integer  "locale"
@@ -433,6 +444,6 @@ ActiveRecord::Schema.define(version: 20141013190813) do
     t.datetime "updated_at"
   end
 
-  add_index "videos", ["locale"], name: "index_videos_on_locale", using: :btree
+  add_index "videos", ["guid"], name: "index_videos_on_guid", using: :btree
 
 end

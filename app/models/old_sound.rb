@@ -1,3 +1,3 @@
 class OldSound < Sound
-  set_table_name "old_sounds"
+  self.table_name = "old_sounds"
 end
