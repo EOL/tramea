@@ -3,7 +3,6 @@ class CreateOldArticles < ActiveRecord::Migration
     create_table :old_articles do |t|
       t.string :guid
       t.integer :locale
-      t.integer :section_id
       t.string :title
       t.text :body
       t.string :copyright
