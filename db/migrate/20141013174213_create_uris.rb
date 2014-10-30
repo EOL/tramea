@@ -2,7 +2,6 @@ class CreateUris < ActiveRecord::Migration
   def up
     create_table :uris do |t|
       t.string :string
-      t.integer :locale
       t.integer :position
       t.boolean :show_in_glossary
       t.boolean :important_metadata
