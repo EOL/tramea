@@ -68,7 +68,7 @@ ActiveRecord::Schema.define(version: 20141022190532) do
   add_index "associations", ["parent_type", "parent_id"], name: "index_associations_on_parent_type_and_parent_id", using: :btree
 
   create_table "attributions", force: true do |t|
-    t.integer  "medium_type"
+    t.string   "medium_type"
     t.integer  "medium_id"
     t.string   "who"
     t.string   "url"
@@ -421,7 +421,6 @@ ActiveRecord::Schema.define(version: 20141022190532) do
 
   create_table "uris", force: true do |t|
     t.string   "string"
-    t.integer  "locale"
     t.integer  "position"
     t.boolean  "show_in_glossary"
     t.boolean  "important_metadata"
