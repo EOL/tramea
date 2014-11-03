@@ -140,6 +140,7 @@ ActiveRecord::Schema.define(version: 20141022190532) do
     t.integer  "parent_id"
     t.string   "string"
     t.boolean  "bibliographic_citation"
+    t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
