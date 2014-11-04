@@ -35,6 +35,24 @@ CREATE TABLE `appearances` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `article_sections`
+--
+
+DROP TABLE IF EXISTS `article_sections`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `article_sections` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `article_id` int(11) DEFAULT NULL,
+  `section_id` int(11) DEFAULT NULL,
+  `primary` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_article_sections_on_article_id` (`article_id`),
+  KEY `index_article_sections_on_section_id` (`section_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `articles`
 --
 
@@ -45,7 +63,6 @@ CREATE TABLE `articles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `guid` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `locale` int(11) DEFAULT NULL,
-  `section_id` int(11) DEFAULT NULL,
   `title` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `body` text COLLATE utf8_unicode_ci,
   `copyright` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -56,7 +73,7 @@ CREATE TABLE `articles` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `index_articles_on_locale` (`locale`)
+  KEY `index_articles_on_guid` (`guid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -77,6 +94,7 @@ CREATE TABLE `associations` (
   `reviewed` tinyint(1) DEFAULT NULL,
   `visible` tinyint(1) DEFAULT NULL,
   `overview` tinyint(1) DEFAULT NULL,
+  `original_name` tinyint(1) DEFAULT NULL,
   `position` int(11) DEFAULT NULL,
   `rating` float DEFAULT NULL,
   `num_ratings` int(11) DEFAULT NULL,
@@ -97,7 +115,7 @@ DROP TABLE IF EXISTS `attributions`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `attributions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `medium_type` int(11) DEFAULT NULL,
+  `medium_type` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `medium_id` int(11) DEFAULT NULL,
   `who` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `url` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -110,39 +128,26 @@ CREATE TABLE `attributions` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `node_hierarchies`
+-- Table structure for table `datasets`
 --
 
-DROP TABLE IF EXISTS `node_hierarchies`;
+DROP TABLE IF EXISTS `datasets`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `node_hierarchies` (
-  `ancestor_id` int(11) NOT NULL,
-  `descendant_id` int(11) NOT NULL,
-  `generations` int(11) NOT NULL,
-  UNIQUE KEY `anc_desc_idx` (`ancestor_id`,`descendant_id`,`generations`),
-  KEY `desc_idx` (`descendant_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Table structure for table `nodes`
---
-
-DROP TABLE IF EXISTS `nodes`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `nodes` (
+CREATE TABLE `datasets` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `partner_id` int(11) DEFAULT NULL,
-  `parent_id` int(11) DEFAULT NULL,
-  `synth_id` int(11) DEFAULT NULL,
-  `original_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `full_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `abbr` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `description` text COLLATE utf8_unicode_ci,
+  `private_notes` text COLLATE utf8_unicode_ci,
+  `admin_notes` text COLLATE utf8_unicode_ci,
+  `url` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `license_id` int(11) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `index_nodes_on_partner_id` (`partner_id`),
-  KEY `index_nodes_on_synth_id` (`synth_id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -168,7 +173,7 @@ CREATE TABLE `images` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `index_images_on_locale` (`locale`)
+  KEY `index_images_on_guid` (`guid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -239,6 +244,8 @@ CREATE TABLE `literature_references` (
   `parent_type` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `parent_id` int(11) DEFAULT NULL,
   `string` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `bibliographic_citation` tinyint(1) DEFAULT NULL,
+  `position` int(11) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -270,7 +277,7 @@ CREATE TABLE `maps` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `index_maps_on_locale` (`locale`)
+  KEY `index_maps_on_guid` (`guid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -284,12 +291,69 @@ DROP TABLE IF EXISTS `names`;
 CREATE TABLE `names` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `string` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `location` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `type` int(11) DEFAULT NULL,
   `locale` int(11) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `node_hierarchies`
+--
+
+DROP TABLE IF EXISTS `node_hierarchies`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `node_hierarchies` (
+  `ancestor_id` int(11) NOT NULL,
+  `descendant_id` int(11) NOT NULL,
+  `generations` int(11) NOT NULL,
+  UNIQUE KEY `anc_desc_idx` (`ancestor_id`,`descendant_id`,`generations`),
+  KEY `desc_idx` (`descendant_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `nodes`
+--
+
+DROP TABLE IF EXISTS `nodes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `nodes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `partner_id` int(11) DEFAULT NULL,
+  `parent_id` int(11) DEFAULT NULL,
+  `synth_id` int(11) DEFAULT NULL,
+  `rank` int(11) DEFAULT NULL,
+  `original_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `index_names_on_locale` (`locale`)
+  KEY `index_nodes_on_partner_id` (`partner_id`),
+  KEY `index_nodes_on_synth_id` (`synth_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `old_article_sections`
+--
+
+DROP TABLE IF EXISTS `old_article_sections`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `old_article_sections` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `article_id` int(11) DEFAULT NULL,
+  `section_id` int(11) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_old_article_sections_on_article_id` (`article_id`),
+  KEY `index_old_article_sections_on_section_id` (`section_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -304,7 +368,6 @@ CREATE TABLE `old_articles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `guid` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `locale` int(11) DEFAULT NULL,
-  `section_id` int(11) DEFAULT NULL,
   `title` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `body` text COLLATE utf8_unicode_ci,
   `copyright` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -315,7 +378,8 @@ CREATE TABLE `old_articles` (
   `article_id` int(11) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `index_old_articles_on_guid` (`guid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -339,10 +403,10 @@ CREATE TABLE `old_images` (
   `full_size_url` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `crop_url` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `thumbnail_url` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `image_id` int(11) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `index_old_images_on_guid` (`guid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -367,10 +431,10 @@ CREATE TABLE `old_maps` (
   `thumbnail_url` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `javascript_id` int(11) DEFAULT NULL,
   `stylesheet_id` int(11) DEFAULT NULL,
-  `map_id` int(11) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `index_old_maps_on_guid` (`guid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -393,10 +457,10 @@ CREATE TABLE `old_sounds` (
   `url` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `javascript_id` int(11) DEFAULT NULL,
   `stylesheet_id` int(11) DEFAULT NULL,
-  `sound_id` int(11) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `index_old_sounds_on_guid` (`guid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -419,7 +483,33 @@ CREATE TABLE `old_videos` (
   `url` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `javascript_id` int(11) DEFAULT NULL,
   `stylesheet_id` int(11) DEFAULT NULL,
-  `video_id` int(11) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_old_videos_on_guid` (`guid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `partners`
+--
+
+DROP TABLE IF EXISTS `partners`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `partners` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `full_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `abbr` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `description` text COLLATE utf8_unicode_ci,
+  `private_notes` text COLLATE utf8_unicode_ci,
+  `admin_notes` text COLLATE utf8_unicode_ci,
+  `icon_file_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `icon_content_type` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `icon_file_size` int(11) DEFAULT NULL,
+  `icon_updated_at` datetime DEFAULT NULL,
+  `url` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -510,23 +600,6 @@ CREATE TABLE `sections` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `sections_uris`
---
-
-DROP TABLE IF EXISTS `sections_uris`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `sections_uris` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `uri_id` int(11) DEFAULT NULL,
-  `section_id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `index_sections_uris_on_uri_id` (`uri_id`),
-  KEY `index_sections_uris_on_section_id` (`section_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Table structure for table `sounds`
 --
 
@@ -548,33 +621,7 @@ CREATE TABLE `sounds` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `index_sounds_on_locale` (`locale`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Table structure for table `partners`
---
-
-DROP TABLE IF EXISTS `partners`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `partners` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `full_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `abbr` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `description` text COLLATE utf8_unicode_ci,
-  `private_notes` text COLLATE utf8_unicode_ci,
-  `admin_notes` text COLLATE utf8_unicode_ci,
-  `icon_file_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `icon_content_type` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `icon_file_size` int(11) DEFAULT NULL,
-  `icon_updated_at` datetime DEFAULT NULL,
-  `url` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `created_at` datetime DEFAULT NULL,
-  `updated_at` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  KEY `index_sounds_on_guid` (`guid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -603,6 +650,7 @@ DROP TABLE IF EXISTS `synths`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `synths` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `superceded_by_id` int(11) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -619,7 +667,6 @@ DROP TABLE IF EXISTS `traits`;
 CREATE TABLE `traits` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `metadata_for_id` int(11) DEFAULT NULL,
-  `original_predicate_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `predicate_uri_id` int(11) DEFAULT NULL,
   `value` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `text` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -646,10 +693,29 @@ CREATE TABLE `translations` (
   `of_medium_id` int(11) DEFAULT NULL,
   `to_medium_type` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `to_medium_id` int(11) DEFAULT NULL,
+  `translated_by` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `index_translations_on_of_medium_type_and_of_medium_id` (`of_medium_type`,`of_medium_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `uri_sections`
+--
+
+DROP TABLE IF EXISTS `uri_sections`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `uri_sections` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `uri_id` int(11) DEFAULT NULL,
+  `section_id` int(11) DEFAULT NULL,
+  `primary` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_uri_sections_on_uri_id` (`uri_id`),
+  KEY `index_uri_sections_on_section_id` (`section_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -684,14 +750,12 @@ DROP TABLE IF EXISTS `uris`;
 CREATE TABLE `uris` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `string` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `locale` int(11) DEFAULT NULL,
   `position` int(11) DEFAULT NULL,
   `show_in_glossary` tinyint(1) DEFAULT NULL,
   `important_metadata` tinyint(1) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `index_uris_on_locale` (`locale`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -717,7 +781,7 @@ CREATE TABLE `videos` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `index_videos_on_locale` (`locale`)
+  KEY `index_videos_on_guid` (`guid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -730,8 +794,10 @@ CREATE TABLE `videos` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-10-13 15:57:31
+-- Dump completed on 2014-11-04 15:22:01
 INSERT INTO schema_migrations (version) VALUES ('20141013171100');
+
+INSERT INTO schema_migrations (version) VALUES ('20141013171101');
 
 INSERT INTO schema_migrations (version) VALUES ('20141013171140');
 
@@ -779,6 +845,8 @@ INSERT INTO schema_migrations (version) VALUES ('20141013174213');
 
 INSERT INTO schema_migrations (version) VALUES ('20141013174219');
 
+INSERT INTO schema_migrations (version) VALUES ('20141013174220');
+
 INSERT INTO schema_migrations (version) VALUES ('20141013174341');
 
 INSERT INTO schema_migrations (version) VALUES ('20141013174430');
@@ -792,4 +860,6 @@ INSERT INTO schema_migrations (version) VALUES ('20141013174522');
 INSERT INTO schema_migrations (version) VALUES ('20141013190800');
 
 INSERT INTO schema_migrations (version) VALUES ('20141013190813');
+
+INSERT INTO schema_migrations (version) VALUES ('20141022190532');
 
