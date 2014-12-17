@@ -61,7 +61,7 @@ Rails.application.configure do
   # config.action_mailer.raise_delivery_errors = false
   # Assume email comes from eol.org:
   config.action_mailer.default_url_options =
-    { host: ENV["EOL_HOST"] || 'eol.org' }
+  { host: ENV["EOL_HOST"] || 'staging.eol.org' }
   config.action_mailer.delivery_method = :smtp
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to

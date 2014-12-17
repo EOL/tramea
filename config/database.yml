@@ -47,8 +47,18 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+staging:
+  <<: *default
+  host: <%= ENV['TRAMEA_DATABASE_HOST'] %>
+  port: <%= ENV['TRAMEA_DATABASE_PORT'] %>
+  database: tramea_staging
+  username: tramea
+  password: <%= ENV['TRAMEA_DATABASE_PASSWORD'] %>
+
 production:
   <<: *default
+  host: <%= ENV['TRAMEA_DATABASE_HOST'] %>
+  port: <%= ENV['TRAMEA_DATABASE_PORT'] %>
   database: tramea_production
   username: tramea
   password: <%= ENV['TRAMEA_DATABASE_PASSWORD'] %>
