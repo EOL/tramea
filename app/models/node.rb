@@ -32,10 +32,12 @@ class Node < ActiveRecord::Base
   # This is an alternative to closure_tree's .rebuild!, which mysteriously seems
   # to abort without doing anything.
   def self.rebuild_all
+    Rails.logger.info "** #{Time.now.strftime('%Y-%m-%d %I:%M%p')}: Starting Node.rebuild_all"
     Node.where(parent_id: 0).find_each do |node|
       Rails.logger.info "** #{Time.now.strftime('%Y-%m-%d %I:%M%p')}: Rebuilding Node ##{node.id} (Synth ##{node.synth_id})"
       node.rebuild!
     end
+    Rails.logger.info "** #{Time.now.strftime('%Y-%m-%d %I:%M%p')}: Node.rebuild_all complete."
   end
 
 end
