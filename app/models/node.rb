@@ -4,8 +4,9 @@ class Node < ActiveRecord::Base
 
   has_many :associations, as: :parent
 
-  # NOTE: Ideally, we would use the preferred scientific name as the name_column
-  acts_as_tree dependent: :destroy, name_column: :id
+  # NOTE: We may wish to add touch: true, if we start using nested-key-based
+  # caches. (Which we probably should.)
+  acts_as_tree orphan_strategy: :adopt, name_column: :id
 
   # NOTE: Yes, this is HUGE and obnoxious. But I do believe this is is the best
   # way to deal with ranks. :\
@@ -13,8 +14,10 @@ class Node < ActiveRecord::Base
   # map {|s| s.gsub(/[\W]+/, '_').gsub(/_$/, '').gsub(/^_/, # '').downcase.
   #   sub("sub_", "sub").sub("super_", "super") }.sort.uniq
   # NOTE: I also removed things that I thought weren't ranks and things that
-  # were abbreviations or duplicates; this list WILL change once we hear from SPG.
+  # were abbreviations or duplicates; this list WILL change once we hear from
+  # SPG.
   # NOTE: added _rank to those which use reserved names. :|
+  # NOTE: These are NOT in order of highest-order to lowest-order. It's alphanum
   enum rank: [
     :class_rank, :cohort, :convar, :cultivar, :division, :family, :form, :forma,
     :genus, :hybrid, :hybrid_formula, :informal, :infraclass, :infradivision,

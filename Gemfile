@@ -11,6 +11,8 @@ gem "rails", "4.1.6"
 
 # Sort tables:
 gem "acts_as_list"
+# Tree structures (nodes and sections):
+gem "ancestry"
 
 # NEVER EVER *EVER* run this in production. Ever. Don"t. It will be
 # immediately obvious what it does in dev.
@@ -22,8 +24,6 @@ gem "byebug", group: [:development, :test]
 
 # Use Capistrano for deployment
 gem "capistrano-rails", group: :development
-# Tree structures (This implements acts_as_tree):
-gem "closure_tree"
 
 # Memcached:
 gem "dalli"
