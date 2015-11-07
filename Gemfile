@@ -50,6 +50,8 @@ gem "kaminari"
 # Use mysql as the database for Active Record
 gem "mysql2"
 
+gem "neo4j" 
+
 # Icons are handled with:
 gem "paperclip"
 
