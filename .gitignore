@@ -4,6 +4,8 @@ capybara-*.html
 /log
 /tmp
 /db/*.sqlite3
+# Don't want to store the actaul db:
+/db/neo4j/*
 /public/system
 /coverage/
 /spec/tmp
