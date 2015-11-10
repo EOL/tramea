@@ -2,7 +2,7 @@ class Node < ActiveRecord::Base
   belongs_to :dataset
   belongs_to :page
 
-  has_many :associations, as: :parent
+  has_many :on_pages, as: :parent
 
   # NOTE: We may wish to add touch: true, if we start using nested-key-based
   # caches. (Which we probably should.)

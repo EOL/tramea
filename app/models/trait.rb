@@ -6,7 +6,7 @@ class Trait < ActiveRecord::Base
   belongs_to :predicate_uri, class_name: "Uri"
 
   has_many :traits, as: :metadata_for # Metadata
-  has_many :associations, as: :child
+  has_many :on_pages, as: :child
   has_many :literature_references, as: :parent
 
   def object

@@ -64,10 +64,10 @@
 <ellipse fill="none" stroke="#8bc8ba" cx="2096.36" cy="-1153.37" rx="4.00001" ry="4.00001"/>
 <polygon fill="#8bc8ba" stroke="#8bc8ba" points="2065.3,-559.739 2065.21,-548.774 2063.21,-555.196 2061.12,-550.653 2061.12,-550.653 2061.12,-550.653 2063.21,-555.196 2057.03,-552.532 2065.3,-559.739 2065.3,-559.739"/>
 </g>
-<!-- Association -->
-<g id="node5" class="node"><title>Association</title>
+<!-- OnPage -->
+<g id="node5" class="node"><title>OnPage</title>
 <path fill="none" stroke="black" d="M879.906,-387.5C879.906,-387.5 1004.48,-387.5 1004.48,-387.5 1010.48,-387.5 1016.48,-393.5 1016.48,-399.5 1016.48,-399.5 1016.48,-615.5 1016.48,-615.5 1016.48,-621.5 1010.48,-627.5 1004.48,-627.5 1004.48,-627.5 879.906,-627.5 879.906,-627.5 873.906,-627.5 867.906,-621.5 867.906,-615.5 867.906,-615.5 867.906,-399.5 867.906,-399.5 867.906,-393.5 873.906,-387.5 879.906,-387.5"/>
-<text text-anchor="middle" x="942.191" y="-612.3" font-family="Times,serif" font-size="14.00">Association</text>
+<text text-anchor="middle" x="942.191" y="-612.3" font-family="Times,serif" font-size="14.00">OnPage</text>
 <polyline fill="none" stroke="black" points="867.906,-605.5 1016.48,-605.5 "/>
 <text text-anchor="start" x="875.906" y="-590.3" font-family="Times,serif" font-size="14.00">id :integer</text>
 <text text-anchor="start" x="875.906" y="-576.3" font-family="Times,serif" font-size="14.00">parent_type :string</text>
@@ -85,8 +85,8 @@
 <text text-anchor="start" x="875.906" y="-408.3" font-family="Times,serif" font-size="14.00">created_at :datetime</text>
 <text text-anchor="start" x="875.906" y="-394.3" font-family="Times,serif" font-size="14.00">updated_at :datetime</text>
 </g>
-<!-- Article&#45;&gt;Association -->
-<g id="edge2" class="edge"><title>Article&#45;&gt;Association</title>
+<!-- Article&#45;&gt;OnPage -->
+<g id="edge2" class="edge"><title>Article&#45;&gt;OnPage</title>
 <path fill="none" stroke="#a1434a" d="M2070.39,-1149.07C2061.52,-1039.38 2046.05,-881.174 2029.19,-858 1907.37,-690.585 1260.58,-563.676 1026.68,-522.64"/>
 <ellipse fill="none" stroke="#a1434a" cx="2070.73" cy="-1153.22" rx="4" ry="4"/>
 <polygon fill="#a1434a" stroke="#a1434a" points="1026.38,-522.587 1017.3,-516.434 1021.45,-521.727 1016.53,-520.867 1016.53,-520.867 1016.53,-520.867 1021.45,-521.727 1015.75,-525.3 1026.38,-522.587 1026.38,-522.587"/>
@@ -213,8 +213,8 @@
 <text text-anchor="start" x="910.954" y="-187.3" font-family="Times,serif" font-size="14.00">created_at :datetime</text>
 <text text-anchor="start" x="910.954" y="-173.3" font-family="Times,serif" font-size="14.00">updated_at :datetime</text>
 </g>
-<!-- Association&#45;&gt;Trait -->
-<g id="edge11" class="edge"><title>Association&#45;&gt;Trait</title>
+<!-- OnPage&#45;&gt;Trait -->
+<g id="edge11" class="edge"><title>OnPage&#45;&gt;Trait</title>
 <path fill="none" stroke="#fbba63" d="M960.988,-379.264C963.193,-368.285 965.466,-357.307 967.739,-346.661"/>
 <ellipse fill="none" stroke="#fbba63" cx="960.166" cy="-383.386" rx="4.00001" ry="4.00001"/>
 <polygon fill="#fbba63" stroke="#fbba63" points="967.808,-346.34 974.315,-337.514 968.862,-341.453 969.917,-336.565 969.917,-336.565 969.917,-336.565 968.862,-341.453 965.518,-335.616 967.808,-346.34 967.808,-346.34"/>
@@ -276,8 +276,8 @@
 <text text-anchor="start" x="841.889" y="-1171.3" font-family="Times,serif" font-size="14.00">created_at :datetime</text>
 <text text-anchor="start" x="841.889" y="-1157.3" font-family="Times,serif" font-size="14.00">updated_at :datetime</text>
 </g>
-<!-- Image&#45;&gt;Association -->
-<g id="edge16" class="edge"><title>Image&#45;&gt;Association</title>
+<!-- Image&#45;&gt;OnPage -->
+<g id="edge16" class="edge"><title>Image&#45;&gt;OnPage</title>
 <path fill="none" stroke="#b078fd" d="M837.494,-1142.75C831.639,-1128.38 826.626,-1113.59 823.191,-1099 785.979,-940.916 837.704,-757.33 884.158,-637.354"/>
 <ellipse fill="none" stroke="#b078fd" cx="839.08" cy="-1146.53" rx="4.00002" ry="4.00002"/>
 <polygon fill="#b078fd" stroke="#b078fd" points="884.273,-637.06 892.109,-629.389 886.096,-632.404 887.919,-627.748 887.919,-627.748 887.919,-627.748 886.096,-632.404 883.728,-626.108 884.273,-637.06 884.273,-637.06"/>
@@ -556,8 +556,8 @@
 <ellipse fill="none" stroke="#b69326" cx="1413.82" cy="-1513.21" rx="4.00002" ry="4.00002"/>
 <polygon fill="#b69326" stroke="#b69326" points="1696.45,-1314.66 1707.16,-1312.28 1700.46,-1311.67 1704.46,-1308.68 1704.46,-1308.68 1704.46,-1308.68 1700.46,-1311.67 1701.77,-1305.07 1696.45,-1314.66 1696.45,-1314.66"/>
 </g>
-<!-- Map&#45;&gt;Association -->
-<g id="edge39" class="edge"><title>Map&#45;&gt;Association</title>
+<!-- Map&#45;&gt;OnPage -->
+<g id="edge39" class="edge"><title>Map&#45;&gt;OnPage</title>
 <path fill="none" stroke="#2bdaa3" d="M1565.06,-1128.39C1566.71,-1118.49 1568.13,-1108.61 1569.19,-1099 1580.95,-992.536 1634.39,-942.982 1569.19,-858 1530.54,-807.619 1489.29,-846.62 1431.19,-821 1278.46,-753.656 1118.62,-642.598 1024.83,-572.61"/>
 <ellipse fill="none" stroke="#2bdaa3" cx="1564.36" cy="-1132.39" rx="4.00001" ry="4.00001"/>
 <polygon fill="#2bdaa3" stroke="#2bdaa3" points="1024.8,-572.591 1019.49,-562.995 1020.8,-569.594 1016.8,-566.597 1016.8,-566.597 1016.8,-566.597 1020.8,-569.594 1014.1,-570.199 1024.8,-572.591 1024.8,-572.591"/>
@@ -609,8 +609,8 @@
 <ellipse fill="none" stroke="#381193" cx="528.437" cy="-1503.2" rx="4.00001" ry="4.00001"/>
 <polygon fill="#381193" stroke="#381193" points="552.141,-1330.65 557.96,-1321.36 552.821,-1325.7 553.502,-1320.75 553.502,-1320.75 553.502,-1320.75 552.821,-1325.7 549.044,-1320.13 552.141,-1330.65 552.141,-1330.65"/>
 </g>
-<!-- Name&#45;&gt;Association -->
-<g id="edge46" class="edge"><title>Name&#45;&gt;Association</title>
+<!-- Name&#45;&gt;OnPage -->
+<g id="edge46" class="edge"><title>Name&#45;&gt;OnPage</title>
 <path fill="none" stroke="#031c26" d="M578.047,-1500.26C603.385,-1465.5 630.152,-1421.51 643.191,-1377 658.245,-1325.6 672.641,-1180.73 643.191,-1136 620.309,-1101.25 580.072,-1133.75 557.191,-1099 498.29,-1009.54 523.627,-959.717 557.191,-858 593.93,-746.658 627.451,-724.886 714.191,-646 757.231,-606.857 813.06,-572.967 858.7,-548.627"/>
 <ellipse fill="none" stroke="#031c26" cx="575.38" cy="-1503.87" rx="4.00002" ry="4.00002"/>
 <polygon fill="#031c26" stroke="#031c26" points="858.84,-548.553 869.785,-547.868 863.263,-546.22 867.685,-543.887 867.685,-543.887 867.685,-543.887 863.263,-546.22 865.586,-539.907 858.84,-548.553 858.84,-548.553"/>
@@ -621,8 +621,8 @@
 <ellipse fill="none" stroke="#6c3a31" cx="502.699" cy="-1503.43" rx="4.00001" ry="4.00001"/>
 <polygon fill="#6c3a31" stroke="#6c3a31" points="1448.28,-72.935 1458.59,-76.6741 1453.27,-72.5608 1458.25,-72.1867 1458.25,-72.1867 1458.25,-72.1867 1453.27,-72.5608 1457.92,-67.6993 1448.28,-72.935 1448.28,-72.935"/>
 </g>
-<!-- Node&#45;&gt;Association -->
-<g id="edge49" class="edge"><title>Node&#45;&gt;Association</title>
+<!-- Node&#45;&gt;OnPage -->
+<g id="edge49" class="edge"><title>Node&#45;&gt;OnPage</title>
 <path fill="none" stroke="#e4bfd8" d="M147.159,-727.819C308.645,-683.271 688.424,-578.505 857.93,-531.744"/>
 <ellipse fill="none" stroke="#e4bfd8" cx="142.869" cy="-729.002" rx="4.00001" ry="4.00001"/>
 <polygon fill="#e4bfd8" stroke="#e4bfd8" points="858.166,-531.679 869.003,-533.358 862.986,-530.349 867.806,-529.02 867.806,-529.02 867.806,-529.02 862.986,-530.349 866.61,-524.682 858.166,-531.679 858.166,-531.679"/>
@@ -840,8 +840,8 @@
 <polygon fill="#780958" stroke="#780958" points="2200.75,-534.796 2200.56,-523.832 2198.62,-530.274 2196.49,-525.751 2196.49,-525.751 2196.49,-525.751 2198.62,-530.274 2192.42,-527.67 2200.75,-534.796 2200.75,-534.796"/>
 <text text-anchor="middle" x="2393.49" y="-648.8" font-family="Times,serif" font-size="14.00">descendant_hierarchies</text>
 </g>
-<!-- Sound&#45;&gt;Association -->
-<g id="edge80" class="edge"><title>Sound&#45;&gt;Association</title>
+<!-- Sound&#45;&gt;OnPage -->
+<g id="edge80" class="edge"><title>Sound&#45;&gt;OnPage</title>
 <path fill="none" stroke="#4a4be4" d="M1254.79,-1233.35C1190.39,-1210.39 1100.57,-1168.01 1051.19,-1099 999.488,-1026.74 968.312,-788.906 953.25,-638.03"/>
 <ellipse fill="none" stroke="#4a4be4" cx="1258.73" cy="-1234.73" rx="4.00001" ry="4.00001"/>
 <polygon fill="#4a4be4" stroke="#4a4be4" points="953.219,-637.722 956.715,-627.328 952.728,-632.746 952.237,-627.77 952.237,-627.77 952.237,-627.77 952.728,-632.746 947.759,-628.213 953.219,-637.722 953.219,-637.722"/>
@@ -938,12 +938,12 @@
 <text text-anchor="middle" x="314.191" y="-1599.3" font-family="Times,serif" font-size="14.00">Page</text>
 <polyline fill="none" stroke="black" points="232.133,-1592.5 396.248,-1592.5 "/>
 <text text-anchor="start" x="240.133" y="-1577.3" font-family="Times,serif" font-size="14.00">id :integer</text>
-<text text-anchor="start" x="240.133" y="-1563.3" font-family="Times,serif" font-size="14.00">superceded_by_id :integer</text>
+<text text-anchor="start" x="240.133" y="-1563.3" font-family="Times,serif" font-size="14.00">merged_to_id :integer</text>
 <text text-anchor="start" x="240.133" y="-1549.3" font-family="Times,serif" font-size="14.00">created_at :datetime</text>
 <text text-anchor="start" x="240.133" y="-1535.3" font-family="Times,serif" font-size="14.00">updated_at :datetime</text>
 </g>
-<!-- Page&#45;&gt;Association -->
-<g id="edge95" class="edge"><title>Page&#45;&gt;Association</title>
+<!-- Page&#45;&gt;OnPage -->
+<g id="edge95" class="edge"><title>Page&#45;&gt;OnPage</title>
 <path fill="none" stroke="#9a7049" d="M341.383,-1520.79C361.408,-1482.45 388.032,-1427.59 405.191,-1377 430.798,-1301.5 515.463,-738.666 567.191,-678 642.213,-590.013 772.254,-545.531 857.765,-524.714"/>
 <ellipse fill="none" stroke="#9a7049" cx="339.333" cy="-1524.69" rx="4.00002" ry="4.00002"/>
 <polygon fill="#9a7049" stroke="#9a7049" points="857.977,-524.663 868.747,-526.729 862.842,-523.507 867.706,-522.351 867.706,-522.351 867.706,-522.351 862.842,-523.507 866.666,-517.973 857.977,-524.663 857.977,-524.663"/>
@@ -960,8 +960,8 @@
 <polygon fill="#b8c7c1" stroke="#b8c7c1" points="314.191,-1518.29 309.691,-1528.29 314.191,-1523.29 314.191,-1528.29 314.191,-1528.29 314.191,-1528.29 314.191,-1523.29 318.691,-1528.29 314.191,-1518.29 314.191,-1518.29"/>
 <polygon fill="#b8c7c1" stroke="#b8c7c1" points="314.191,-1379.62 318.691,-1369.62 314.191,-1374.62 314.191,-1369.62 314.191,-1369.62 314.191,-1369.62 314.191,-1374.62 309.691,-1369.62 314.191,-1379.62 314.191,-1379.62"/>
 </g>
-<!-- Trait&#45;&gt;Association -->
-<g id="edge100" class="edge"><title>Trait&#45;&gt;Association</title>
+<!-- Trait&#45;&gt;OnPage -->
+<g id="edge100" class="edge"><title>Trait&#45;&gt;OnPage</title>
 <path fill="none" stroke="#c40241" d="M981.212,-344.622C979.222,-355.255 977.092,-366.243 974.891,-377.252"/>
 <ellipse fill="none" stroke="#c40241" cx="981.977" cy="-340.498" rx="4.00001" ry="4.00001"/>
 <polygon fill="#c40241" stroke="#c40241" points="974.84,-377.507 968.45,-386.419 973.85,-382.408 972.861,-387.309 972.861,-387.309 972.861,-387.309 973.85,-382.408 977.272,-388.199 974.84,-377.507 974.84,-377.507"/>
@@ -1017,8 +1017,8 @@
 <polygon fill="#932af0" stroke="#932af0" points="2369.19,-279.613 2373.69,-269.613 2369.19,-274.613 2369.19,-269.613 2369.19,-269.613 2369.19,-269.613 2369.19,-274.613 2364.69,-269.613 2369.19,-279.613 2369.19,-279.613"/>
 <text text-anchor="middle" x="2401.46" y="-357.8" font-family="Times,serif" font-size="14.00">translations</text>
 </g>
-<!-- Video&#45;&gt;Association -->
-<g id="edge111" class="edge"><title>Video&#45;&gt;Association</title>
+<!-- Video&#45;&gt;OnPage -->
+<g id="edge111" class="edge"><title>Video&#45;&gt;OnPage</title>
 <path fill="none" stroke="#bc150b" d="M1814.71,-1142.59C1839.11,-1057.28 1855.04,-941.086 1799.19,-858 1708.34,-722.84 1224.06,-582.599 1026.35,-530.063"/>
 <ellipse fill="none" stroke="#bc150b" cx="1813.52" cy="-1146.64" rx="4.00001" ry="4.00001"/>
 <polygon fill="#bc150b" stroke="#bc150b" points="1026.25,-530.037 1017.73,-523.128 1021.42,-528.758 1016.58,-527.478 1016.58,-527.478 1016.58,-527.478 1021.42,-528.758 1015.43,-531.828 1026.25,-530.037 1026.25,-530.037"/>
@@ -1068,8 +1068,8 @@
 <g id="edge10" class="edge"><title>ActiveRecord::Base&#45;&gt;ArticleSection</title>
 <path fill="none" stroke="black" d="M1332.78,-1713.51C1586.82,-1706.19 2354.19,-1675.53 2354.19,-1572.5 2354.19,-1572.5 2354.19,-1572.5 2354.19,-977.5 2354.19,-923.722 2371.67,-897.51 2335.19,-858 2287.73,-806.602 2235.3,-866.543 2182.19,-821 2118.35,-766.25 2145.52,-722.324 2110.19,-646 2095.18,-613.573 2076.6,-577.727 2062.22,-550.766"/>
 </g>
-<!-- ActiveRecord::Base&#45;&gt;Association -->
-<g id="edge12" class="edge"><title>ActiveRecord::Base&#45;&gt;Association</title>
+<!-- ActiveRecord::Base&#45;&gt;OnPage -->
+<g id="edge12" class="edge"><title>ActiveRecord::Base&#45;&gt;OnPage</title>
 <path fill="none" stroke="black" d="M1217.71,-1699.99C1201.19,-1693.05 1180.95,-1685.27 1162.19,-1680 1069.69,-1654.01 1025.49,-1701.4 949.191,-1643 845.612,-1563.72 867.243,-1500.47 825.191,-1377 725.033,-1082.92 712.245,-967.797 824.191,-678 834.85,-650.406 850.894,-622.994 867.745,-598.512"/>
 </g>
 <!-- ActiveRecord::Base&#45;&gt;Attribution -->

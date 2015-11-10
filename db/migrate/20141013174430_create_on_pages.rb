@@ -1,6 +1,6 @@
-class CreateAssociations < ActiveRecord::Migration
+class CreateOnPages < ActiveRecord::Migration
   def change
-    create_table :associations do |t|
+    create_table :on_pages do |t|
       t.string :parent_type
       t.integer :parent_id
       t.string :child_type
@@ -16,7 +16,7 @@ class CreateAssociations < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :associations, [:parent_type, :parent_id]
-    add_index :associations, [:child_type, :child_id]
+    add_index :on_pages, [:parent_type, :parent_id]
+    add_index :on_pages, [:child_type, :child_id]
   end
 end

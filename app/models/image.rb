@@ -2,7 +2,7 @@ class Image < ActiveRecord::Base
   belongs_to :license
 
   # TODO - extract this to abstract Medium class:
-  has_many :associations, as: :child
+  has_many :on_pages, as: :child
   has_many :literature_references, as: :parent
   has_many :translations, as: :of_medium
 

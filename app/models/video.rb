@@ -4,7 +4,7 @@ class Video < ActiveRecord::Base
   belongs_to :stylesheet
 
   # TODO - extract this to abstract Medium class:
-  has_many :associations, as: :child
+  has_many :on_pages, as: :child
   has_many :translations, as: :of_medium
   has_many :literature_references, as: :parent
 

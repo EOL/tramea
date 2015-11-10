@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 20141022190532) do
 
   add_index "articles", ["guid"], name: "index_articles_on_guid", using: :btree
 
-  create_table "associations", force: true do |t|
+  create_table "on_pages", force: true do |t|
     t.string   "parent_type"
     t.integer  "parent_id"
     t.string   "child_type"
@@ -64,8 +64,8 @@ ActiveRecord::Schema.define(version: 20141022190532) do
     t.datetime "updated_at"
   end
 
-  add_index "associations", ["child_type", "child_id"], name: "index_associations_on_child_type_and_child_id", using: :btree
-  add_index "associations", ["parent_type", "parent_id"], name: "index_associations_on_parent_type_and_parent_id", using: :btree
+  add_index "on_pages", ["child_type", "child_id"], name: "index_on_pages_on_child_type_and_child_id", using: :btree
+  add_index "on_pages", ["parent_type", "parent_id"], name: "index_on_pages_on_parent_type_and_parent_id", using: :btree
 
   create_table "attributions", force: true do |t|
     t.string   "medium_type"
@@ -368,7 +368,7 @@ ActiveRecord::Schema.define(version: 20141022190532) do
   end
 
   create_table "pages", force: true do |t|
-    t.integer  "superceded_by_id"
+    t.integer  "merged_to_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

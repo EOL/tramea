@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   resource :licenses
 
-  resource :associations
+  resource :on_pages
 
   resource :secions
 

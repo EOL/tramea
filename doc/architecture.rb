@@ -26,7 +26,7 @@
 # LATER: harvesting schedule
 # LATER: harvesting status
 
-# Associations:
+# OnPages:
 # LATER: These two will allow us to store user-added data (associated "from" a
 # page)
 # LATER: user_site_id 
