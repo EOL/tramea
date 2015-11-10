@@ -58,8 +58,8 @@
 	<text transform="matrix(1 0 0 1 2227.7214 -352.9164)" font-family="'Times-Roman'" font-size="13.9984">id :integer</text>
 	<text transform="matrix(1 0 0 1 2227.7214 -338.9183)" font-family="'Times-Roman'" font-size="13.9984">parent_type :string</text>
 	<text transform="matrix(1 0 0 1 2227.7214 -324.9193)" font-family="'Times-Roman'" font-size="13.9984">parent_id :integer</text>
-	<text transform="matrix(1 0 0 1 2227.7214 -310.9213)" font-family="'Times-Roman'" font-size="13.9984">child_type :string</text>
-	<text transform="matrix(1 0 0 1 2227.7214 -296.9222)" font-family="'Times-Roman'" font-size="13.9984">child_id :integer</text>
+	<text transform="matrix(1 0 0 1 2227.7214 -310.9213)" font-family="'Times-Roman'" font-size="13.9984">content_type :string</text>
+	<text transform="matrix(1 0 0 1 2227.7214 -296.9222)" font-family="'Times-Roman'" font-size="13.9984">content_id :integer</text>
 	<text transform="matrix(1 0 0 1 2227.7214 -282.9242)" font-family="'Times-Roman'" font-size="13.9984">trusted :boolean</text>
 	<text transform="matrix(1 0 0 1 2227.7214 -268.9261)" font-family="'Times-Roman'" font-size="13.9984">reviewed :boolean</text>
 	<text transform="matrix(1 0 0 1 2227.7214 -254.9271)" font-family="'Times-Roman'" font-size="13.9984">visible :boolean</text>

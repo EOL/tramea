@@ -1,10 +1,9 @@
 class CreateOnPages < ActiveRecord::Migration
   def change
     create_table :on_pages do |t|
-      t.string :parent_type
-      t.integer :parent_id
-      t.string :child_type
-      t.integer :child_id
+      t.integer :page_id
+      t.string :content_type
+      t.integer :content_id
       t.boolean :trusted
       t.boolean :reviewed
       t.boolean :visible
@@ -16,7 +15,7 @@ class CreateOnPages < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :on_pages, [:parent_type, :parent_id]
-    add_index :on_pages, [:child_type, :child_id]
+    add_index :on_pages, :page_id
+    add_index :on_pages, [:content_type, :content_id]
   end
 end

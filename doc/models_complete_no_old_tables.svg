@@ -55,8 +55,8 @@
 	<text transform="matrix(1 0 0 1 2446.0649 745.7)" font-family="'Times-Roman'" font-size="14">id :integer</text>
 	<text transform="matrix(1 0 0 1 2446.0649 759.7)" font-family="'Times-Roman'" font-size="14">parent_type :string</text>
 	<text transform="matrix(1 0 0 1 2446.0649 773.7)" font-family="'Times-Roman'" font-size="14">parent_id :integer</text>
-	<text transform="matrix(1 0 0 1 2446.0649 787.7)" font-family="'Times-Roman'" font-size="14">child_type :string</text>
-	<text transform="matrix(1 0 0 1 2446.0649 801.7)" font-family="'Times-Roman'" font-size="14">child_id :integer</text>
+	<text transform="matrix(1 0 0 1 2446.0649 787.7)" font-family="'Times-Roman'" font-size="14">content_type :string</text>
+	<text transform="matrix(1 0 0 1 2446.0649 801.7)" font-family="'Times-Roman'" font-size="14">content_id :integer</text>
 	<text transform="matrix(1 0 0 1 2446.0649 815.7)" font-family="'Times-Roman'" font-size="14">trusted :boolean</text>
 	<text transform="matrix(1 0 0 1 2446.0649 829.7)" font-family="'Times-Roman'" font-size="14">reviewed :boolean</text>
 	<text transform="matrix(1 0 0 1 2446.0649 843.7)" font-family="'Times-Roman'" font-size="14">visible :boolean</text>
@@ -531,7 +531,7 @@
 	<ellipse fill="none" stroke="#3EC95C" cx="3689.9" cy="515.5" rx="4" ry="4"/>
 	<polygon fill="#3EC95C" stroke="#3EC95C" points="3695.8,530.3 3686.8,536.7 3690.9,531.3 3686,532.2 3686,532.2 3686,532.2 
 		3690.9,531.3 3685.1,527.8 3695.8,530.3 	"/>
-	<text transform="matrix(1 0 0 1 3703.8604 527.7)" font-family="'Times-Roman'" font-size="14">children</text>
+	<text transform="matrix(1 0 0 1 3703.8604 527.7)" font-family="'Times-Roman'" font-size="14">contentren</text>
 </g>
 <g id="edge50">
 	<title>Node-&gt;Node</title>
@@ -647,7 +647,7 @@
 	<ellipse fill="none" stroke="#95AB99" cx="3058.9" cy="515.5" rx="4" ry="4"/>
 	<polygon fill="#95AB99" stroke="#95AB99" points="3064.8,530.3 3055.8,536.7 3059.9,531.3 3055,532.2 3055,532.2 3055,532.2 
 		3059.9,531.3 3054.1,527.8 3064.8,530.3 	"/>
-	<text transform="matrix(1 0 0 1 3072.8604 527.7)" font-family="'Times-Roman'" font-size="14">children</text>
+	<text transform="matrix(1 0 0 1 3072.8604 527.7)" font-family="'Times-Roman'" font-size="14">contentren</text>
 </g>
 <g id="edge89">
 	<title>Section-&gt;Section</title>

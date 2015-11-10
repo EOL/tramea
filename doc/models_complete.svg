@@ -72,8 +72,8 @@
 <text text-anchor="start" x="875.906" y="-590.3" font-family="Times,serif" font-size="14.00">id :integer</text>
 <text text-anchor="start" x="875.906" y="-576.3" font-family="Times,serif" font-size="14.00">parent_type :string</text>
 <text text-anchor="start" x="875.906" y="-562.3" font-family="Times,serif" font-size="14.00">parent_id :integer</text>
-<text text-anchor="start" x="875.906" y="-548.3" font-family="Times,serif" font-size="14.00">child_type :string</text>
-<text text-anchor="start" x="875.906" y="-534.3" font-family="Times,serif" font-size="14.00">child_id :integer</text>
+<text text-anchor="start" x="875.906" y="-548.3" font-family="Times,serif" font-size="14.00">content_type :string</text>
+<text text-anchor="start" x="875.906" y="-534.3" font-family="Times,serif" font-size="14.00">content_id :integer</text>
 <text text-anchor="start" x="875.906" y="-520.3" font-family="Times,serif" font-size="14.00">trusted :boolean</text>
 <text text-anchor="start" x="875.906" y="-506.3" font-family="Times,serif" font-size="14.00">reviewed :boolean</text>
 <text text-anchor="start" x="875.906" y="-492.3" font-family="Times,serif" font-size="14.00">visible :boolean</text>
@@ -632,7 +632,7 @@
 <path fill="none" stroke="#654142" d="M146.876,-753.811C152.937,-752.874 156.696,-751.437 156.696,-749.5 156.696,-747.773 153.71,-746.444 148.769,-745.513"/>
 <ellipse fill="none" stroke="#654142" cx="142.767" cy="-754.252" rx="4" ry="4"/>
 <polygon fill="#654142" stroke="#654142" points="148.72,-745.507 139.324,-739.852 143.755,-744.913 138.79,-744.32 138.79,-744.32 138.79,-744.32 143.755,-744.913 138.256,-748.788 148.72,-745.507 148.72,-745.507"/>
-<text text-anchor="middle" x="179.63" y="-745.3" font-family="Times,serif" font-size="14.00">children</text>
+<text text-anchor="middle" x="179.63" y="-745.3" font-family="Times,serif" font-size="14.00">contentren</text>
 </g>
 <!-- Node&#45;&gt;Node -->
 <g id="edge52" class="edge"><title>Node&#45;&gt;Node</title>
@@ -769,7 +769,7 @@
 <path fill="none" stroke="#23876a" d="M2332.88,-753.811C2338.94,-752.874 2342.7,-751.437 2342.7,-749.5 2342.7,-747.773 2339.71,-746.444 2334.77,-745.513"/>
 <ellipse fill="none" stroke="#23876a" cx="2328.77" cy="-754.252" rx="4" ry="4"/>
 <polygon fill="#23876a" stroke="#23876a" points="2334.72,-745.507 2325.32,-739.852 2329.75,-744.913 2324.79,-744.32 2324.79,-744.32 2324.79,-744.32 2329.75,-744.913 2324.26,-748.788 2334.72,-745.507 2334.72,-745.507"/>
-<text text-anchor="middle" x="2365.63" y="-745.3" font-family="Times,serif" font-size="14.00">children</text>
+<text text-anchor="middle" x="2365.63" y="-745.3" font-family="Times,serif" font-size="14.00">contentren</text>
 </g>
 <!-- Section&#45;&gt;Section -->
 <g id="edge72" class="edge"><title>Section&#45;&gt;Section</title>

@@ -50,8 +50,8 @@ ActiveRecord::Schema.define(version: 20141022190532) do
   create_table "on_pages", force: true do |t|
     t.string   "parent_type"
     t.integer  "parent_id"
-    t.string   "child_type"
-    t.integer  "child_id"
+    t.string   "content_type"
+    t.integer  "content_id"
     t.boolean  "trusted"
     t.boolean  "reviewed"
     t.boolean  "visible"
@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(version: 20141022190532) do
     t.datetime "updated_at"
   end
 
-  add_index "on_pages", ["child_type", "child_id"], name: "index_on_pages_on_child_type_and_child_id", using: :btree
+  add_index "on_pages", ["content_type", "content_id"], name: "index_on_pages_on_content_type_and_content_id", using: :btree
   add_index "on_pages", ["parent_type", "parent_id"], name: "index_on_pages_on_parent_type_and_parent_id", using: :btree
 
   create_table "attributions", force: true do |t|

@@ -88,8 +88,8 @@ CREATE TABLE `on_pages` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `parent_type` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `parent_id` int(11) DEFAULT NULL,
-  `child_type` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `child_id` int(11) DEFAULT NULL,
+  `content_type` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `content_id` int(11) DEFAULT NULL,
   `trusted` tinyint(1) DEFAULT NULL,
   `reviewed` tinyint(1) DEFAULT NULL,
   `visible` tinyint(1) DEFAULT NULL,
@@ -102,7 +102,7 @@ CREATE TABLE `on_pages` (
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `index_on_pages_on_parent_type_and_parent_id` (`parent_type`,`parent_id`),
-  KEY `index_on_pages_on_child_type_and_child_id` (`child_type`,`child_id`)
+  KEY `index_on_pages_on_content_type_and_content_id` (`content_type`,`content_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

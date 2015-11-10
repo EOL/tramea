@@ -1,9 +1,7 @@
 class Node < ActiveRecord::Base
   belongs_to :dataset
   belongs_to :page
-
-  has_many :on_pages, as: :parent
-
+  
   # NOTE: We may wish to add touch: true, if we start using nested-key-based
   # caches. (Which we probably should.)
   acts_as_tree orphan_strategy: :adopt, name_column: :id
