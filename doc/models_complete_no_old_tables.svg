@@ -216,7 +216,7 @@
 	<text transform="matrix(1 0 0 1 3560.845 489.7)" font-family="'Times-Roman'" font-size="14">id :integer</text>
 	<text transform="matrix(1 0 0 1 3560.845 503.7)" font-family="'Times-Roman'" font-size="14">partner_id :integer</text>
 	<text transform="matrix(1 0 0 1 3560.845 517.7)" font-family="'Times-Roman'" font-size="14">parent_id :integer</text>
-	<text transform="matrix(1 0 0 1 3560.845 531.7)" font-family="'Times-Roman'" font-size="14">synth_id :integer</text>
+	<text transform="matrix(1 0 0 1 3560.845 531.7)" font-family="'Times-Roman'" font-size="14">page_id :integer</text>
 	<text transform="matrix(1 0 0 1 3560.845 545.7)" font-family="'Times-Roman'" font-size="14">rank :integer</text>
 	<text transform="matrix(1 0 0 1 3560.845 559.7)" font-family="'Times-Roman'" font-size="14">original_id :string</text>
 	<text transform="matrix(1 0 0 1 3560.845 573.7)" font-family="'Times-Roman'" font-size="14">created_at :datetime</text>
@@ -808,10 +808,10 @@
 		2459.9,106.3 2454.8,110.6 2460.6,101.3 	"/>
 </g>
 <g id="node25">
-	<title>Synth</title>
+	<title>Page</title>
 	<path fill="none" stroke="#000000" d="M3110.3-318.5h140.1c6,0,12-6,12-12v-62c0-6-6-12-12-12h-140.1c-6,0-12,6-12,12v62
 		C3098.3-324.5,3104.3-318.5,3110.3-318.5"/>
-	<text transform="matrix(1 0 0 1 3164.0171 -389.3)" font-family="'Times-Roman'" font-size="14">Synth</text>
+	<text transform="matrix(1 0 0 1 3164.0171 -389.3)" font-family="'Times-Roman'" font-size="14">Page</text>
 	<line fill="none" stroke="#000000" x1="3098.3" y1="-382.5" x2="3262.4" y2="-382.5"/>
 	<text transform="matrix(1 0 0 1 3106.2949 -367.3)" font-family="'Times-Roman'" font-size="14">id :integer</text>
 	<text transform="matrix(1 0 0 1 3106.2949 -353.3)" font-family="'Times-Roman'" font-size="14">superceded_by_id :integer</text>
@@ -819,7 +819,7 @@
 	<text transform="matrix(1 0 0 1 3106.2949 -325.3)" font-family="'Times-Roman'" font-size="14">updated_at :datetime</text>
 </g>
 <g id="edge111">
-	<title>Synth-&gt;Association</title>
+	<title>Page-&gt;Association</title>
 	<path fill="none" stroke="#058FBC" d="M3165.8-310.5c-23.4,79.2-71.5,238.2-119.4,370.5c-53.8,148.4-92.8,176.6-134,329
 		c-35.3,130.4,41.2,195.3-43,301c-66.4,83.4-189.8,116.3-272.7,129.2"/>
 	<ellipse fill="none" stroke="#058FBC" cx="3167" cy="-314.5" rx="4" ry="4"/>
@@ -827,7 +827,7 @@
 		2591.7,819.9 2586.1,816.2 2596.6,819.2 	"/>
 </g>
 <g id="edge112">
-	<title>Synth-&gt;Node</title>
+	<title>Page-&gt;Node</title>
 	<path fill="none" stroke="#F4A6BA" d="M3175.7-310.5c-12.3,146-39.2,567.7,50.6,662.5c48,50.7,253.3-0.8,312,37
 		c20.4,13.2,36.5,33.5,48.8,54.3"/>
 	<ellipse fill="none" stroke="#F4A6BA" cx="3176.1" cy="-314.5" rx="4" ry="4"/>
@@ -835,7 +835,7 @@
 		3589.7,447.9 3588.2,454.5 3587.2,443.6 	"/>
 </g>
 <g id="edge113">
-	<title>Synth-&gt;Partner</title>
+	<title>Page-&gt;Partner</title>
 	<path fill="none" stroke="#4FCD0C" d="M3216.8-309.7c26.4,36.7,63.1,87.8,96.8,134.6"/>
 	<polygon fill="#4FCD0C" stroke="#4FCD0C" points="3216.5,-310.2 3207.1,-315.7 3213.6,-314.2 3210.7,-318.3 3210.7,-318.3 
 		3210.7,-318.3 3213.6,-314.2 3214.4,-320.9 3216.5,-310.2 	"/>

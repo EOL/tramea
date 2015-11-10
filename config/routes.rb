@@ -39,7 +39,7 @@ Rails.application.routes.draw do
 
   resource :literature_references
 
-  resource :synths
+  resource :pages
 
   resource :nodes
 

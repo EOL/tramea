@@ -245,7 +245,7 @@
 <text text-anchor="start" x="13.6852" y="-783.3" font-family="Times,serif" font-size="14.00">id :integer</text>
 <text text-anchor="start" x="13.6852" y="-769.3" font-family="Times,serif" font-size="14.00">partner_id :integer</text>
 <text text-anchor="start" x="13.6852" y="-755.3" font-family="Times,serif" font-size="14.00">parent_id :integer</text>
-<text text-anchor="start" x="13.6852" y="-741.3" font-family="Times,serif" font-size="14.00">synth_id :integer</text>
+<text text-anchor="start" x="13.6852" y="-741.3" font-family="Times,serif" font-size="14.00">page_id :integer</text>
 <text text-anchor="start" x="13.6852" y="-727.3" font-family="Times,serif" font-size="14.00">rank :integer</text>
 <text text-anchor="start" x="13.6852" y="-713.3" font-family="Times,serif" font-size="14.00">original_id :string</text>
 <text text-anchor="start" x="13.6852" y="-699.3" font-family="Times,serif" font-size="14.00">created_at :datetime</text>
@@ -932,30 +932,30 @@
 <ellipse fill="none" stroke="#c61fb9" cx="1885.09" cy="-1524.92" rx="4.00002" ry="4.00002"/>
 <polygon fill="#c61fb9" stroke="#c61fb9" points="1809.89,-1372.05 1810.64,-1361.11 1808.16,-1367.36 1806.42,-1362.67 1806.42,-1362.67 1806.42,-1362.67 1808.16,-1367.36 1802.2,-1364.23 1809.89,-1372.05 1809.89,-1372.05"/>
 </g>
-<!-- Synth -->
-<g id="node27" class="node"><title>Synth</title>
+<!-- Page -->
+<g id="node27" class="node"><title>Page</title>
 <path fill="none" stroke="black" d="M244.133,-1528.5C244.133,-1528.5 384.248,-1528.5 384.248,-1528.5 390.248,-1528.5 396.248,-1534.5 396.248,-1540.5 396.248,-1540.5 396.248,-1602.5 396.248,-1602.5 396.248,-1608.5 390.248,-1614.5 384.248,-1614.5 384.248,-1614.5 244.133,-1614.5 244.133,-1614.5 238.133,-1614.5 232.133,-1608.5 232.133,-1602.5 232.133,-1602.5 232.133,-1540.5 232.133,-1540.5 232.133,-1534.5 238.133,-1528.5 244.133,-1528.5"/>
-<text text-anchor="middle" x="314.191" y="-1599.3" font-family="Times,serif" font-size="14.00">Synth</text>
+<text text-anchor="middle" x="314.191" y="-1599.3" font-family="Times,serif" font-size="14.00">Page</text>
 <polyline fill="none" stroke="black" points="232.133,-1592.5 396.248,-1592.5 "/>
 <text text-anchor="start" x="240.133" y="-1577.3" font-family="Times,serif" font-size="14.00">id :integer</text>
 <text text-anchor="start" x="240.133" y="-1563.3" font-family="Times,serif" font-size="14.00">superceded_by_id :integer</text>
 <text text-anchor="start" x="240.133" y="-1549.3" font-family="Times,serif" font-size="14.00">created_at :datetime</text>
 <text text-anchor="start" x="240.133" y="-1535.3" font-family="Times,serif" font-size="14.00">updated_at :datetime</text>
 </g>
-<!-- Synth&#45;&gt;Association -->
-<g id="edge95" class="edge"><title>Synth&#45;&gt;Association</title>
+<!-- Page&#45;&gt;Association -->
+<g id="edge95" class="edge"><title>Page&#45;&gt;Association</title>
 <path fill="none" stroke="#9a7049" d="M341.383,-1520.79C361.408,-1482.45 388.032,-1427.59 405.191,-1377 430.798,-1301.5 515.463,-738.666 567.191,-678 642.213,-590.013 772.254,-545.531 857.765,-524.714"/>
 <ellipse fill="none" stroke="#9a7049" cx="339.333" cy="-1524.69" rx="4.00002" ry="4.00002"/>
 <polygon fill="#9a7049" stroke="#9a7049" points="857.977,-524.663 868.747,-526.729 862.842,-523.507 867.706,-522.351 867.706,-522.351 867.706,-522.351 862.842,-523.507 866.666,-517.973 857.977,-524.663 857.977,-524.663"/>
 </g>
-<!-- Synth&#45;&gt;Node -->
-<g id="edge96" class="edge"><title>Synth&#45;&gt;Node</title>
+<!-- Page&#45;&gt;Node -->
+<g id="edge96" class="edge"><title>Page&#45;&gt;Node</title>
 <path fill="none" stroke="#605170" d="M286.865,-1520.84C266.77,-1482.52 240.118,-1427.67 223.191,-1377 145.801,-1145.35 185.735,-1071.58 111.191,-839 110.247,-836.057 109.238,-833.08 108.177,-830.088"/>
 <ellipse fill="none" stroke="#605170" cx="288.924" cy="-1524.74" rx="4.00002" ry="4.00002"/>
 <polygon fill="#605170" stroke="#605170" points="108.103,-829.889 108.851,-818.949 106.367,-825.2 104.631,-820.511 104.631,-820.511 104.631,-820.511 106.367,-825.2 100.411,-822.074 108.103,-829.889 108.103,-829.889"/>
 </g>
-<!-- Synth&#45;&gt;Partner -->
-<g id="edge97" class="edge"><title>Synth&#45;&gt;Partner</title>
+<!-- Page&#45;&gt;Partner -->
+<g id="edge97" class="edge"><title>Page&#45;&gt;Partner</title>
 <path fill="none" stroke="#b8c7c1" d="M314.191,-1518.13C314.191,-1480.38 314.191,-1427.83 314.191,-1379.79"/>
 <polygon fill="#b8c7c1" stroke="#b8c7c1" points="314.191,-1518.29 309.691,-1528.29 314.191,-1523.29 314.191,-1528.29 314.191,-1528.29 314.191,-1528.29 314.191,-1523.29 318.691,-1528.29 314.191,-1518.29 314.191,-1518.29"/>
 <polygon fill="#b8c7c1" stroke="#b8c7c1" points="314.191,-1379.62 318.691,-1369.62 314.191,-1374.62 314.191,-1369.62 314.191,-1369.62 314.191,-1369.62 314.191,-1374.62 309.691,-1369.62 314.191,-1379.62 314.191,-1379.62"/>
@@ -1136,8 +1136,8 @@
 <g id="edge94" class="edge"><title>ActiveRecord::Base&#45;&gt;Stylesheet</title>
 <path fill="none" stroke="black" d="M1330.98,-1712.03C1470.78,-1704.85 1755.89,-1685.4 1845.19,-1643 1859.56,-1636.18 1873,-1625.58 1884.42,-1614.65"/>
 </g>
-<!-- ActiveRecord::Base&#45;&gt;Synth -->
-<g id="edge98" class="edge"><title>ActiveRecord::Base&#45;&gt;Synth</title>
+<!-- ActiveRecord::Base&#45;&gt;Page -->
+<g id="edge98" class="edge"><title>ActiveRecord::Base&#45;&gt;Page</title>
 <path fill="none" stroke="black" d="M1220.54,-1699.85C1203.66,-1692.32 1182.27,-1684.07 1162.19,-1680 1080.27,-1663.41 487.584,-1693.56 410.191,-1662 385.715,-1652.02 363.709,-1632.71 346.961,-1614.57"/>
 </g>
 <!-- ActiveRecord::Base&#45;&gt;Trait -->

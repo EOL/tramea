@@ -1,6 +1,6 @@
 class Node < ActiveRecord::Base
   belongs_to :dataset
-  belongs_to :synth
+  belongs_to :page
 
   has_many :associations, as: :parent
 
@@ -38,7 +38,7 @@ class Node < ActiveRecord::Base
   def self.rebuild_all
     Rails.logger.info "** #{Time.now.strftime('%Y-%m-%d %I:%M%p')}: Starting Node.rebuild_all"
     Node.where(parent_id: 0).find_each do |node|
-      Rails.logger.info "** #{Time.now.strftime('%Y-%m-%d %I:%M%p')}: Rebuilding Node ##{node.id} (Synth ##{node.synth_id})"
+      Rails.logger.info "** #{Time.now.strftime('%Y-%m-%d %I:%M%p')}: Rebuilding Node ##{node.id} (Page ##{node.page_id})"
       node.rebuild!
     end
     Rails.logger.info "** #{Time.now.strftime('%Y-%m-%d %I:%M%p')}: Node.rebuild_all complete."

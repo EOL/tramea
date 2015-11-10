@@ -140,7 +140,7 @@
 	<text transform="matrix(1 0 0 1 1521.615 -426.307)" font-family="'Times-Roman'" font-size="13.9984">id :integer</text>
 	<text transform="matrix(1 0 0 1 1521.615 -412.308)" font-family="'Times-Roman'" font-size="13.9984">partner_id :integer</text>
 	<text transform="matrix(1 0 0 1 1521.615 -398.3099)" font-family="'Times-Roman'" font-size="13.9984">parent_id :integer</text>
-	<text transform="matrix(1 0 0 1 1521.615 -384.3119)" font-family="'Times-Roman'" font-size="13.9984">synth_id :integer</text>
+	<text transform="matrix(1 0 0 1 1521.615 -384.3119)" font-family="'Times-Roman'" font-size="13.9984">page_id :integer</text>
 	<text transform="matrix(1 0 0 1 1521.615 -370.3129)" font-family="'Times-Roman'" font-size="13.9984">original_id :string</text>
 	<text transform="matrix(1 0 0 1 1521.615 -356.3148)" font-family="'Times-Roman'" font-size="13.9984">created_at :datetime</text>
 	<text transform="matrix(1 0 0 1 1521.615 -342.3168)" font-family="'Times-Roman'" font-size="13.9984">updated_at :datetime</text>
@@ -373,10 +373,10 @@
 	<text transform="matrix(1 0 0 1 2536.875 474.7503)" font-family="'Times-Roman'" font-size="13.9984">updated_at :datetime</text>
 </g>
 <g id="node25">
-	<title>Synth</title>
+	<title>Page</title>
 	<path fill="none" stroke="#000000" d="M1760.7-390.3h109c6,0,12-6,12-12v-48c0-6-6-12-12-12h-109c-6,0-12,6-12,12v48
 		C1748.7-396.3,1754.7-390.3,1760.7-390.3"/>
-	<text transform="matrix(1 0 0 1 1798.8679 -447.1053)" font-family="'Times-Roman'" font-size="13.9984">Synth</text>
+	<text transform="matrix(1 0 0 1 1798.8679 -447.1053)" font-family="'Times-Roman'" font-size="13.9984">Page</text>
 	<line fill="none" stroke="#000000" x1="1748.7" y1="-440.3" x2="1881.7" y2="-440.3"/>
 	<text transform="matrix(1 0 0 1 1756.7009 -425.1077)" font-family="'Times-Roman'" font-size="13.9984">id :integer</text>
 	<text transform="matrix(1 0 0 1 1756.7009 -411.1092)" font-family="'Times-Roman'" font-size="13.9984">created_at :datetime</text>

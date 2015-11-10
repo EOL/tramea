@@ -187,7 +187,7 @@ ActiveRecord::Schema.define(version: 20141022190532) do
   create_table "nodes", force: true do |t|
     t.integer  "partner_id"
     t.integer  "parent_id"
-    t.integer  "synth_id"
+    t.integer  "page_id"
     t.integer  "rank"
     t.string   "original_id"
     t.datetime "created_at"
@@ -195,7 +195,7 @@ ActiveRecord::Schema.define(version: 20141022190532) do
   end
 
   add_index "nodes", ["partner_id"], name: "index_nodes_on_partner_id", using: :btree
-  add_index "nodes", ["synth_id"], name: "index_nodes_on_synth_id", using: :btree
+  add_index "nodes", ["page_id"], name: "index_nodes_on_page_id", using: :btree
 
   create_table "old_article_sections", force: true do |t|
     t.integer  "article_id"
@@ -367,7 +367,7 @@ ActiveRecord::Schema.define(version: 20141022190532) do
     t.datetime "updated_at"
   end
 
-  create_table "synths", force: true do |t|
+  create_table "pages", force: true do |t|
     t.integer  "superceded_by_id"
     t.datetime "created_at"
     t.datetime "updated_at"

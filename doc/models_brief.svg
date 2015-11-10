@@ -617,25 +617,25 @@
 <ellipse fill="none" stroke="#cb23dd" cx="1524.67" cy="-497.099" rx="4.00002" ry="4.00002"/>
 <polygon fill="#cb23dd" stroke="#cb23dd" points="1458.22,-431.883 1454.24,-421.667 1454.65,-428.381 1451.08,-424.878 1451.08,-424.878 1451.08,-424.878 1454.65,-428.381 1447.93,-428.09 1458.22,-431.883 1458.22,-431.883"/>
 </g>
-<!-- Synth -->
-<g id="node27" class="node"><title>Synth</title>
+<!-- Page -->
+<g id="node27" class="node"><title>Page</title>
 <ellipse fill="none" stroke="black" cx="324.925" cy="-517" rx="30.9967" ry="18"/>
-<text text-anchor="middle" x="324.925" y="-512.8" font-family="Times,serif" font-size="14.00">Synth</text>
+<text text-anchor="middle" x="324.925" y="-512.8" font-family="Times,serif" font-size="14.00">Page</text>
 </g>
-<!-- Synth&#45;&gt;Association -->
-<g id="edge95" class="edge"><title>Synth&#45;&gt;Association</title>
+<!-- Page&#45;&gt;Association -->
+<g id="edge95" class="edge"><title>Page&#45;&gt;Association</title>
 <path fill="none" stroke="#e7d9d7" d="M337.538,-492.288C365.327,-441.752 436.224,-321.801 521.925,-245 543.273,-225.869 550.845,-222.401 577.925,-213 634.088,-193.504 701.578,-184.864 749.433,-181.037"/>
 <ellipse fill="none" stroke="#e7d9d7" cx="335.517" cy="-495.995" rx="4.00002" ry="4.00002"/>
 <polygon fill="#e7d9d7" stroke="#e7d9d7" points="749.666,-181.02 759.975,-184.757 754.652,-180.645 759.638,-180.27 759.638,-180.27 759.638,-180.27 754.652,-180.645 759.3,-175.783 749.666,-181.02 749.666,-181.02"/>
 </g>
-<!-- Synth&#45;&gt;Node -->
-<g id="edge96" class="edge"><title>Synth&#45;&gt;Node</title>
+<!-- Page&#45;&gt;Node -->
+<g id="edge96" class="edge"><title>Page&#45;&gt;Node</title>
 <path fill="none" stroke="#7be4fc" d="M308.797,-493.717C272.881,-444.533 186.45,-328.69 147.925,-299 135.477,-289.407 119.98,-281.718 106.158,-276.017"/>
 <ellipse fill="none" stroke="#7be4fc" cx="311.164" cy="-496.966" rx="4.00002" ry="4.00002"/>
 <polygon fill="#7be4fc" stroke="#7be4fc" points="105.769,-275.865 98.098,-268.028 101.113,-274.042 96.4573,-272.219 96.4573,-272.219 96.4573,-272.219 101.113,-274.042 94.8166,-276.409 105.769,-275.865 105.769,-275.865"/>
 </g>
-<!-- Synth&#45;&gt;Partner -->
-<g id="edge97" class="edge"><title>Synth&#45;&gt;Partner</title>
+<!-- Page&#45;&gt;Partner -->
+<g id="edge97" class="edge"><title>Page&#45;&gt;Partner</title>
 <path fill="none" stroke="#f4c9c7" d="M321.342,-488.867C319.248,-473.019 316.615,-453.082 314.52,-437.219"/>
 <polygon fill="#f4c9c7" stroke="#f4c9c7" points="321.366,-489.055 318.215,-499.559 322.021,-494.012 322.676,-498.969 322.676,-498.969 322.676,-498.969 322.021,-494.012 327.137,-498.38 321.366,-489.055 321.366,-489.055"/>
 <polygon fill="#f4c9c7" stroke="#f4c9c7" points="314.478,-436.902 317.63,-426.399 313.824,-431.945 313.169,-426.988 313.169,-426.988 313.169,-426.988 313.824,-431.945 308.708,-427.578 314.478,-436.902 314.478,-436.902"/>
@@ -816,8 +816,8 @@
 <g id="edge94" class="edge"><title>ActiveRecord::Base&#45;&gt;Stylesheet</title>
 <path fill="none" stroke="black" d="M1137.39,-598.691C1220.87,-587.257 1365.91,-565.141 1487.93,-535 1494.93,-533.27 1502.35,-531.192 1509.43,-529.092"/>
 </g>
-<!-- ActiveRecord::Base&#45;&gt;Synth -->
-<g id="edge98" class="edge"><title>ActiveRecord::Base&#45;&gt;Synth</title>
+<!-- ActiveRecord::Base&#45;&gt;Page -->
+<g id="edge98" class="edge"><title>ActiveRecord::Base&#45;&gt;Page</title>
 <path fill="none" stroke="black" d="M1037.26,-591.894C1020.38,-584.382 998.997,-576.126 978.925,-572 913.051,-558.459 437.512,-575.9 373.925,-554 361.35,-549.669 349.283,-540.88 340.271,-533.071"/>
 </g>
 <!-- ActiveRecord::Base&#45;&gt;Trait -->

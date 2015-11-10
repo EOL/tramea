@@ -28,7 +28,7 @@
 
 # Associations:
 # LATER: These two will allow us to store user-added data (associated "from" a
-# synth)
+# page)
 # LATER: user_site_id 
 # LATER: user_id
 # NOTE: the relationships to higher-level taxa will need special consideration

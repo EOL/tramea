@@ -327,14 +327,14 @@ CREATE TABLE `nodes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `partner_id` int(11) DEFAULT NULL,
   `parent_id` int(11) DEFAULT NULL,
-  `synth_id` int(11) DEFAULT NULL,
+  `page_id` int(11) DEFAULT NULL,
   `rank` int(11) DEFAULT NULL,
   `original_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `index_nodes_on_partner_id` (`partner_id`),
-  KEY `index_nodes_on_synth_id` (`synth_id`)
+  KEY `index_nodes_on_page_id` (`page_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -642,13 +642,13 @@ CREATE TABLE `stylesheets` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `synths`
+-- Table structure for table `pages`
 --
 
-DROP TABLE IF EXISTS `synths`;
+DROP TABLE IF EXISTS `pages`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `synths` (
+CREATE TABLE `pages` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `superceded_by_id` int(11) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
