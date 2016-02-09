@@ -4,11 +4,11 @@ class CreateOnPages < ActiveRecord::Migration
       t.integer :page_id
       t.string :content_type
       t.integer :content_id
-      t.boolean :trusted
-      t.boolean :reviewed
-      t.boolean :visible
-      t.boolean :overview
-      t.boolean :original_name
+      t.boolean :trusted, default: true
+      t.boolean :reviewed, default: false
+      t.boolean :hidden, default: false
+      t.boolean :preview, default: true
+      t.integer :source_page_id, null: false
       t.integer :position
       t.float :rating
       t.integer :num_ratings
